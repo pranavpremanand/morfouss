@@ -97,7 +97,7 @@ const HomePage = () => {
                   Contact Us
                 </Link>
                 <Link
-                  to="/contact-us"
+                  to="/services"
                   className="gradient-btn text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4]"
                 >
                   Services

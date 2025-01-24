@@ -36,9 +36,9 @@ const LandingHeader = () => {
     <div className="py-6 fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 text-white">
       <div className="wrapper flex justify-between items-center gap-10">
         <div className="flex justify-between items-center gap-20 w-full pl-[1rem]">
-          <Link smooth={true} to="banner" className="cursor-pointer">
+          <Scroll smooth={true} to="banner" className="cursor-pointer">
             <img src={logoImg} className="h-[1.75rem] sm:h-[2rem]" alt="logo" />
-          </Link>
+          </Scroll>
           <div className="lg:flex items-center gap-10 hidden">
             {options.map((option) => {
               return option.path.includes("/") ? (

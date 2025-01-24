@@ -14,7 +14,7 @@ const LandingPage = ({ page }) => {
   const services = isWeb ? webDevelopmentServices : appDevelopmentServices;
   return (
     <>
-      <section className="flex flex-col w-screen pb-[2rem]">
+      <section id="banner" className="flex flex-col w-screen pb-[2rem]">
         <div className="blur-gradient-background rotate-[31deg] absolute left-[2rem] top-0 w-1/2 h-[20rem] md:h-[40rem]"></div>
         {/* <div className="blur-gradient-background rotate-[-31deg] absolute right-[2rem] top-0 w-1/3 h-[10rem] md:h-[25rem]"></div> */}
         <div className="relative wrapper z-20 pt-[7rem] md:pt-[5rem] text-center text-white">
@@ -85,11 +85,22 @@ const LandingPage = ({ page }) => {
                   : "In a world that runs on apps, we create ones that stand out. Whether it’s a native app or a cross-platform solution, we develop applications tailored to your needs. Our apps combine cutting-edge technology with intuitive design to deliver smooth, reliable, and feature-rich experiences. Your app should do more than just exist; it should stand out. We create mobile applications that combine sleek designs with powerful functionality, tailored to meet your business objectives. Whether you need a native app for iOS or Android, or a cross-platform solution, we ensure flawless performance and a seamless user experience."}
               </p>
               <div className="flex gap-5">
-                <Link to="/contact-us" className="white-btn hover:shadow-black">
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="white-btn hover:shadow-black"
+                >
                   Contact Us
                 </Link>
                 <Link
-                  to="/contact-us"
+                  to="services"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
                   className="gradient-btn text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4]"
                 >
                   Services
