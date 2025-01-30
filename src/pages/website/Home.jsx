@@ -98,10 +98,10 @@ const Home = () => {
           <div className="gradient-rounded-text-box mx-auto mb-4">
             Who We Are
           </div>
-          <h1 className="heading-2 bg-gradient-to-r from-[#4a62ec] max-w-[50rem] mx-auto to-primary bg-clip-text text-transparent">
+          <h1 className="heading-2 bg-gradient-to-r from-[#4a62ec] max-w-[800px] lg:max-w-[50rem] w-full mx-auto to-primary bg-clip-text text-transparent">
             Reliable IT Support for Your Business
           </h1>
-          <p className="desc max-w-[50rem] mx-auto">
+          <p className="desc max-w-[800px] lg:max-w-[50rem] w-full mx-auto">
             At Morfouss., we firmly believe that long-term client partnerships
             are nurtured through solutions that go beyond typical transactional
             relationships. The services we provide are designed with foresight

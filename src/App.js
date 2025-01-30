@@ -26,13 +26,13 @@ export default function App() {
     <SpinnerContextProvider>
       <LoadingSpinnerContext />
 
-      <Link
+      {/* <Link
         to={`https://wa.me/${companyDetails.whatsapp}`}
         target="_blank"
         className="fixed bottom-[1rem] right-[1rem] z-50 p-3 rounded-full border-2 border-green-500 bg-white hover:bg-black text-green-500 hover:text-white transition-all duration-300"
       >
         <BsWhatsapp className="text-3xl" />
-      </Link>
+      </Link> */}
 
       <Toaster
         position="top-bottom"

@@ -33,7 +33,7 @@ const LandingHeader = () => {
   };
 
   return (
-    <div className="py-6 fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 text-white">
+    <div className="py-6 fixed top-0 w-full backdrop-blur-md z-50 text-white">
       <div className="wrapper flex justify-between items-center gap-10">
         <div className="flex justify-between items-center gap-20 w-full pl-[1rem]">
           <Scroll smooth={true} to="banner" className="cursor-pointer">

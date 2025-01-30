@@ -31,7 +31,7 @@ const AboutUs = () => {
           <h2 data-aos="fade-up" className="heading-2">
             Magic Behind Our IT Solutions
           </h2>
-          <p data-aos="fade-up" className="desc max-w-[50rem]">
+          <p data-aos="fade-up" className="desc max-w-[800px] lg:max-w-[50rem] w-full">
             We begin by conducting a comprehensive needs assessment to
             understand your specific requirements, challenges, and goals.
           </p>

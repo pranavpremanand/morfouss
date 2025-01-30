@@ -10,7 +10,7 @@ const UnlockEfficiency = () => {
       >
         <div className="gradient-rounded-text-box">Unlock Efficiency</div>
         <h2 className="heading-2">Transforming Ideas into Digital Realities</h2>
-        <p className="desc max-w-[40rem] text-center">
+        <p className="desc max-w-[650px] lg:max-w-[40rem] w-full text-center">
           Helping businesses not only survive but flourish in today’s
           competitive digital landscape.
         </p>

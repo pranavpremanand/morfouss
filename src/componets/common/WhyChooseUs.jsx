@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
           <h2 data-aos="fade-up" className="heading-2">
             Magic Behind Our IT Solutions
           </h2>
-          <p data-aos="fade-up" className="desc max-w-[40rem] mx-auto">
+          <p data-aos="fade-up" className="desc max-w-[650px] lg:max-w-[40rem] w-full mx-auto">
             We begin by conducting a comprehensive needs assessment to
             understand your specific requirements, challenges, and goals.
           </p>

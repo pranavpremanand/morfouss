@@ -23,10 +23,10 @@ const OurServices = ({ length }) => {
         <div data-aos="fade-up" className="gradient-rounded-text-box mb-2">
           Our Services
         </div>
-        <h2 data-aos="fade-up" className="heading-2 max-w-[50rem]">
+        <h2 data-aos="fade-up" className="heading-2 max-w-[800px] lg:max-w-[50rem] w-full">
           Advanced and Highly Reliable Performance
         </h2>
-        <p data-aos="fade-up" className="desc max-w-[50rem]">
+        <p data-aos="fade-up" className="desc max-w-[800px] lg:max-w-[50rem] w-full">
           Our success is our success and together we help our society to become
           a better place to live and work.
         </p>
@@ -39,15 +39,15 @@ const OurServices = ({ length }) => {
               className="rounded-lg p-[1px] bg-gradient-to-r from-secondary to-primary cursor-pointer"
             >
               <div className="rounded-lg bg-[#101010] hover:bg-black/70 transition-all duration-300 p-5 flex flex-col justify-between items-start text-start h-full gap-4">
-                <div className="flex flex-col gap-3">
-                  <h5 className="font-semibold text-xl font-raleway">
+                <div className="flex flex-col gap-[20px] lg:gap-5">
+                  <h5 className="font-semibold text-[20px] md:text-xl font-raleway">
                     {service.title}
                   </h5>
                   <p className="desc text-white/80">{service.desc}</p>
                 </div>
                 <button
                   onClick={() => handleSelectServiceToShowDetail(service)}
-                  className="desc mt-1 flex items-center gap-3 hover:text-primary transition-all duration-300"
+                  className="desc mt-[4px] flex items-center gap-3 hover:text-primary transition-all duration-300"
                 >
                   Learn More <PiCaretDoubleRightBold />
                 </button>

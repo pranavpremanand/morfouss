@@ -135,7 +135,7 @@ export const LandingPage = ({ page }) => {
           >
             Design & Revolution
           </h1>
-          <p data-aos="fade-up" className="desc max-w-[50rem] mx-auto">
+          <p data-aos="fade-up" className="desc max-w-[800px] lg:max-w-[50rem] w-full mx-auto">
             At Morfouss, we understand that in today’s
             digital-first world, your website is more than just an online
             presence—it’s the heart of your brand’s identity, a vital business
