@@ -9,7 +9,7 @@ const GetInTouch = () => {
           <div className="h-full relative flex items-start">
             <img
               src={gradientBlurImg1}
-              className="top-0 md:top-[-7rem] left-0 w-full object-contain absolute -z-10"
+              className="top-0 md:top-[-7rem] scale-125 left-0 w-full object-contain absolute -z-10"
               alt=""
             />
             <div
