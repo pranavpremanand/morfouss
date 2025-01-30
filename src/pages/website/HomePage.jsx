@@ -22,13 +22,13 @@ const HomePage = () => {
         <div className="relative z-20 pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[62px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
+            className="text-[70px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
           >
             UNLEASH
           </h1>
           <h3
             data-aos="zoom-in"
-            className="text-[26px] sm:text-[7.6rem] ml-[-0.3rem] leading-[0.9] md:-mt-5"
+            className="text-[29px] sm:text-[7.6rem] ml-[-0.3rem] leading-[0.9] md:-mt-5"
           >
             <span className="gradient-stroke-text text-black">Dreams</span>{" "}
             <span className="gradient-stroke-text text-white">
@@ -38,14 +38,14 @@ const HomePage = () => {
         </div>
         <img
           src="/noise-texture.svg"
-          className="w-full h-full absolute z-10 inset-0 object-cover opacity-70"
+          className="w-full h-full absolute z-0 inset-0 object-cover opacity-70"
           alt=""
         />
         <div data-aos="fade-up" className="wrapper w-full">
           <img
             src={BannerMobile}
             alt=""
-            className="block z-30 w-full relative mt-[32px]"
+            className="block z-10 w-full relative mt-[32px]"
           />
           {/* <img
             src={mobilePng}
@@ -100,7 +100,7 @@ const HomePage = () => {
           <div className="text-center">
             <h2
               data-aos="zoom-in"
-              className="text-[62px] sm:text-[18rem] leading-none font-extrabold tracking-tighter gradient-text"
+              className="text-[70px] sm:text-[18rem] leading-none font-extrabold tracking-tighter gradient-text"
             >
               SERVICES
             </h2>
@@ -139,7 +139,7 @@ const HomePage = () => {
         <div className="wrapper py-[2rem]">
           <h2
             data-aos="zoom-in"
-            className="text-[62px] sm:text-[18rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text"
+            className="text-[70px] sm:text-[18rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text"
           >
             WHY US?
           </h2>
