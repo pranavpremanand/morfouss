@@ -1,19 +1,43 @@
-import React from "react";
-import mobilePng from "../../assets/images/figma-home/mobile-png.png";
-import transparentLogo from "../../assets/images/logo/transparent-mask-logo.png";
-import logo from "../../assets/images/logo/mask-logo.png";
+import React, { useRef } from "react";
+import mobilePng from "../../../assets/images/figma-home/mobile-png.png";
+import transparentLogo from "../../../assets/images/logo/transparent-mask-logo.png";
+import logo from "../../../assets/images/logo/mask-logo.png";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
-import img1 from "../../assets/images/figma-home/triangle shapes.png";
-import { allServices } from "../../constant";
-import GetInTouch from "../../componets/common/GetInTouch";
-import blur1 from "../../assets/images/figma-home/blur-1.png";
-import blur2 from "../../assets/images/figma-home/blur-2.png";
-import blur3 from "../../assets/images/figma-home/blur-3.png";
-// import { ReactComponent as BannerMobile } from "../../assets/images/figma-home/banner-mobile.svg";
-import BannerMobile from "../../assets/images/figma-home/banner-mobile.png";
+import GetInTouch from "../../../componets/common/GetInTouch";
+import blur1 from "../../../assets/images/figma-home/blur-1.png";
+import blur2 from "../../../assets/images/figma-home/blur-2.png";
+import blur3 from "../../../assets/images/figma-home/blur-3.png";
+import BannerMobile from "../../../assets/images/figma-home/banner-mobile.png";
+import Services from "./components/Services";
+import vector1 from "../../../assets/images/figma-home/Vector1.png";
+import vector2 from "../../../assets/images/figma-home/Vector2.png";
+import vector3 from "../../../assets/images/figma-home/Vector3.png";
+import vector4 from "../../../assets/images/figma-home/Vector4.png";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HomePage = () => {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  const containerRef = useRef();
+
+  useGSAP(() => {
+    gsap.from(".vector-image", {
+      y: 200,
+      opacity: 0,
+      duration: 4,
+      stagger: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 70%",
+        end: "top 30%",
+        scrub: 1,
+      },
+    });
+  }, []);
   return (
     <div className="bg-black">
       <section className="flex flex-col w-screen relative">
@@ -31,7 +55,7 @@ const HomePage = () => {
             className="text-[29px] sm:text-[7.6rem] ml-[-0.3rem] leading-[0.9] md:-mt-5"
           >
             <span className="gradient-stroke-text text-black">Dreams</span>{" "}
-            <span className="gradient-stroke-text text-white">
+            <span className="gradient-stroke-text text-white font-extralight">
               Through Tech
             </span>
           </h3>
@@ -41,21 +65,20 @@ const HomePage = () => {
           className="w-full h-full absolute z-0 inset-0 object-cover opacity-70"
           alt=""
         />
-        <div data-aos="fade-up" className="wrapper w-full">
-          <img
-            src={BannerMobile}
-            alt=""
-            className="block z-10 w-full relative mt-[32px]"
-          />
-          {/* <img
-            src={mobilePng}
-            alt=""
-            className="sm:hidden block z-30 relative mt-[32px] w-full object-contain"
-          /> */}
-          {/* <BannerMobile className="z-30 relative w-full mt-[32px]" /> */}
+        <div
+          data-aos="fade-up"
+          className="wrapper overflow-hidden mt-[32px] w-full h-full lg:h-[80vh]"
+        >
+          <div className="bg-black h-full">
+            <img
+              src={BannerMobile}
+              alt=""
+              className="block z-10 w-full lg:w-4/6 relative object-cover h-full mx-auto"
+            />
+          </div>
         </div>
       </section>
-      <section className="bg-white flex items-center min-h-[70vh] py-[50px] sm:py-[5rem] relative z-20">
+      <section className="bg-white flex items-center min-h-screen py-[50px] sm:py-[5rem] relative z-20">
         <div className="wrapper relative h-full w-full">
           <img
             src={transparentLogo}
@@ -95,51 +118,12 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="relative z-20 text-white bg-black">
-        <div className="wrapper flex flex-col py-[50px] sm:pb-[3rem]">
-          <div className="text-center">
-            <h2
-              data-aos="zoom-in"
-              className="text-[70px] sm:text-[18rem] leading-none font-extrabold tracking-tighter gradient-text"
-            >
-              SERVICES
-            </h2>
-            <h3 data-aos="fade-up" className="heading-3">
-              Advanced and Highly Reliable Performance
-            </h3>
-            <p data-aos="fade-up" className="mt-[12px] lg:mt-8 desc">
-              Our services are designed to provide advanced and highly reliable
-              performance.
-            </p>
-          </div>
-          <div className="mt-[15px] sm:mt-[32px] grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
-            {allServices.map((item, index) => (
-              <div
-                data-aos="fade-up"
-                key={item.id}
-                className="group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/9]"
-              >
-                <div className="h-0 w-0 bottom-0 left-0 rounded-tr-full group-hover:rounded-none group-hover:h-full group-hover:w-full absolute bg-gradient-box transition-all duration-300 ease-linear">
-                  <img src="/background.png" className="h-[200%] w-[200%] object-cover" alt="" />
-                </div>
-                <div className="relative p-[16px] z-10 h-full flex flex-col justify-between gap-[20px]">
-                  <h4 className="text-[19px] sm:text-[24px] lg:text-2xl font-bold">
-                    {item.title}
-                  </h4>
-                  <p className="desc lg:opacity-0 group-hover:opacity-100">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Services />
       <section className="relative z-10 text-white bg-black pb-[50px] xl:pb-0">
         <div className="wrapper py-[2rem]">
           <h2
             data-aos="zoom-in"
-            className="text-[70px] sm:text-[18rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text"
+            className="text-[70px] sm:text-[18rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text4"
           >
             WHY US?
           </h2>
@@ -149,14 +133,18 @@ const HomePage = () => {
               className="flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16 z-20"
             >
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[7rem]">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">Expertise</h4>
+                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
+                  Expertise
+                </h4>
                 <p className="font-light desc">
                   Our team of experts has extensive experience in delivering
                   innovative solutions that drive business success.
                 </p>
               </div>
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:translate-x-[15rem]">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">Innovation</h4>
+                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
+                  Innovation
+                </h4>
                 <p className="font-light desc">
                   We are committed to staying at the forefront of technology and
                   continuously innovating to provide the best solutions for our
@@ -168,28 +156,25 @@ const HomePage = () => {
               data-aos="fade-up"
               className="z-10 aspect-[4/3] lg:min-h-[30rem] h-full overflow-hidden flex items-center justify-center relative p-[1rem]"
             >
-              {/* <img
-                src="/background.png"
-                className="w-full h-full absolute z-10 inset-0 object-cover"
-                alt=""
-              /> */}
               <img
                 src={mobilePng}
                 className="object-contain w-full h-full lg:scale-[1.2] z-10"
                 alt=""
               />
             </div>
-              <img
-                src={blur3}
-                className="-z-10 h-[85%] lg:h-[72%] left-1/2 top-2/3 -translate-x-1/2 -translate-y-[68%] lg:-translate-y-[55%] absolute object-contain"
-                alt=""
-              />
+            <img
+              src={blur3}
+              className="-z-10 h-[85%] lg:h-[72%] left-1/2 top-2/3 -translate-x-1/2 -translate-y-[68%] lg:-translate-y-[55%] absolute object-contain"
+              alt=""
+            />
             <div
               data-aos="fade-up"
               className="z-20 flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16"
             >
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[-7rem]">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">Reliability</h4>
+                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
+                  Reliability
+                </h4>
                 <p className="font-light desc">
                   Our solutions are designed to be reliable and scalable,
                   ensuring that your business operations run smoothly and
@@ -197,7 +182,9 @@ const HomePage = () => {
                 </p>
               </div>
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem]">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">Support</h4>
+                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
+                  Support
+                </h4>
                 <p className="font-light desc">
                   We provide ongoing support to ensure that our solutions
                   continue to meet your business needs and help you achieve your
@@ -222,7 +209,9 @@ const HomePage = () => {
               scrollSpyOnce
               duration={3}
             />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">Years of Experience</p>
+            <p className="font-light text-[16px] lg:text-[1.1rem]">
+              Years of Experience
+            </p>
           </div>
           <div className="text-center space-y-2">
             <CountUp
@@ -233,7 +222,9 @@ const HomePage = () => {
               scrollSpyOnce
               duration={3}
             />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">Projects Completed</p>
+            <p className="font-light text-[16px] lg:text-[1.1rem]">
+              Projects Completed
+            </p>
           </div>
           <div className="text-center space-y-2">
             <CountUp
@@ -244,7 +235,9 @@ const HomePage = () => {
               scrollSpyOnce
               duration={3}
             />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">Tech Experts</p>
+            <p className="font-light text-[16px] lg:text-[1.1rem]">
+              Tech Experts
+            </p>
           </div>
           <div className="text-center space-y-2">
             <CountUp
@@ -255,14 +248,19 @@ const HomePage = () => {
               scrollSpyOnce
               duration={3}
             />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">Happy Clients</p>
+            <p className="font-light text-[16px] lg:text-[1.1rem]">
+              Happy Clients
+            </p>
           </div>
         </div>
       </div>
       <section className="relative z-20 bg-white">
-        <div className="lg:max-w-6xl wrapper lg:mx-auto flex min-h-[60vh] py-[35px] lg:pt-[5rem] lg:pb-0 relative h-full w-full">
-          <div className="flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[30px] lg:gap-7">
-            <div data-aos="fade-up" className="space-y-[20px] md:space-y-10">
+        <div className="lg:max-w-6xl wrapper lg:mx-auto flex py-[35px] lg:pt-[5rem] lg:pb-0 relative h-full w-full">
+          <div className="min-h-[60vh] flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[30px] lg:gap-7">
+            <div
+              data-aos="fade-up"
+              className="lg:pb-[5rem] flex flex-col justify-center space-y-[20px] md:space-y-10"
+            >
               <h3 className="heading-2 uppercase">
                 Transforming Ideas into Digital Realities
               </h3>
@@ -280,12 +278,28 @@ const HomePage = () => {
               data-aos="fade-up"
               className="flex flex-col h-full w-full justify-end items-end"
             >
-              <img
-                loading="lazy"
-                src={img1}
-                className="object-contain aspect-square w-full"
-                alt=""
-              />
+              <div ref={containerRef} className="relative h-full w-full">
+                <img
+                  src={vector1}
+                  alt=""
+                  className="vector-image absolute left-0 bottom-0 h-full w-full z-[4] object-contain"
+                />
+                <img
+                  src={vector2}
+                  alt=""
+                  className="vector-image absolute left-[2rem] bottom-0 h-full w-full z-[3] object-contain"
+                />
+                <img
+                  src={vector3}
+                  alt=""
+                  className="vector-image absolute left-[4rem] bottom-0 h-full w-full z-[2] object-contain"
+                />
+                <img
+                  src={vector4}
+                  alt=""
+                  className="vector-image absolute left-[6rem] bottom-0 h-full w-full z-[1] object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>

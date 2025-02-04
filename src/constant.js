@@ -22,8 +22,7 @@ import aboutUsGridImg4 from "./assets/images/aboutus-png4.png";
 import aboutUsGridImg5 from "./assets/images/aboutus-png5.png";
 
 import { lazy } from "react";
-const HomePage = lazy(() => import("./pages/website/HomePage"));
-// const Home = lazy(() => import("./pages/website/Home"));
+const Home = lazy(() => import("./pages/website/Home/Home"));
 const Services = lazy(() => import("./pages/website/Services"));
 const ContactUs = lazy(() => import("./pages/website/ContactUs"));
 const AboutUs = lazy(() => import("./pages/website/AboutUs"));
@@ -66,7 +65,7 @@ export const routes = [
   {
     name: "Home",
     path: "/",
-    component: <HomePage />,
+    component: <Home />,
   },
   // {
   //   name: "Home",
@@ -235,6 +234,48 @@ export const allServices = [
     desc: "We provide cutting-edge blockchain development services that revolutionize the decentralized operation, security, and transparency of your company's operations. Discover a new era of reliability and innovation with our comprehensive blockchain solutions.",
     detailContent:
       "At Morfouss, we provide cutting-edge blockchain development services that revolutionize the decentralized operation, security, and transparency of your company's operations. Our expertise includes developing secure smart contracts, cutting-edge decentralized apps, and bespoke cryptocurrency solutions—all meticulously crafted to enable your company to fully leverage the groundbreaking possibilities of blockchain technology. Using this cutting-edge technology, we bring your company at the forefront of the digital economy by boosting operational efficiency, bolstering security, and cultivating stakeholder confidence. Discover a new era of reliability and innovation with our comprehensive blockchain solutions, designed to address the specific challenges and possibilities faced by your industry.",
+  },
+  {
+    id: 7,
+    title: "AI & Data",
+    desc: "Harness the power of artificial intelligence and data to drive innovation and efficiency in your business. Our AI and data solutions are designed to provide actionable insights and automate complex processes.",
+    detailContent:
+      "Harness the power of artificial intelligence and data to drive innovation and efficiency in your business. Our AI and data solutions are designed to provide actionable insights and automate complex processes. From machine learning models to predictive analytics, we help you unlock the full potential of your data, enabling smarter decision-making and a competitive edge in your industry.",
+  },
+  {
+    id: 8,
+    title: "Product Engineering",
+    desc: "Transform your ideas into reality with our comprehensive product engineering services. We specialize in designing, developing, and delivering high-quality products that meet the needs of your customers.",
+    detailContent:
+      "Transform your ideas into reality with our comprehensive product engineering services. We specialize in designing, developing, and delivering high-quality products that meet the needs of your customers. Our end-to-end product engineering approach ensures that every aspect of your product, from concept to deployment, is meticulously planned and executed to achieve optimal performance and user satisfaction.",
+  },
+  {
+    id: 9,
+    title: "IT Consulting & Strategy",
+    desc: "Optimize your IT infrastructure and align it with your business goals through our expert IT consulting and strategy services. We help you navigate the complexities of technology to achieve sustainable growth.",
+    detailContent:
+      "Optimize your IT infrastructure and align it with your business goals through our expert IT consulting and strategy services. We help you navigate the complexities of technology to achieve sustainable growth. Our team of experienced consultants works closely with you to develop tailored strategies that enhance operational efficiency, reduce costs, and drive innovation across your organization.",
+  },
+  {
+    id: 10,
+    title: "UI/UX Design",
+    desc: "Create exceptional user experiences with our UI/UX design services. We focus on designing intuitive and visually appealing interfaces that enhance user engagement and satisfaction.",
+    detailContent:
+      "Create exceptional user experiences with our UI/UX design services. We focus on designing intuitive and visually appealing interfaces that enhance user engagement and satisfaction. Our design process is centered around understanding user behavior and preferences, ensuring that every interaction with your product is seamless and enjoyable. From wireframes to prototypes, we deliver designs that not only look great but also perform exceptionally well.",
+  },
+  {
+    id: 11,
+    title: "Cloud Services",
+    desc: "Leverage the power of cloud computing to scale your business and improve operational efficiency. Our cloud services provide flexible, secure, and scalable solutions tailored to your needs.",
+    detailContent:
+      "Leverage the power of cloud computing to scale your business and improve operational efficiency. Our cloud services provide flexible, secure, and scalable solutions tailored to your needs. Whether you're looking to migrate to the cloud, optimize your existing cloud infrastructure, or develop cloud-native applications, our team of experts is here to help you every step of the way.",
+  },
+  {
+    id: 12,
+    title: "Enterprise Solutions",
+    desc: "Empower your business with our enterprise solutions designed to streamline operations, enhance productivity, and drive growth. We offer customized solutions that address the unique challenges of large organizations.",
+    detailContent:
+      "Empower your business with our enterprise solutions designed to streamline operations, enhance productivity, and drive growth. We offer customized solutions that address the unique challenges of large organizations. From enterprise resource planning (ERP) to customer relationship management (CRM), our solutions are designed to integrate seamlessly with your existing systems, providing you with the tools you need to succeed in a competitive marketplace.",
   },
 ];
 

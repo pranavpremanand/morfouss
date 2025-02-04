@@ -15,19 +15,19 @@ const WebsiteHeader = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Update isAtTop state
       setIsAtTop(currentScrollY === 0);
-      
+
       // Show header when scrolling up or at the top
       if (currentScrollY < lastScrollY || currentScrollY < 50) {
         setIsVisible(true);
-      } 
+      }
       // Hide header when scrolling down
       else if (currentScrollY > lastScrollY) {
         setIsVisible(false);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
@@ -43,13 +43,13 @@ const WebsiteHeader = () => {
   };
 
   return (
-    <div 
+    <div
       className={`py-6 border-white/20 fixed top-0 w-full z-50 text-white transition-all duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      } ${!isAtTop ? 'bg-black/20 backdrop-blur-[1px]' : ''}`}
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } ${!isAtTop ? "bg-black/50 backdrop-blur-md" : ""}`}
     >
-      <div className="wrapper flex justify-between items-center gap-10">
-        <div className="flex justify-between items-center gap-20 w-full pl-[1rem]">
+      <div className="wrapper pl-1 flex justify-between items-center gap-10 w-full">
+        <div className="flex justify-between items-center gap-20 w-full">
           <Link to="/">
             <img
               src={logoImg}
@@ -64,42 +64,16 @@ const WebsiteHeader = () => {
                 key={path}
                 className={`${
                   pathname === `${path}` && "link-text-box-active"
-                } link-text-box overflow-hidden transition-all duration-300`}
+                } link-text-box transition-all duration-300 overflow-auto min-w-[4.5rem] rounded-full flex justify-center`}
               >
-                <div className="px-2 py-1 h-full w-full rounded-full text-sm">
+                <div className="py-2 px-2 rounded-full text-center text-sm">
                   {name}
                 </div>
               </Link>
             ))}
           </div>
         </div>
-        <Drawer
-          open={isOpen}
-          onClose={toggleDrawer}
-          direction="right"
-          className="py-4 px-10 z-10"
-        >
-          <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-white text-[35px]"
-            >
-              <IoMdClose />
-            </button>
-          </div>
-          <div className="flex flex-col gap-6">
-            {routes.map(({ name, path }) => (
-              <Link
-                onClick={() => setIsOpen(false)}
-                key={path}
-                className="text-[30px] text-white font-medium transition-colors duration-300 link"
-                to={path}
-              >
-                {name}
-              </Link>
-            ))}
-          </div>
-        </Drawer>
+
         <div
           className="block lg:hidden justify-self-end"
           onClick={toggleDrawer}
@@ -113,6 +87,33 @@ const WebsiteHeader = () => {
           />
         </div>
       </div>
+      <Drawer
+        open={isOpen}
+        onClose={toggleDrawer}
+        direction="right"
+        className="py-4 px-10 z-10"
+      >
+        <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-white text-[35px]"
+          >
+            <IoMdClose />
+          </button>
+        </div>
+        <div className="flex flex-col gap-6">
+          {routes.map(({ name, path }) => (
+            <Link
+              onClick={() => setIsOpen(false)}
+              key={path}
+              className="text-[30px] text-white font-medium transition-colors duration-300 link"
+              to={path}
+            >
+              {name}
+            </Link>
+          ))}
+        </div>
+      </Drawer>
     </div>
   );
 };
