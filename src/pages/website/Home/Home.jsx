@@ -52,7 +52,7 @@ const HomePage = () => {
           </h1>
           <h3
             data-aos="zoom-in"
-            className="text-[29px] sm:text-[7.6rem] ml-[-0.3rem] leading-[0.9] md:-mt-11"
+            className="text-[29px] sm:text-[7.7rem] ml-[-0.3rem] leading-[0.9] md:-mt-11"
           >
             <span className="gradient-stroke-text text-black">Dreams</span>{" "}
             <span className="gradient-stroke-text text-white font-extralight">
