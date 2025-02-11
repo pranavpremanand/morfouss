@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
-import { companyDetails, logoImg, routes } from "../../constant";
+import { companyDetails, LogoImg, routes } from "../../constant";
 import { Link } from "react-router-dom";
 
 const WebsiteFooter = () => {
@@ -10,7 +10,7 @@ const WebsiteFooter = () => {
       <div className="wrapper text-white">
         <div className="flex md:flex-row flex-col md:items-center justify-between gap-[27px] md:gap-10">
           <div className="flex flex-col md:items-center gap-3">
-            <img src={logoImg} className="w-[15rem] min-w-[185px] object-contain" alt="" />
+            <img src={LogoImg} className="w-[15rem] min-w-[185px] object-contain" alt="" />
             {/* <p className="desc md:max-w-[15rem] text-sm text-center">
               We have rapidly grown into a trusted partner for organizations
               seeking digital transformation, enhanced operational efficiency.

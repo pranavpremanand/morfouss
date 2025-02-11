@@ -1,4 +1,4 @@
-import logoImg from "./assets/images/logo/logo.png";
+import { ReactComponent as LogoImg } from "./assets/images/logo/logo.svg";
 import whyChooseUsIcon1 from "./assets/images/ph_target-light.png";
 import whyChooseUsIcon2 from "./assets/images/mage_light-bulb.png";
 import whyChooseUsIcon3 from "./assets/images/tdesign_user-talk.png";
@@ -28,7 +28,7 @@ const ContactUs = lazy(() => import("./pages/website/ContactUs"));
 const AboutUs = lazy(() => import("./pages/website/AboutUs"));
 
 export {
-  logoImg,
+  LogoImg,
   whyChooseUsPng,
   whyChooseUsIcon1,
   whyChooseUsIcon2,
@@ -67,11 +67,6 @@ export const routes = [
     path: "/",
     component: <Home />,
   },
-  // {
-  //   name: "Home",
-  //   path: "/",
-  //   component: <Home />,
-  // },
   {
     name: "Services",
     path: "/services",
@@ -82,13 +77,13 @@ export const routes = [
     path: "/about-us",
     component: <AboutUs />,
   },
-  // {
-  //   name: "Blogs",
-  //   path: "#",
-  //   component: '',
-  // },
   {
-    name: "Contact Us",
+    name: "Blogs",
+    path: "#",
+    component: "",
+  },
+  {
+    name: "Contact",
     path: "/contact-us",
     component: <ContactUs />,
   },
@@ -194,53 +189,35 @@ export const appDevelopmentServices = [
 // all services
 export const allServices = [
   {
-    id: 1,
-    title: "Web Development",
-    desc: "We provide full-stack web development services, that involve back-end infrastructure and front-end user interfaces. Our area of expertise is developing safe, scalable, and reliable online applications that work flawlessly across all platforms.",
-    detailContent:
-      "We provide full-stack web development services, that involve back-end infrastructure and front-end user interfaces. Our area of expertise is developing safe, scalable, and reliable online applications that work flawlessly across all platforms. Our artificial intelligence (AI) enhanced web solutions guarantee optimal speed, user engagement, and security, no matter any kind of website—corporate, e-commerce, or sophisticated web application.",
-  },
-  {
-    id: 2,
-    title: "App Development",
-    desc: "We specialize in developing mobile applications that incorporate cutting-edge artificial intelligence into all facets of the user experience, exceeding conventional functionality. Our solutions can enhance the exposure of your brand by leveraging AI capabilities.",
-    detailContent:
-      "At Morfouss, we specialize in developing mobile applications that incorporate cutting-edge artificial intelligence into all facets of the user experience, exceeding conventional functionality. Whether for iOS or Android, our innovative strategy produces user-friendly, high-performing apps that are meticulously designed to fulfil the distinctive requirements of your company. We emphasize the consumer's experience initially, ensuring that the apps we develop not only retain users intrigued but also streamline workflows and maximize performance. Each application we develop is a potent tool intended to improve productivity and foster greater engagement, encouraging your company to thrive in a world that is getting more and more mobile-focused. Our solutions can adapt in real-time, offering personalized experiences that interact with customers and enhance the exposure of your brand by leveraging AI capabilities.",
-  },
-  {
-    id: 3,
-    title: "Game Development",
-    desc: "We deploy cutting-edge artificial intelligence (AI) to develop games that re-invent the gaming experience. Our dedicated team of experts uses the finest and most recent advances in artificial intelligence to transform innovative concepts into captivating, immersive worlds.",
-    detailContent:
-      "At Morfouss, we deploy cutting-edge artificial intelligence (AI) to develop games that re-invent the gaming experience. Our dedicated team of experts uses the finest and most recent advances in artificial intelligence to transform innovative concepts into captivating, immersive worlds. From initial ideation to the meticulous design and seamless launch, we employ innovative AI technology to generate immersive gaming experiences that resonate with players on multiple levels. Our cutting-edge solutions enable developers to build dynamic gaming environments that adapt to player actions and interactions in an innovative manner, ensuring unparalleled engagement and virtually limitless creative possibilities. We boast the technical expertise and creative vision to execute your unique concept, whether it's a light-hearted mobile game that delights users during downtime or a vast, multi-layered multiplayer universe that fosters involvement and competitiveness.",
-  },
-  {
-    id: 4,
-    title: "Chatbot Development",
-    desc: "Use the disruptive potential of artificial intelligence to rethink how your company interacts with clients. At Morfouss, we specialize in developing sophisticated chatbots that provide excellent and seamlessly automating tedious tasks.",
-    detailContent:
-      "Use the disruptive potential of artificial intelligence to rethink how your company interacts with clients. At Morfouss, we specialize in developing sophisticated chatbots that provide excellent, significantly boosting customer satisfaction and seamlessly automating tedious tasks. Our intelligent chatbots are designed to offer tailored, human-like interactions that enhance consumer satisfaction and improve operational efficiency. This allows your company to focus on what truly matters and fostering lasting relationships and accomplishing strategic objectives. By leveraging our cutting-edge technologies, you may reduce operating expenses and optimize resources while ensuring your clients feel valued and engaged at all times.",
-  },
-  {
-    id: 5,
-    title: "Data Analytics",
-    desc: "With the guidance of our cutting-edge AI-powered data analytics services, unleash the full potential of your data. At Morfouss, we enable companies to acquire valuable insights, automate workflows, and make accurate, data-driven decisions that stimulate innovation and creativity.",
-    detailContent:
-      "With the guidance of our cutting-edge AI-powered data analytics services, unleash the full potential of your data. At Morfouss, we enable companies to acquire valuable insights, automate workflows, and make accurate, data-driven decisions that stimulate innovation and creativity. With the support of our sophisticated analytics capabilities, you will be able to identify new trends, comprehend consumer behavior in tremendous detail, and forecast future performance with precision. We ensure that your company leads the way in a rapidly evolving, data-centric world and remains competitive by turning complex data into actionable intelligence. With the assistance of our expertise, you may leverage data to propel your company's growth and accomplish unparalleled achievement.",
-  },
-  {
-    id: 6,
-    title: "Blockchain Development",
-    desc: "We provide cutting-edge blockchain development services that revolutionize the decentralized operation, security, and transparency of your company's operations. Discover a new era of reliability and innovation with our comprehensive blockchain solutions.",
-    detailContent:
-      "At Morfouss, we provide cutting-edge blockchain development services that revolutionize the decentralized operation, security, and transparency of your company's operations. Our expertise includes developing secure smart contracts, cutting-edge decentralized apps, and bespoke cryptocurrency solutions—all meticulously crafted to enable your company to fully leverage the groundbreaking possibilities of blockchain technology. Using this cutting-edge technology, we bring your company at the forefront of the digital economy by boosting operational efficiency, bolstering security, and cultivating stakeholder confidence. Discover a new era of reliability and innovation with our comprehensive blockchain solutions, designed to address the specific challenges and possibilities faced by your industry.",
-  },
-  {
     id: 7,
     title: "AI & Data",
     desc: "Harness the power of artificial intelligence and data to drive innovation and efficiency in your business. Our AI and data solutions are designed to provide actionable insights and automate complex processes.",
     detailContent:
       "Harness the power of artificial intelligence and data to drive innovation and efficiency in your business. Our AI and data solutions are designed to provide actionable insights and automate complex processes. From machine learning models to predictive analytics, we help you unlock the full potential of your data, enabling smarter decision-making and a competitive edge in your industry.",
+    html: `<div class="wrapper">
+  <div class="text-center mb-2">
+    <h2 class="heading-2 !leading-tight">Bringing an Idea to Life</h2>
+    <p class="desc mt-2">Bringing an idea to life requires more than just coding—it takes creativity, precision, and a clear understanding of your business objectives. Our product engineering services are designed to help you develop high-quality, scalable products that meet your customers’ needs and stand the test of time. We work with you throughout the entire product development lifecycle, from conceptualization to deployment, ensuring the end result is a product that not only works but thrives.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Custom Software Development</h3>
+      <p class="desc">We build software solutions that are as unique as your business, designed to deliver exactly what you need in the most efficient way possible.</p>
+    </div>
+    
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Mobile App Development</h3>
+      <p class="desc">Whether it’s iOS or Android, our team creates seamless and intuitive mobile experiences that boost engagement and performance.</p>
+    </div>
+
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Ongoing Maintenance & Support</h3>
+      <p class="desc">We don’t just walk away after launch. We offer continuous support to keep your products secure, functional, and updated with the latest features.</p>
+    </div>
+  </div>
+</div>
+`,
   },
   {
     id: 8,
@@ -248,6 +225,30 @@ export const allServices = [
     desc: "Transform your ideas into reality with our comprehensive product engineering services. We specialize in designing, developing, and delivering high-quality products that meet the needs of your customers.",
     detailContent:
       "Transform your ideas into reality with our comprehensive product engineering services. We specialize in designing, developing, and delivering high-quality products that meet the needs of your customers. Our end-to-end product engineering approach ensures that every aspect of your product, from concept to deployment, is meticulously planned and executed to achieve optimal performance and user satisfaction.",
+    html: `<div class="wrapper">
+  <div class="text-center mb-2">
+    <h2 class="heading-2 !leading-tight">Stay Ahead with IT Consulting & Strategy</h2>
+    <p class="desc mt-2">Technology evolves quickly, and it can be difficult to keep up with the pace of change. Our IT consulting and strategy services help you stay ahead by assessing your current infrastructure and guiding you through technology decisions that align with your long-term goals. We work as an extension of your team, offering the insights and direction you need to optimize your IT landscape, reduce risks, and improve overall efficiency.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Technology Audits & Strategy</h3>
+      <p class="desc">We take a deep dive into your current tech setup and develop a customized strategy that helps streamline operations and reduce unnecessary costs.</p>
+    </div>
+    
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Digital Transformation</h3>
+      <p class="desc">We partner with you to modernize your processes, adopting the latest tech that empowers your team and drives new opportunities.</p>
+    </div>
+
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cybersecurity & Risk Management</h3>
+      <p class="desc">With ever-evolving threats, we prioritize the protection of your data and systems, ensuring your business stays safe from cyber risks.</p>
+    </div>
+  </div>
+</div>
+`,
   },
   {
     id: 9,
@@ -255,6 +256,30 @@ export const allServices = [
     desc: "Optimize your IT infrastructure and align it with your business goals through our expert IT consulting and strategy services. We help you navigate the complexities of technology to achieve sustainable growth.",
     detailContent:
       "Optimize your IT infrastructure and align it with your business goals through our expert IT consulting and strategy services. We help you navigate the complexities of technology to achieve sustainable growth. Our team of experienced consultants works closely with you to develop tailored strategies that enhance operational efficiency, reduce costs, and drive innovation across your organization.",
+    html: `<div class="wrapper">
+  <div class="text-center mb-2">
+    <h2 class="heading-2 !leading-tight">Expert IT Consulting & Strategy</h2>
+    <p class="desc mt-2">Technology evolves quickly, and it can be difficult to keep up with the pace of change. Our IT consulting and strategy services help you stay ahead by assessing your current infrastructure and guiding you through technology decisions that align with your long-term goals. We work as an extension of your team, offering the insights and direction you need to optimize your IT landscape, reduce risks, and improve overall efficiency.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Technology Audits & Strategy</h3>
+      <p class="desc">We take a deep dive into your current tech setup and develop a customized strategy that helps streamline operations and reduce unnecessary costs.</p>
+    </div>
+    
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Digital Transformation</h3>
+      <p class="desc">We partner with you to modernize your processes, adopting the latest tech that empowers your team and drives new opportunities.</p>
+    </div>
+
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cybersecurity & Risk Management</h3>
+      <p class="desc">With ever-evolving threats, we prioritize the protection of your data and systems, ensuring your business stays safe from cyber risks.</p>
+    </div>
+  </div>
+</div>
+`,
   },
   {
     id: 10,
@@ -262,6 +287,30 @@ export const allServices = [
     desc: "Create exceptional user experiences with our UI/UX design services. We focus on designing intuitive and visually appealing interfaces that enhance user engagement and satisfaction.",
     detailContent:
       "Create exceptional user experiences with our UI/UX design services. We focus on designing intuitive and visually appealing interfaces that enhance user engagement and satisfaction. Our design process is centered around understanding user behavior and preferences, ensuring that every interaction with your product is seamless and enjoyable. From wireframes to prototypes, we deliver designs that not only look great but also perform exceptionally well.",
+    html: `<div class="wrapper">
+  <div class="text-center mb-2">
+    <h2 class="heading-2 !leading-tight">Designing Seamless User Experiences</h2>
+    <p class="desc mt-2">User experience is at the heart of every successful digital product. We design intuitive, visually engaging interfaces that not only look great but also create a seamless, enjoyable experience for your users. Our design process is rooted in research, ensuring we understand your audience and craft solutions that meet their needs while also aligning with your business goals.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">User Research & Insights</h3>
+      <p class="desc">We gather data to understand user behavior, enabling us to design interfaces that are not only visually appealing but also highly functional and user-friendly.</p>
+    </div>
+    
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Wireframes & Prototypes</h3>
+      <p class="desc">We create low- and high-fidelity prototypes to give you a clear vision of how your product will look and behave before it’s developed.</p>
+    </div>
+
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">UI/UX Design</h3>
+      <p class="desc">We focus on creating beautiful, responsive designs that are easy to navigate, helping you connect with your users and enhance their overall experience.</p>
+    </div>
+  </div>
+</div>
+`,
   },
   {
     id: 11,
@@ -269,6 +318,30 @@ export const allServices = [
     desc: "Leverage the power of cloud computing to scale your business and improve operational efficiency. Our cloud services provide flexible, secure, and scalable solutions tailored to your needs.",
     detailContent:
       "Leverage the power of cloud computing to scale your business and improve operational efficiency. Our cloud services provide flexible, secure, and scalable solutions tailored to your needs. Whether you're looking to migrate to the cloud, optimize your existing cloud infrastructure, or develop cloud-native applications, our team of experts is here to help you every step of the way.",
+    html: `<div class="wrapper">
+  <div class="text-center mb-2">
+    <h2 class="heading-2 !leading-tight">Unlock the Power of Cloud Computing</h2>
+    <p class="desc mt-2">Cloud computing is a game-changer for businesses, offering flexibility, scalability, and cost-effectiveness. Our cloud services help you migrate to the cloud, optimize your existing infrastructure, and manage your resources more efficiently. We ensure your cloud environment is secure, reliable, and perfectly tailored to your business needs.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cloud Migration</h3>
+      <p class="desc">Moving to the cloud doesn’t have to be a daunting process. We make your transition smooth and seamless, minimizing disruptions and ensuring you get the most out of your new infrastructure.</p>
+    </div>
+    
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cloud Management & Optimization</h3>
+      <p class="desc">We manage your cloud resources, making sure they’re running efficiently, securely, and cost-effectively.</p>
+    </div>
+
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cloud Security & Compliance</h3>
+      <p class="desc">We implement robust security measures that protect your data, while ensuring compliance with industry standards and regulations.</p>
+    </div>
+  </div>
+</div>
+`,
   },
   {
     id: 12,
@@ -276,6 +349,30 @@ export const allServices = [
     desc: "Empower your business with our enterprise solutions designed to streamline operations, enhance productivity, and drive growth. We offer customized solutions that address the unique challenges of large organizations.",
     detailContent:
       "Empower your business with our enterprise solutions designed to streamline operations, enhance productivity, and drive growth. We offer customized solutions that address the unique challenges of large organizations. From enterprise resource planning (ERP) to customer relationship management (CRM), our solutions are designed to integrate seamlessly with your existing systems, providing you with the tools you need to succeed in a competitive marketplace.",
+    html: `<div class="wrapper">
+  <div class="text-center mb-2">
+    <h2 class="heading-2 !leading-tight">Powerful Enterprise Solutions for Growth</h2>
+    <p class="desc mt-2">For large organizations, complexity is inevitable. But with the right enterprise solutions, you can streamline processes, improve collaboration, and make more informed decisions. Our solutions are designed to scale with your business, integrating your operations and making them more efficient while providing powerful insights through data and analytics.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Enterprise Resource Planning (ERP)</h3>
+      <p class="desc">We help you integrate and streamline core business functions such as finance, HR, and operations, making your organization more agile and efficient.</p>
+    </div>
+    
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Customer Relationship Management (CRM)</h3>
+      <p class="desc">Our CRM solutions help you build stronger relationships with your customers by improving communication, tracking interactions, and personalizing their experience.</p>
+    </div>
+
+    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Business Intelligence & Analytics</h3>
+      <p class="desc">We provide you with the tools to make data-driven decisions, offering powerful insights into your business performance, customer behavior, and market trends.</p>
+    </div>
+  </div>
+</div>
+`,
   },
 ];
 

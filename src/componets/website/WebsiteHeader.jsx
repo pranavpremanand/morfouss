@@ -2,8 +2,9 @@ import Drawer from "react-modern-drawer";
 import { Divide as Hamburger } from "hamburger-react";
 import { IoMdClose } from "react-icons/io";
 import React, { useState, useEffect } from "react";
-import { logoImg, routes } from "../../constant";
+import { LogoImg, routes } from "../../constant";
 import { Link, useLocation } from "react-router-dom";
+import bg from "../../assets/images/figma-home/header.png";
 
 const WebsiteHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,78 +44,81 @@ const WebsiteHeader = () => {
   };
 
   return (
-    <div
-      className={`py-6 border-white/20 fixed top-0 w-full z-50 text-white transition-all duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${!isAtTop ? "bg-black/50 backdrop-blur-md" : ""}`}
-    >
-      <div className="wrapper pl-1 flex justify-between items-center gap-10 w-full">
-        <div className="flex justify-between items-center gap-20 w-full">
-          <Link to="/">
-            <img
-              src={logoImg}
-              className="w-[12.5rem] min-w-[165px]"
-              alt="logo"
+    <>
+      <div
+        className={`py-6 border-white/20 fixed left-0 top-0 w-full z-[50] text-white transition-all duration-300 bg-cover bg-left ${
+          isVisible ? "translate-y-0" : "-translate-y-0"
+        }`}
+        style={
+          isAtTop
+            ? { backgroundImage: "none" }
+            : { backgroundImage: `url(${bg})` }
+        }
+      >
+        <div className="wrapper pl-1 flex justify-between items-center gap-10 w-full">
+          <div className="flex justify-between items-center gap-20 w-full">
+            <Link to="/">
+              <LogoImg className="w-[12.5rem] min-w-[165px]" />
+            </Link>
+            <div className="lg:flex items-center gap-[2.01rem] hidden">
+              {routes.map(({ name, path }) => (
+                <Link
+                  to={`${path}`}
+                  key={path}
+                  className={`${
+                    pathname === `${path}` && "link-text-box-active"
+                  } link-text-box transition-all duration-300 overflow-auto min-w-[4.5rem] rounded-full flex justify-center`}
+                >
+                  <div className="py-2 px-4 rounded-full text-center text-base">
+                    {name}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div
+            className="block lg:hidden justify-self-end"
+            onClick={toggleDrawer}
+          >
+            <Hamburger
+              color="white"
+              size="23"
+              toggled={isOpen}
+              rounded
+              toggle={setIsOpen}
             />
-          </Link>
-          <div className="lg:flex items-center gap-10 hidden">
+          </div>
+        </div>
+      </div>
+        <Drawer
+          open={isOpen}
+          onClose={toggleDrawer}
+          direction="right"
+          className="py-4 px-10 z-30"
+        >
+          <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-white text-[35px]"
+            >
+              <IoMdClose />
+            </button>
+          </div>
+          <div className="flex flex-col gap-6">
             {routes.map(({ name, path }) => (
               <Link
-                to={`${path}`}
+                onClick={() => setIsOpen(false)}
                 key={path}
-                className={`${
-                  pathname === `${path}` && "link-text-box-active"
-                } link-text-box transition-all duration-300 overflow-auto min-w-[4.5rem] rounded-full flex justify-center`}
+                className="text-[30px] text-white font-medium transition-colors duration-300 link"
+                to={path}
               >
-                <div className="py-2 px-2 rounded-full text-center text-sm">
-                  {name}
-                </div>
+                {name}
               </Link>
             ))}
           </div>
-        </div>
-
-        <div
-          className="block lg:hidden justify-self-end"
-          onClick={toggleDrawer}
-        >
-          <Hamburger
-            color="white"
-            size="23"
-            toggled={isOpen}
-            rounded
-            toggle={setIsOpen}
-          />
-        </div>
-      </div>
-      <Drawer
-        open={isOpen}
-        onClose={toggleDrawer}
-        direction="right"
-        className="py-4 px-10 z-10"
-      >
-        <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-white text-[35px]"
-          >
-            <IoMdClose />
-          </button>
-        </div>
-        <div className="flex flex-col gap-6">
-          {routes.map(({ name, path }) => (
-            <Link
-              onClick={() => setIsOpen(false)}
-              key={path}
-              className="text-[30px] text-white font-medium transition-colors duration-300 link"
-              to={path}
-            >
-              {name}
-            </Link>
-          ))}
-        </div>
-      </Drawer>
-    </div>
+        </Drawer>
+    </>
   );
 };
 

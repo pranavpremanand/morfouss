@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import { Link as ScrollLink } from "react-scroll";
-import { companyDetails, logoImg } from "../../constant";
+import { companyDetails, LogoImg } from "../../constant";
 import { Link } from "react-router-dom";
 
 const LandingFooter = () => {
@@ -11,7 +11,7 @@ const LandingFooter = () => {
       <div className="wrapper text-white">
         <div className="flex md:flex-row flex-col justify-between gap-10">
           <div className="flex flex-col items-center gap-3">
-            <img src={logoImg} className="h-[3rem]" alt="" />
+            <img src={LogoImg} className="h-[3rem]" alt="" />
             <p className="desc md:max-w-[15rem] text-sm text-center">
               We have rapidly grown into a trusted partner for organizations
               seeking digital transformation, enhanced operational efficiency.

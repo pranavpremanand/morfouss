@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import LandingPage from "./pages/landingPages/LandingPage";
@@ -45,6 +45,7 @@ export default function App() {
       />
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
+          <Route path="*" element={<Navigate to="/" />} />
           {/* Website Pages */}
           {routes.map(({ component, name, path }, index) => (
             <Route
@@ -63,14 +64,13 @@ export default function App() {
             path="/thank-you"
             element={
               <>
-
                 <Thankyou />
               </>
             }
           />
 
           {/* Landing Pages */}
-          <Route
+          {/* <Route
             path="/web-development"
             element={
               <>
@@ -89,7 +89,7 @@ export default function App() {
                 <LandingFooter />
               </>
             }
-          />
+          /> */}
         </Routes>
       </Suspense>
     </SpinnerContextProvider>

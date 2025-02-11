@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { companyDetails, logoImg, routes } from "../constant";
+import { companyDetails, LogoImg, routes } from "../constant";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 
 const Thankyou = () => {
@@ -11,7 +11,7 @@ const Thankyou = () => {
           <div className="flex justify-between items-center gap-20 w-full pl-[1rem] lg:pl-0">
             <Link to="/" className="cursor-pointer">
               <img
-                src={logoImg}
+                src={LogoImg}
                 className="h-[3rem] md:h-[3.75rem] scale-125"
                 alt="logo"
               />
@@ -33,7 +33,7 @@ const Thankyou = () => {
         <div className="wrapper text-white">
           <div className="flex md:flex-row flex-col justify-between gap-10">
             <div className="flex flex-col items-center">
-              <img src={logoImg} className="h-[6rem]" alt="" />
+              <img src={LogoImg} className="h-[6rem]" alt="" />
               <p className="desc md:max-w-[15rem] text-sm text-center">
                 We have rapidly grown into a trusted partner for organizations
                 seeking digital transformation, enhanced operational efficiency.

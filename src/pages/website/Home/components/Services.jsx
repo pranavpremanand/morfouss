@@ -1,12 +1,21 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { allServices } from "../../../../constant";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import Drawer from "react-modern-drawer";
+import { IoMdClose } from "react-icons/io";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Services = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState(allServices[0]);
   const titleRef = useRef(null);
+
+  const handleSelectServiceToShowDetail = (service) => {
+    setSelectedService(service);
+    setIsOpen(true);
+  };
 
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -28,7 +37,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="relative z-20 text-white bg-black">
+    <section className="services relative text-white bg-black">
       <div className="wrapper flex flex-col py-[50px] sm:pb-[3rem]">
         <div className="text-center">
           <div className="h-[70px] sm:h-[18rem]">
@@ -52,9 +61,10 @@ const Services = () => {
         <div className="mt-[15px] sm:mt-[32px] grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
           {allServices.map((item) => (
             <div
+              onClick={() => handleSelectServiceToShowDetail(item)}
               data-aos="fade-up"
               key={item.id}
-              className="group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/9]"
+              className="cursor-pointer group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/9]"
             >
               <div className="h-full w-full hidden group-hover:block bottom-0 left-0 rounded-tr-full group-hover:rounded-none absolute bg-gradient-box transition-all duration-300 ease-linear">
                 <img
@@ -63,7 +73,7 @@ const Services = () => {
                   alt=""
                 />
               </div>
-              <div className="relative p-[16px] z-10 h-full flex flex-col justify-between gap-[20px]">
+              <div className="relative p-[16px] z-[1] h-full flex flex-col justify-between gap-[20px]">
                 <h4 className="text-[19px] sm:text-[24px] lg:text-2xl font-bold">
                   {item.title}
                 </h4>
@@ -75,6 +85,28 @@ const Services = () => {
           ))}
         </div>
       </div>
+      <Drawer
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        direction="top"
+        className="py-4 px-10 z-30"
+        lockBackgroundScroll
+      >
+        <div className="flex items-center justify-end pr-[.7rem] py-[.4rem]">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-white text-[35px] lg:text-[2.2rem]"
+          >
+            <IoMdClose />
+          </button>
+        </div>
+        <div className="px-4 flex flex-col gap-6 tex-white pb-[2rem]">
+          <div
+            dangerouslySetInnerHTML={{ __html: selectedService.html }}
+            className="desc whitespace-pre-line"
+          ></div>
+        </div>
+      </Drawer>
     </section>
   );
 };

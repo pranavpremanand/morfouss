@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import React, { useState } from "react";
 import { Link as Scroll } from "react-scroll";
 import { Link } from "react-router-dom";
-import { logoImg } from "../../constant";
+import { LogoImg } from "../../constant";
 
 const options = [
   {
@@ -37,7 +37,7 @@ const LandingHeader = () => {
       <div className="wrapper flex justify-between items-center gap-10">
         <div className="flex justify-between items-center gap-20 w-full pl-[1rem]">
           <Scroll smooth={true} to="banner" className="cursor-pointer">
-            <img src={logoImg} className="h-[1.75rem] sm:h-[2rem]" alt="logo" />
+            <LogoImg className="w-[12.5rem] min-w-[165px]" />
           </Scroll>
           <div className="lg:flex items-center gap-10 hidden">
             {options.map((option) => {

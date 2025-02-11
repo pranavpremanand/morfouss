@@ -43,7 +43,7 @@ const HomePage = () => {
       <section className="flex flex-col w-screen relative">
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
-        <div className="relative z-20 pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
+        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
           <h1
             data-aos="zoom-in"
             className="text-[70px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
@@ -52,7 +52,7 @@ const HomePage = () => {
           </h1>
           <h3
             data-aos="zoom-in"
-            className="text-[29px] sm:text-[7.6rem] ml-[-0.3rem] leading-[0.9] md:-mt-5"
+            className="text-[29px] sm:text-[7.6rem] ml-[-0.3rem] leading-[0.9] md:-mt-11"
           >
             <span className="gradient-stroke-text text-black">Dreams</span>{" "}
             <span className="gradient-stroke-text text-white font-extralight">
@@ -62,7 +62,7 @@ const HomePage = () => {
         </div>
         <img
           src="/noise-texture.svg"
-          className="w-full h-full absolute z-0 inset-0 object-cover opacity-70"
+          className="w-full h-[calc(100%+1rem)] -translate-y-[2rem] absolute z-0 inset-0 object-cover opacity-70"
           alt=""
         />
         <div
@@ -73,12 +73,12 @@ const HomePage = () => {
             <img
               src={BannerMobile}
               alt=""
-              className="block z-10 w-full lg:w-4/6 relative object-cover h-full mx-auto"
+              className="block z-[2] w-full lg:w-4/6 relative object-cover h-full mx-auto"
             />
           </div>
         </div>
       </section>
-      <section className="bg-white flex items-center min-h-screen py-[50px] sm:py-[5rem] relative z-20">
+      <section className="bg-white flex items-center min-h-screen py-[50px] sm:py-[5rem] relative z-[2]">
         <div className="wrapper relative h-full w-full">
           <img
             src={transparentLogo}
@@ -119,7 +119,7 @@ const HomePage = () => {
         </div>
       </section>
       <Services />
-      <section className="relative z-10 text-white bg-black pb-[50px] xl:pb-0">
+      <section className="relative z-[1] text-white bg-black pb-[50px] xl:pb-0">
         <div className="wrapper py-[2rem]">
           <h2
             data-aos="zoom-in"
@@ -130,7 +130,7 @@ const HomePage = () => {
           <div className="mt-[32px] lg:mt-0 grid lg:grid-cols-[auto_50%_auto] items-center">
             <div
               data-aos="fade-up"
-              className="flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16 z-20"
+              className="flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16 z-[2]"
             >
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[7rem]">
                 <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
@@ -154,22 +154,22 @@ const HomePage = () => {
             </div>
             <div
               data-aos="fade-up"
-              className="z-10 aspect-[4/3] lg:min-h-[30rem] h-full overflow-hidden flex items-center justify-center relative p-[1rem]"
+              className="z-[1] aspect-[4/3] lg:min-h-[30rem] h-full overflow-hidden flex items-center justify-center relative p-[1rem]"
             >
               <img
                 src={mobilePng}
-                className="object-contain w-full h-full lg:scale-[1.2] z-10"
+                className="object-contain w-full h-full lg:scale-[1.2] z-[1]"
                 alt=""
               />
             </div>
             <img
               src={blur3}
-              className="-z-10 h-[85%] lg:h-[72%] left-1/2 top-2/3 -translate-x-1/2 -translate-y-[68%] lg:-translate-y-[55%] absolute object-contain"
+              className="-z-[1] h-[85%] lg:h-[72%] left-1/2 top-2/3 -translate-x-1/2 -translate-y-[68%] lg:-translate-y-[55%] absolute object-contain"
               alt=""
             />
             <div
               data-aos="fade-up"
-              className="z-20 flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16"
+              className="z-[2] flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16"
             >
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[-7rem]">
                 <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
@@ -195,7 +195,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <div className="bg-white z-10 relative border-b">
+      <div className="bg-white z-[1] relative border-b">
         <div
           data-aos="fade-up"
           className="wrapper border-black py-[30px] md:py-[35px] grid sm:grid-cols-4 gap-[35px] sm:gap-7"
@@ -254,7 +254,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <section className="relative z-20 bg-white">
+      <section className="relative z-[2] bg-white">
         <div className="lg:max-w-6xl wrapper lg:mx-auto flex py-[35px] lg:pt-[5rem] lg:pb-0 relative h-full w-full">
           <div className="min-h-[60vh] flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[30px] lg:gap-7">
             <div
