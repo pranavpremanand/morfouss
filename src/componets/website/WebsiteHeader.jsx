@@ -60,7 +60,7 @@ const WebsiteHeader = () => {
             <Link to="/">
               <LogoImg className="w-[12.5rem] min-w-[165px]" />
             </Link>
-            <div className="lg:flex items-center gap-[2.01rem] hidden">
+            <div className="lg:flex items-center gap-[2.4rem] hidden">
               {routes.map(({ name, path }) => (
                 <Link
                   to={`${path}`}
