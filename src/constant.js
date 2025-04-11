@@ -26,6 +26,7 @@ const Home = lazy(() => import("./pages/website/Home/Home"));
 const Services = lazy(() => import("./pages/website/Services"));
 const ContactUs = lazy(() => import("./pages/website/ContactUs"));
 const AboutUs = lazy(() => import("./pages/website/AboutUs"));
+const Intro = lazy(() => import("./pages/website/Intro/Intro"));
 
 export {
   LogoImg,
@@ -68,14 +69,14 @@ export const routes = [
     component: <Home />,
   },
   {
+    name: "Intro",
+    path: "/intro",
+    component: <Intro />,
+  },
+  {
     name: "Services",
     path: "/services",
     component: <Services />,
-  },
-  {
-    name: "About Us",
-    path: "/about-us",
-    component: <AboutUs />,
   },
   {
     name: "Blogs",

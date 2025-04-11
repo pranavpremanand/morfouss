@@ -58,7 +58,7 @@ const WebsiteHeader = () => {
         <div className="wrapper pl-1 flex justify-between items-center gap-10 w-full">
           <div className="flex justify-between items-center gap-20 w-full">
             <Link to="/">
-              <LogoImg className="w-[12.5rem] min-w-[165px]" />
+              <LogoImg className="w-[10rem] min-w-[120px] sm:w-[12.5rem] sm:min-w-[165px]" />
             </Link>
             <div className="lg:flex items-center gap-[2.4rem] hidden">
               {routes.map(({ name, path }) => (

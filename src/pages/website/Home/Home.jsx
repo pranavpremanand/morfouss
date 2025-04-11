@@ -16,8 +16,10 @@ import vector3 from "../../../assets/images/figma-home/Vector3.png";
 import vector4 from "../../../assets/images/figma-home/Vector4.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import bannerVid from "../../../assets/videos/banner.mp4";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ReactPlayer from "react-player";
 
 const HomePage = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -70,10 +72,29 @@ const HomePage = () => {
           className="wrapper overflow-hidden mt-[32px] w-full h-full lg:h-[80vh]"
         >
           <div className="bg-black h-full">
-            <img
+            {/* <img
               src={BannerMobile}
               alt=""
               className="block z-[2] w-full lg:w-4/6 relative object-cover h-full mx-auto"
+            /> */}
+            <ReactPlayer
+              className="h-full w-full z-0"
+              url={bannerVid}
+              playing
+              muted
+              loop
+              width="100%"
+              height="100%"
+              pip={false}
+              playsinline={true}
+              config={{
+                file: {
+                  attributes: {
+                    controlsList: "nodownload noplaybackrate",
+                    disablePictureInPicture: true,
+                  },
+                },
+              }}
             />
           </div>
         </div>

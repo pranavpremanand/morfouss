@@ -44,7 +44,7 @@ const Services = () => {
             <h2
               ref={titleRef}
               data-aos="zoom-in"
-              className="text-[70px] sm:text-[18rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden"
+              className="text-[65px] sm:text-[18rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden"
               style={{ height: 0 }} // Initial height set to 0
             >
               SERVICES
