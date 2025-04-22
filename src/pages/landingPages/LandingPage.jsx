@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 import img1 from "../../assets/images/figma-home/triangle shapes.png";
 import { appDevelopmentServices, webDevelopmentServices } from "../../constant";
 import { Link } from "react-scroll";
-import GetInTouch from "../../componets/common/GetInTouch";
+import GetInTouch from "../../components/common/GetInTouch";
 
 const LandingPage = ({ page }) => {
   const isWeb = Boolean(page === "web-development");

@@ -1,57 +1,11 @@
 import { ReactComponent as LogoImg } from "./assets/images/logo/logo.svg";
-import whyChooseUsIcon1 from "./assets/images/ph_target-light.png";
-import whyChooseUsIcon2 from "./assets/images/mage_light-bulb.png";
-import whyChooseUsIcon3 from "./assets/images/tdesign_user-talk.png";
-import whyChooseUsIcon4 from "./assets/images/healthicons_ui-secure-outline.png";
-import whyChooseUsPng from "./assets/images/whychooseus-png.png";
-import faqPng from "./assets/images/faq-character.png";
-import appDevBanner from "./assets/images/app-dev-banner.webp";
-import webDevBanner from "./assets/images/web-landing-banner.webp";
-import webLandingAbout from "./assets/images/web-landing-about1.png";
-import appLandingAbout from "./assets/images/app-landing-about.png";
-import endlessOpportunitiesImg1 from "./assets/images/section-8-img-1.png";
-import endlessOpportunitiesImg2 from "./assets/images/section-8-img-2.png";
-import endlessOpportunitiesImg3 from "./assets/images/section-8-img-3.png";
-import homeBannerVideo from "./assets/videos/home-banner.mp4";
-import defaultBanner from "./assets/images/banner.webp";
-import aboutUsBanner from "./assets/images/about-us-banner.webp";
-import aboutUsGridImg1 from "./assets/images/aboutus-png1.png";
-import aboutUsGridImg2 from "./assets/images/aboutus-png2.png";
-import aboutUsGridImg3 from "./assets/images/aboutus-png3.png";
-import aboutUsGridImg4 from "./assets/images/aboutus-png4.png";
-import aboutUsGridImg5 from "./assets/images/aboutus-png5.png";
 
 import { lazy } from "react";
 const Home = lazy(() => import("./pages/website/Home/Home"));
-const Services = lazy(() => import("./pages/website/Services"));
-const ContactUs = lazy(() => import("./pages/website/ContactUs"));
-const AboutUs = lazy(() => import("./pages/website/AboutUs"));
+const Services = lazy(() => import("./pages/website/Services/Services"));
 const Intro = lazy(() => import("./pages/website/Intro/Intro"));
 
-export {
-  LogoImg,
-  whyChooseUsPng,
-  whyChooseUsIcon1,
-  whyChooseUsIcon2,
-  whyChooseUsIcon3,
-  whyChooseUsIcon4,
-  faqPng,
-  appDevBanner,
-  webDevBanner,
-  webLandingAbout,
-  appLandingAbout,
-  endlessOpportunitiesImg1,
-  endlessOpportunitiesImg2,
-  endlessOpportunitiesImg3,
-  homeBannerVideo,
-  defaultBanner,
-  aboutUsBanner,
-  aboutUsGridImg1,
-  aboutUsGridImg2,
-  aboutUsGridImg3,
-  aboutUsGridImg4,
-  aboutUsGridImg5,
-};
+export { LogoImg };
 
 // company details
 export const companyDetails = {
@@ -86,40 +40,7 @@ export const routes = [
   {
     name: "Contact",
     path: "/contact-us",
-    component: <ContactUs />,
-  },
-];
-
-export const faqs = [
-  {
-    id: 1,
-    question: "What is Web Development?",
-    answer:
-      "Web development refers to the process of creating websites and web applications. It includes tasks such as web design, web development, web programming, and database management.",
-  },
-  {
-    id: 2,
-    question: "What is Web Development?",
-    answer:
-      "Web development refers to the process of creating websites and web applications. It includes tasks such as web design, web development, web programming, and database management.",
-  },
-  {
-    id: 3,
-    question: "What is Web Development?",
-    answer:
-      "Web development refers to the process of creating websites and web applications. It includes tasks such as web design, web development, web programming, and database management.",
-  },
-  {
-    id: 4,
-    question: "What is Web Development?",
-    answer:
-      "Web development refers to the process of creating websites and web applications. It includes tasks such as web design, web development, web programming, and database management.",
-  },
-  {
-    id: 5,
-    question: "What is Web Development?",
-    answer:
-      "Web development refers to the process of creating websites and web applications. It includes tasks such as web design, web development, web programming, and database management.",
+    // component: <ContactUs />,
   },
 ];
 
@@ -377,60 +298,42 @@ export const allServices = [
   },
 ];
 
-// portfolio images (web development)
-export const webPortfolio = [
+// service list page content
+export const serviceListPageContent = [
   {
-    id: 1,
-    img: require("./assets/images/web_projects/1.webp"),
-    title: "FE-Finance",
+    service: "AI & Data",
+    title: "Customizing AI Solutions for Enterprises",
+    desc: "Unite data-driven insights with advanced analytics. Leverage automation and turnkey AI tools and frameworks to revolutionize business performance.",
+    image: require("./assets/images/services page/1.webp"),
   },
   {
-    id: 2,
-    img: require("./assets/images/web_projects/2.webp"),
-    title: "Ocxee",
+    service: "Product Engineering",
+    title: "Crafting Impactful Software Products",
+    desc: "Scale with impact through carefully crafted engineering experiences that follow a human-centric design focused around specific product needs.",
+    image: require("./assets/images/services page/2.webp"),
   },
   {
-    id: 3,
-    img: require("./assets/images/web_projects/3.webp"),
-    title: "Leaderbridge",
+    service: "IT Consulting & Strategy",
+    title: "Elevating Performance with Strategic Business Platforms",
+    desc: "Revamp workflows and eliminate data silos with top-tier solutions and expert consulting in industry leading enterprise platforms.",
+    image: require("./assets/images/services page/3.webp"),
   },
   {
-    id: 4,
-    img: require("./assets/images/web_projects/4.webp"),
-    title: "Gigzio",
+    service: "UI/UX Design",
+    title: "Designing Seamless, Engaging Digital Experiences",
+    desc: "Enhance user interaction with intuitive and aesthetically refined digital products. Our designs prioritize usability and innovation.",
+    image: require("./assets/images/services page/4.webp"),
   },
   {
-    id: 5,
-    img: require("./assets/images/web_projects/5.webp"),
-    title: "FE Group",
+    service: "Cloud Services",
+    title: "Delivering End-to-End Cloud Excellence",
+    desc: "Streamline operations and fortify security with our comprehensive cloud services, ensuring seamless migration and optimization.",
+    image: require("./assets/images/services page/5.webp"),
   },
   {
-    id: 6,
-    img: require("./assets/images/web_projects/6.webp"),
-    title: "V Talkz",
-  },
-];
-
-// portfolio images (app development)
-export const appPortfolio = [
-  {
-    id: 1,
-    img: require("./assets/images/app_projects/1.webp"),
-    title: "PartEx",
-  },
-  {
-    id: 2,
-    img: require("./assets/images/app_projects/2.webp"),
-    title: "Find A Driver",
-  },
-  {
-    id: 3,
-    img: require("./assets/images/app_projects/3.webp"),
-    title: "Artisan Express",
-  },
-  {
-    id: 4,
-    img: require("./assets/images/app_projects/4.webp"),
-    title: "House of Deliverance",
+    service: "Enterprise Solutions",
+    title: "Elevating Performance with Strategic Business Platforms",
+    desc: "Revamp workflows and eliminate data silos with top-tier solutions and expert consulting in industry leading enterprise platforms.",
+    image: require("./assets/images/services page/6.webp"),
   },
 ];

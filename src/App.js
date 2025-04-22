@@ -1,21 +1,20 @@
-import { Link, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import LandingPage from "./pages/landingPages/LandingPage";
-// import { LandingPage } from "./pages/landingPages/LandingPage1";
-import LandingHeader from "./componets/landingPages/LandingHeader";
-import LandingFooter from "./componets/landingPages/LandingFooter";
-import WebsiteHeader from "./componets/website/WebsiteHeader";
-import WebsiteFooter from "./componets/website/WebsiteFooter";
-import { companyDetails, routes } from "./constant";
-import { Suspense } from "react";
-import { LoadingSpinner } from "./componets/common/LoadingSpinner";
+import WebsiteHeader from "./components/website/WebsiteHeader";
+import WebsiteFooter from "./components/website/WebsiteFooter";
+import { routes } from "./constant";
+import { lazy, Suspense } from "react";
+import { LoadingSpinner } from "./components/common/LoadingSpinner";
 import SpinnerContextProvider, {
   LoadingSpinnerContext,
-} from "./componets/SpinnerContext";
+} from "./components/SpinnerContext";
 import { Toaster } from "react-hot-toast";
-import { BsWhatsapp } from "react-icons/bs";
 import Thankyou from "./pages/Thankyou";
+
+const ServiceDetails = lazy(() =>
+  import("./pages/website/ServiceDetails/ServiceDetails")
+);
 
 AOS.init({
   once: true,
@@ -49,10 +48,11 @@ export default function App() {
           {/* Website Pages */}
           {routes.map(({ component, name, path }, index) => (
             <Route
+              key={name}
               path={path}
               element={
                 <>
-                  <WebsiteHeader name={name} />
+                  <WebsiteHeader />
                   {component}
                   <WebsiteFooter />
                 </>
@@ -60,6 +60,16 @@ export default function App() {
             />
           ))}
 
+          <Route
+            path="/services/:service"
+            element={
+              <>
+                <WebsiteHeader />
+                <ServiceDetails />
+                <WebsiteFooter />
+              </>
+            }
+          />
           <Route
             path="/thank-you"
             element={

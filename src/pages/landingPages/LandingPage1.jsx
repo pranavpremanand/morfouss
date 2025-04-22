@@ -6,7 +6,7 @@ import section5Img4 from "../../assets/images/section-5-img-4.png";
 import section5Img5 from "../../assets/images/section-5-img-5.png";
 import section5Img6 from "../../assets/images/section-5-img-6.png";
 import section5Img7 from "../../assets/images/section-5-img-7.png";
-import Contact from "../../componets/common/Contact";
+import Contact from "../../components/common/Contact";
 import {
   appDevBanner,
   appLandingAbout,
@@ -14,13 +14,13 @@ import {
   webLandingAbout,
 } from "../../constant";
 import { Link as ScrollLink } from "react-scroll";
-import WhyChooseUs from "../../componets/common/WhyChooseUs";
-import EndlessOpportunitiesSection from "../../componets/common/EndlessOpportunitiesSection";
-import LandingServices from "../../componets/landingPages/LandingServices";
-import UnlockEfficiency from "../../componets/common/UnlockEfficiency";
-import ContactForm from "../../componets/common/ContactForm";
-import Portfolio from "../../componets/landingPages/Portfolio";
-import BrandLogos from "../../componets/common/BrandLogos";
+import WhyChooseUs from "../../components/common/WhyChooseUs";
+import EndlessOpportunitiesSection from "../../components/common/EndlessOpportunitiesSection";
+import LandingServices from "../../components/landingPages/LandingServices";
+import UnlockEfficiency from "../../components/common/UnlockEfficiency";
+import ContactForm from "../../components/common/ContactForm";
+import Portfolio from "../../components/landingPages/Portfolio";
+import BrandLogos from "../../components/common/BrandLogos";
 
 export const LandingPage = ({ page }) => {
   const isWebDevelopment = Boolean(page === "web-development");

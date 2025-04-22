@@ -1,17 +1,10 @@
 import React, { useRef } from "react";
-import mobilePng from "../../../assets/images/figma-home/mobile-png.png";
 import transparentLogo from "../../../assets/images/logo/transparent-mask-logo.png";
 import logo from "../../../assets/images/logo/mask-logo.png";
 import { Link } from "react-router-dom";
-import CountUp from "react-countup";
-import GetInTouch from "../../../componets/common/GetInTouch";
+import GetInTouch from "../../../components/common/GetInTouch";
 import blur1 from "../../../assets/images/figma-home/blur-1.png";
 import blur2 from "../../../assets/images/figma-home/blur-2.png";
-import blur3 from "../../../assets/images/figma-home/blur-3.png";
-import vector1 from "../../../assets/images/figma-home/Vector1.png";
-import vector2 from "../../../assets/images/figma-home/Vector2.png";
-import vector3 from "../../../assets/images/figma-home/Vector3.png";
-import vector4 from "../../../assets/images/figma-home/Vector4.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,6 +13,13 @@ import whyPartnerWithUsImg from "../../../assets/imgs/partner-with-us.webp";
 import { PiCheck } from "react-icons/pi";
 import ourCoreBlur1 from "../../../assets/imgs/our-core-r.png";
 import ourCoreBlur2 from "../../../assets/imgs/our-core-l.png";
+import { FaStar } from "react-icons/fa";
+
+// highlights icons
+import { ReactComponent as Highlight1 } from "../../../assets/svg/highlights/A Team of Experts.svg";
+import { ReactComponent as Highlight2 } from "../../../assets/svg/highlights/Tailored to You.svg";
+import { ReactComponent as Highlight3 } from "../../../assets/svg/highlights/True Collaboration.svg";
+import { ReactComponent as Highlight4 } from "../../../assets/svg/highlights/End-to-End Support.svg";
 
 const Intro = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -78,7 +78,7 @@ const Intro = () => {
               all sizes, guiding them through their digital transformation and
               delivering tangible, lasting value.
             </p>
-            <div className="flex sm:flex-row flex-col gap-4 mt-5 sm:mt-0">
+            <div className="flex sm:flex-row flex-col gap-4 mt-[20px] sm:mt-0">
               <Link
                 className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-4"
                 to="/services"
@@ -109,11 +109,12 @@ const Intro = () => {
             className="w-[30vw] z-[-1] aspect-square absolute object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             alt=""
           />
-          <div className="flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[20px] lg:gap-7 w-full lg:max-w-6xl lg:mx-auto">
-            <div data-aos="fade-up" className="lg:space-y-7 space-y-[16px]">
+          <div className="flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[20px] lg:gap-7 w-full">
+            <div data-aos="fade-up" className="lg:space-y-7 space-y-[25px]">
               <h3 className="heading-2 uppercase">
                 Why Partner <br /> with Us?
               </h3>
+
               <ul className="space-y-4 list-outside">
                 {[
                   {
@@ -170,8 +171,16 @@ const Intro = () => {
         </div>
       </section>
       <section className="relative z-0 text-white py-[50px] lg:pb-[50px] lg:pt-0">
-        <img src={ourCoreBlur1} alt="" className="absolute right-0 top-1/2 -translate-y-1/2 z-[-1]" />
-        <img src={ourCoreBlur2} alt="" className="absolute left-0 -translate-x-1/3 bottom-0 translate-y-[20%] z-[-1]" />
+        <img
+          src={ourCoreBlur1}
+          alt=""
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-[-1]"
+        />
+        <img
+          src={ourCoreBlur2}
+          alt=""
+          className="absolute left-0 -translate-x-1/3 bottom-0 translate-y-[20%] z-[-1]"
+        />
         <div className="wrapper py-[2rem]">
           <h2
             data-aos="zoom-in"
@@ -185,43 +194,60 @@ const Intro = () => {
             </h3>
           </div>
           <div className="mt-[32px] lg:mt-12 max-w-5xl mx-auto space-y-10">
-            <div className="flex md:flex-row flex-col md:justify-between gap-[30px] md:gap-10">
-              <div className="space-y-2 md:max-w-[20rem] text-center">
-                <h5 className="text-[20px] lg:text-xl font-medium uppercase">Innovation</h5>
+            <div
+              data-aos="fade-up"
+              className="flex md:flex-row flex-col md:justify-between gap-[30px] md:gap-10"
+            >
+              <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
+                <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
+                  Innovation
+                </h5>
                 <p className="desc">
                   We embrace creativity and always look for new ways to solve
                   problems and meet challenges. Innovation drives everything we
                   do.
                 </p>
               </div>
-              <div className="space-y-2 md:max-w-[20rem] text-center">
-                <h5 className="text-[20px] lg:text-xl font-medium uppercase">Integrity</h5>
+              <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1 pb-[30px] md:pb-0">
+                <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
+                  Integrity
+                </h5>
                 <p className="desc">
                   Trust is essential to us. We operate transparently and
                   responsibly, always doing what’s best for our clients.
                 </p>
               </div>
             </div>
-            <div className="flex md:justify-center">
-              <div className="space-y-2 md:max-w-[20rem] text-center">
-                <h5 className="text-[20px] lg:text-xl font-medium uppercase">Collaboration</h5>
+            <div
+              data-aos="fade-up"
+              className="flex md:justify-center pb-[30px] md:pb-0"
+            >
+              <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
+                <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
+                  Collaboration
+                </h5>
                 <p className="desc">
                   We believe the best solutions come from collaboration. We work
                   closely with you, involving you in the process at every stage.
                 </p>
               </div>
             </div>
-            <div className="flex md:flex-row flex-col md:justify-between gap-10">
-              <div className="space-y-2 md:max-w-[20rem] text-center">
-                <h5 className="text-[20px] lg:text-xl font-medium uppercase">Excellence</h5>
+            <div
+              data-aos="fade-up"
+              className="flex md:flex-row flex-col md:justify-between gap-[30px] md:gap-10"
+            >
+              <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
+                <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
+                  Excellence
+                </h5>
                 <p className="desc">
                   We are committed to high standards. From initial concept to
                   final delivery, we put in the work to ensure every project is
                   executed flawlessly.
                 </p>
               </div>
-              <div className="space-y-2 md:max-w-[20rem] text-center">
-                <h5 className="text-[20px] lg:text-xl font-medium uppercase">
+              <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
+                <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
                   Sustainability
                 </h5>
                 <p className="desc">
@@ -234,110 +260,136 @@ const Intro = () => {
           </div>
         </div>
       </section>
-      <div className="bg-white z-[1] relative border-b">
-        <div
-          data-aos="fade-up"
-          className="wrapper border-black py-[30px] md:py-[35px] grid sm:grid-cols-4 gap-[35px] sm:gap-7"
-        >
-          <div className="text-center space-y-2">
-            <CountUp
-              end={3}
-              className="heading-1 text-[#88F4FF]"
-              suffix="+"
-              enableScrollSpy
-              scrollSpyOnce
-              duration={3}
+      <section className="bg-white z-[1] relative">
+        <div className="wrapper py-[3rem] relative">
+          <h2
+            data-aos="zoom-in"
+            className="uppercase text-[53px] sm:text-[12.2rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_30%] via-[#239CE4] to-[#87F3FF_80%]"
+          >
+            Testimonials
+          </h2>
+          <div
+            data-aos="fade-up"
+            className="grid md:grid-cols-3 gap-5 mt-16 relative"
+          >
+            <img
+              src={logo}
+              className="w-[85vw] md:w-[45vw] z-[-1] aspect-square absolute object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              alt=""
             />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">
-              Years of Experience
-            </p>
+            {[
+              {
+                title: "Tech Solutions That Actually Work",
+                desc: `"As our business grew, so did the complexity of our IT needs.
+                  Their team helped us develop a comprehensive IT strategy,
+                  making our systems more efficient and secure."`,
+                name: "- John T., CEO",
+                style: "md:col-span-1",
+              },
+              {
+                title: "Redefining Our Digital Presence",
+                desc: `"Working with Morphus completely transformed the way we engage with our customers. From the first meeting, it was clear they understood our brand and vision. They designed a website and app that are not only visually stunning but also incredibly easy to use. Since the launch, we’ve seen a significant increase in engagement and positive feedback from our users. Their focus on creating a user-friendly experience was exactly what we needed."`,
+                name: "- Sarah W., Marketing Director",
+                style: "md:col-span-2",
+              },
+              {
+                title: "Helping Us Grow Smarter",
+                desc: `"We were struggling with where to take our business next, and that’s where Morfouss came in. They helped us refine our digital strategy, giving us clear direction for moving forward. Their market analysis and advice on brand positioning were eye-opening, and we saw immediate results in customer acquisition. Their strategic insights played a huge role in accelerating our growth."`,
+                name: "- Emily L., Chief Strategy Officer",
+                style: "md:col-span-1",
+              },
+              {
+                title: "A Truly Collaborative Approach",
+                desc: `"What sets Morfouss apart is their genuine commitment to collaboration. They took the time to understand our goals and challenges and worked with us every step of the way.  They created an experience that feels effortless for our users, and we’ve received great feedback since launch."`,
+                name: "- Mark H., Product Manager",
+                style: "md:col-span-1",
+              },
+              {
+                title: "Seeing Clear ROI from Their Expertise",
+                desc: `"We knew we needed a fresh approach to both our website and IT systems, but we weren’t sure where to start. We not only delivered outstanding UI/UX design but also revamped our internal IT processes. The combination of smart design and strategic tech upgrades gave us a significant return on investment. We couldn’t be happier with the results."`,
+                name: "- Robert D., Chief Operating Officer",
+                style: "md:col-span-1",
+              },
+            ].map(({ title, desc, name, style }) => (
+              <div
+                key={title}
+                className={`p-[2px] group bg-black/80 hover:bg-gradient-to-tr from-[#8d49cd] via-[#239CE4] to-[#87F3FF] rounded-xl transition-all duration-300 hover:translate-y-1 ${style}`}
+              >
+                <div className="h-full group-hover:bg-black text-white p-6 space-y-2 rounded-xl">
+                  <p className="font-semibold lg:text-base text-[17px]">
+                    {title}
+                  </p>
+                  <p className="text-[15px] sm:text-[16px] lg:text-base">
+                    {desc}
+                  </p>
+                  <p className="font-semibold lg:text-base text-[17px]">
+                    {name}
+                  </p>
+                  <div className="flex gap-1 pt-5 text-[17px] lg:text-base">
+                    <FaStar color="#FFB700" />
+                    <FaStar color="#FFB700" />
+                    <FaStar color="#FFB700" />
+                    <FaStar color="#FFB700" />
+                    <FaStar color="#FFB700" />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="text-center space-y-2">
-            <CountUp
-              end={150}
-              className="heading-1 text-[#239CE4]"
-              suffix="+"
-              enableScrollSpy
-              scrollSpyOnce
-              duration={3}
-            />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">
-              Projects Completed
-            </p>
-          </div>
-          <div className="text-center space-y-2">
-            <CountUp
-              end={25}
-              className="heading-1 text-[#615BD8]"
-              suffix="+"
-              enableScrollSpy
-              scrollSpyOnce
-              duration={3}
-            />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">
-              Tech Experts
-            </p>
-          </div>
-          <div className="text-center space-y-2">
-            <CountUp
-              end={130}
-              className="heading-1 text-[#7338AD]"
-              suffix="+"
-              enableScrollSpy
-              scrollSpyOnce
-              duration={3}
-            />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">
-              Happy Clients
-            </p>
-          </div>
-        </div>
-      </div>
-      <section className="relative z-[2] bg-white">
-        <div className="lg:max-w-6xl wrapper lg:mx-auto flex py-[35px] lg:pt-[5rem] lg:pb-0 relative h-full w-full">
-          <div className="min-h-[60vh] flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[30px] lg:gap-7">
-            <div
-              data-aos="fade-up"
-              className="lg:pb-[5rem] flex flex-col justify-center space-y-[20px] md:space-y-10"
-            >
-              <h3 className="heading-2 uppercase">
-                Transforming Ideas into Digital Realities
-              </h3>
-              <p className="desc">
-                Helping businesses not only survive but flourish in today’s
-                competitive digital landscape.
-              </p>
-              <div className="flex gap-5">
+          <div className="wrapper pt-[7rem] pb-[3rem] relative">
+            <div className="grid lg:grid-cols-[40%_1fr] gap-[30px] lg:gap-10">
+              <div data-aos="fade-up" className="space-y-7">
+                <p className="py-[3px] px-4 desc !font-medium tracking-wide w-fit shadow-inner shadow-black/70 rounded-full uppercase">
+                  highlights
+                </p>
+                <h3 className="heading-2 uppercase">
+                  Our Process: Insight-Driven, User-Centered, Results-Focused
+                </h3>
+                <p className="desc">
+                  Our process is straightforward but thorough. We begin by
+                  listening - understanding your business, your users, and your
+                  goals.
+                </p>
                 <Link to="/contact-us" className="black-btn">
-                  Contact Us
+                  Get Started
                 </Link>
               </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              className="flex flex-col h-full w-full justify-end items-end"
-            >
-              <div ref={containerRef} className="relative h-full w-full">
-                <img
-                  src={vector1}
-                  alt=""
-                  className="vector-image absolute left-0 bottom-0 h-full w-full z-[4] object-contain"
-                />
-                <img
-                  src={vector2}
-                  alt=""
-                  className="vector-image absolute left-[2rem] bottom-0 h-full w-full z-[3] object-contain"
-                />
-                <img
-                  src={vector3}
-                  alt=""
-                  className="vector-image absolute left-[4rem] bottom-0 h-full w-full z-[2] object-contain"
-                />
-                <img
-                  src={vector4}
-                  alt=""
-                  className="vector-image absolute left-[6rem] bottom-0 h-full w-full z-[1] object-contain"
-                />
+              <div data-aos="fade-up" className="grid sm:grid-cols-2 gap-5">
+                {[
+                  {
+                    title: "A Team of Experts",
+                    icon: <Highlight1 className="w-[25px] lg:w-8" />,
+                    desc: "With backgrounds in design, development, and consulting, we bring a wide range of expertise to every project, making sure we find the best solution for you.",
+                  },
+                  {
+                    title: "Tailored to You",
+                    icon: <Highlight2 className="w-[25px] lg:w-8" />,
+                    desc: "We believe every business is unique, and that’s why we create solutions that are custom-built for your needs.",
+                  },
+                  {
+                    title: "True Collaboration",
+                    icon: <Highlight3 className="w-[25px] lg:w-8" />,
+                    desc: "From start to finish, we collaborate closely with you, keeping communication open and ensuring that your vision stays front and center throughout the process.",
+                  },
+                  {
+                    title: "End-to-End Support",
+                    icon: <Highlight4 className="w-[25px] lg:w-8" />,
+                    desc: "Whether you're just starting or looking to optimize an existing solution, we provide fullservice support.",
+                  },
+                ].map(({ title, icon, desc }) => (
+                  <div
+                    key={title}
+                    className="group flex flex-col gap-4 p-[20px] lg:p-6 bg-black hover:bg-gradient-to-tr from-[#7338AC_40%] via-[#239CE4] to-[#87F3FF] rounded-2xl transition-all duration-300 hover:translate-y-1 text-white"
+                  >
+                    {icon}
+                    <h5 className="text-[20px] lg:text-xl font-medium">
+                      {title}
+                    </h5>
+                    <p className="desc w-[90%] group-hover:w-[98%] transition-all duration-300">
+                      {desc}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

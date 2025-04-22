@@ -4,7 +4,7 @@ import transparentLogo from "../../../assets/images/logo/transparent-mask-logo.p
 import logo from "../../../assets/images/logo/mask-logo.png";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
-import GetInTouch from "../../../componets/common/GetInTouch";
+import GetInTouch from "../../../components/common/GetInTouch";
 import blur1 from "../../../assets/images/figma-home/blur-1.png";
 import blur2 from "../../../assets/images/figma-home/blur-2.png";
 import blur3 from "../../../assets/images/figma-home/blur-3.png";
