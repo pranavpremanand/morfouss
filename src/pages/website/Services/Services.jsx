@@ -1,35 +1,14 @@
-import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import GetInTouch from "../../../components/common/GetInTouch";
 import blur1 from "../../../assets/images/figma-home/blur-1.png";
 import blur2 from "../../../assets/images/figma-home/blur-2.png";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ReactPlayer from "react-player";
 import bannerVid from "../../../assets/videos/services-banner.mp4";
-import { serviceListPageContent } from "../../../constant";
+import { serviceListPageContent } from "../../../content/constant";
 import { RiArrowRightUpLine } from "react-icons/ri";
+import { createUrlParam } from "../../../utils/helper";
 
 const Services = () => {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
-  const containerRef = useRef();
-
-  useGSAP(() => {
-    gsap.from(".vector-image", {
-      y: 200,
-      opacity: 0,
-      duration: 4,
-      stagger: 4,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 70%",
-        end: "top 30%",
-        scrub: 1,
-      },
-    });
-  }, []);
   return (
     <div className="bg-black">
       <section className="flex flex-col w-screen relative">
@@ -38,9 +17,9 @@ const Services = () => {
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[70px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
+            className="text-[62px] sm:text-[20.4rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
           >
-            INTRO
+            services
           </h1>
         </div>
         <img
@@ -112,7 +91,9 @@ const Services = () => {
               className="absolute w-full h-full object-cover z-0 opacity-0 group-hover:opacity-70"
               alt=""
             />
-            <h3 className="text-[26px] md:text-[30px] lg:text-5xl font-semibold !leading-tight relative z-[2]">{item.service}</h3>
+            <h3 className="text-[26px] md:text-[30px] lg:text-5xl font-semibold !leading-tight relative z-[2]">
+              {item.service}
+            </h3>
             <img
               alt={item.title}
               src={item.image}
@@ -121,10 +102,10 @@ const Services = () => {
             <div className="space-y-10 relative z-[2]">
               <div className="space-y-2">
                 <p className="desc !font-medium lg:!text-xl">{item.title}</p>
-                <p className="desc">{item.desc}</p>
+                <p className="desc group-hover:block hidden">{item.desc}</p>
               </div>
               <div className="relative z-[2]">
-                <Link to="/">
+                <a href={`/services/${createUrlParam(item.service)}`}>
                   <svg width="50" height="50" viewBox="0 0 50 50">
                     <defs>
                       <linearGradient
@@ -149,7 +130,7 @@ const Services = () => {
                       className="group-hover:block text-white hidden"
                     />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

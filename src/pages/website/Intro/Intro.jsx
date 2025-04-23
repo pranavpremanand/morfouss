@@ -1,13 +1,9 @@
-import React, { useRef } from "react";
 import transparentLogo from "../../../assets/images/logo/transparent-mask-logo.png";
 import logo from "../../../assets/images/logo/mask-logo.png";
 import { Link } from "react-router-dom";
 import GetInTouch from "../../../components/common/GetInTouch";
 import blur1 from "../../../assets/images/figma-home/blur-1.png";
 import blur2 from "../../../assets/images/figma-home/blur-2.png";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import heroImg from "../../../assets/imgs/into-hero.webp";
 import whyPartnerWithUsImg from "../../../assets/imgs/partner-with-us.webp";
 import { PiCheck } from "react-icons/pi";
@@ -22,24 +18,6 @@ import { ReactComponent as Highlight3 } from "../../../assets/svg/highlights/Tru
 import { ReactComponent as Highlight4 } from "../../../assets/svg/highlights/End-to-End Support.svg";
 
 const Intro = () => {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
-  const containerRef = useRef();
-
-  useGSAP(() => {
-    gsap.from(".vector-image", {
-      y: 200,
-      opacity: 0,
-      duration: 4,
-      stagger: 4,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 70%",
-        end: "top 30%",
-        scrub: 1,
-      },
-    });
-  }, []);
   return (
     <div className="bg-black">
       <section className="flex flex-col w-screen relative">

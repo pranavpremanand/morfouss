@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import WebsiteHeader from "./components/website/WebsiteHeader";
 import WebsiteFooter from "./components/website/WebsiteFooter";
-import { routes } from "./constant";
+import { routes } from "./content/constant";
 import { lazy, Suspense } from "react";
 import { LoadingSpinner } from "./components/common/LoadingSpinner";
 import SpinnerContextProvider, {
@@ -14,6 +14,9 @@ import Thankyou from "./pages/Thankyou";
 
 const ServiceDetails = lazy(() =>
   import("./pages/website/ServiceDetails/ServiceDetails")
+);
+const BlogDetails = lazy(() =>
+  import("./pages/website/BlogDetails/BlogDetails")
 );
 
 AOS.init({
@@ -61,11 +64,22 @@ export default function App() {
           ))}
 
           <Route
-            path="/services/:service"
+            path="/services/:title"
             element={
               <>
                 <WebsiteHeader />
                 <ServiceDetails />
+                <WebsiteFooter />
+              </>
+            }
+          />
+
+          <Route
+            path="/insights/:id"
+            element={
+              <>
+                <WebsiteHeader />
+                <BlogDetails />
                 <WebsiteFooter />
               </>
             }

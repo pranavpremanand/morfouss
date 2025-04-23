@@ -2,9 +2,10 @@ import Drawer from "react-modern-drawer";
 import { Divide as Hamburger } from "hamburger-react";
 import { IoMdClose } from "react-icons/io";
 import React, { useState, useEffect } from "react";
-import { LogoImg, routes } from "../../constant";
+import { LogoImg, routes } from "../../content/constant";
 import { Link, useLocation } from "react-router-dom";
 import bg from "../../assets/images/figma-home/header.png";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const WebsiteHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ const WebsiteHeader = () => {
   return (
     <>
       <div
-        className={`py-6 border-white/20 fixed left-0 top-0 w-full z-[50] text-white transition-all duration-300 bg-cover bg-left ${
+        className={`py-[16px] lg:py-6 border-white/20 fixed left-0 top-0 w-full z-[50] text-white transition-all duration-300 bg-cover bg-left ${
           isVisible ? "translate-y-0" : "-translate-y-0"
         }`}
         style={
@@ -58,7 +59,7 @@ const WebsiteHeader = () => {
         <div className="wrapper pl-1 flex justify-between items-center gap-10 w-full">
           <div className="flex justify-between items-center gap-20 w-full">
             <Link to="/">
-              <LogoImg className="w-[10rem] min-w-[120px] sm:w-[12.5rem] sm:min-w-[165px]" />
+              <LogoImg className="w-[12rem] min-w-[120px] sm:w-[12.5rem] sm:min-w-[165px] lg:h-[2.6rem]" />
             </Link>
             <div className="lg:flex items-center gap-[2.4rem] hidden">
               {routes.map(({ name, path }) => (
@@ -78,12 +79,12 @@ const WebsiteHeader = () => {
           </div>
 
           <div
-            className="block lg:hidden justify-self-end"
+            className="block lg:hidden justify-self-end translate-x-10"
             onClick={toggleDrawer}
           >
-            <Hamburger
+            <RxHamburgerMenu
               color="white"
-              size="23"
+              size={30}
               toggled={isOpen}
               rounded
               toggle={setIsOpen}
@@ -91,33 +92,33 @@ const WebsiteHeader = () => {
           </div>
         </div>
       </div>
-        <Drawer
-          open={isOpen}
-          onClose={toggleDrawer}
-          direction="right"
-          className="py-4 px-10 z-30"
-        >
-          <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
-            <button
+      <Drawer
+        open={isOpen}
+        onClose={toggleDrawer}
+        direction="right"
+        className="py-4 px-10 z-30"
+      >
+        <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-white text-[35px]"
+          >
+            <IoMdClose />
+          </button>
+        </div>
+        <div className="flex flex-col gap-6">
+          {routes.map(({ name, path }) => (
+            <Link
               onClick={() => setIsOpen(false)}
-              className="text-white text-[35px]"
+              key={path}
+              className="text-[30px] text-white font-medium transition-colors duration-300 link"
+              to={path}
             >
-              <IoMdClose />
-            </button>
-          </div>
-          <div className="flex flex-col gap-6">
-            {routes.map(({ name, path }) => (
-              <Link
-                onClick={() => setIsOpen(false)}
-                key={path}
-                className="text-[30px] text-white font-medium transition-colors duration-300 link"
-                to={path}
-              >
-                {name}
-              </Link>
-            ))}
-          </div>
-        </Drawer>
+              {name}
+            </Link>
+          ))}
+        </div>
+      </Drawer>
     </>
   );
 };

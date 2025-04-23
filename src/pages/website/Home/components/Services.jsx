@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { allServices } from "../../../../constant";
+import { allServices } from "../../../../content/constant";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Drawer from "react-modern-drawer";

@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
-import { companyDetails, LogoImg, routes } from "../../constant";
+import { companyDetails, LogoImg, routes } from "../../content/constant";
 import { Link } from "react-router-dom";
 
 const WebsiteFooter = () => {
