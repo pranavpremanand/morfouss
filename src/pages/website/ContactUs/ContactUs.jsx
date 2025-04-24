@@ -18,9 +18,9 @@ const ContactUs = () => {
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[65px] sm:text-[19rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.6rem] uppercase"
+            className="text-[46px] sm:text-[15rem] sm:tracking-[-1.8rem] leading-none font-extrabold inline-block sm:ml-[-2rem] uppercase"
           >
-            contact
+            contact <span className="ml-5"> us</span>
           </h1>
         </div>
         <img
@@ -30,7 +30,7 @@ const ContactUs = () => {
         />
         <form
           data-aos="fade-up"
-          className="wrapper space-y-[24px] lg:space-y-6 md:!max-w-5xl bg-white text-black desc !px-[32px] !py-[32px] lg:!px-24 lg:!py-8 z-[1] rounded-3xl mt-[32px] w-full"
+          className="wrapper space-y-[24px] lg:space-y-6 md:!max-w-5xl bg-white text-black desc !px-[24px] !py-[32px] lg:!px-24 lg:!py-8 z-[1] rounded-3xl mt-[32px] w-full"
         >
           <div className="grid lg:grid-cols-2 gap-6">
             <div className="space-y-[3px]">

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import mobilePng from "../../../assets/images/figma-home/mobile-png.png";
 import transparentLogo from "../../../assets/images/logo/transparent-mask-logo.png";
 import logo from "../../../assets/images/logo/mask-logo.png";
@@ -8,7 +8,6 @@ import GetInTouch from "../../../components/common/GetInTouch";
 import blur1 from "../../../assets/images/figma-home/blur-1.png";
 import blur2 from "../../../assets/images/figma-home/blur-2.png";
 import blur3 from "../../../assets/images/figma-home/blur-3.png";
-import BannerMobile from "../../../assets/images/figma-home/banner-mobile.png";
 import Services from "./components/Services";
 import vector1 from "../../../assets/images/figma-home/Vector1.png";
 import vector2 from "../../../assets/images/figma-home/Vector2.png";
@@ -24,6 +23,9 @@ import ReactPlayer from "react-player";
 const HomePage = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
   const containerRef = useRef();
+  const playerRef = useRef(null);
+  const videoContainerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useGSAP(() => {
     gsap.from(".vector-image", {
@@ -40,6 +42,41 @@ const HomePage = () => {
       },
     });
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            if (playerRef.current) {
+              // Seek to 0 to start from beginning
+              playerRef.current.seekTo(0);
+              playerRef.current.getInternalPlayer().play();
+            }
+          } else {
+            setIsVisible(false);
+            if (playerRef.current) {
+              playerRef.current.getInternalPlayer().pause();
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Adjust based on when you want video to trigger
+      }
+    );
+
+    if (videoContainerRef.current) {
+      observer.observe(videoContainerRef.current);
+    }
+
+    return () => {
+      if (videoContainerRef.current) {
+        observer.unobserve(videoContainerRef.current);
+      }
+    };
+  }, []);
   return (
     <div className="bg-black">
       <section className="flex flex-col w-screen relative">
@@ -48,13 +85,13 @@ const HomePage = () => {
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[68px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
+            className="text-[68px] sm:text-[20.9rem] sm:sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
           >
             UNLEASH
           </h1>
           <h3
             data-aos="zoom-in"
-            className="text-[29px] sm:text-[7.7rem] ml-[-0.3rem] leading-[0.9] md:-mt-11"
+            className="text-[27px] sm:text-[7.7rem] ml-[-0.3rem] leading-[0.9] md:-mt-11"
           >
             <span className="gradient-stroke-text text-black">Dreams</span>{" "}
             <span className="gradient-stroke-text text-white font-extralight">
@@ -68,19 +105,16 @@ const HomePage = () => {
           alt=""
         />
         <div
+          ref={videoContainerRef}
           data-aos="fade-up"
           className="wrapper overflow-hidden mt-[32px] w-full h-full lg:h-[80vh]"
         >
           <div className="bg-black h-full">
-            {/* <img
-              src={BannerMobile}
-              alt=""
-              className="block z-[2] w-full lg:w-4/6 relative object-cover h-full mx-auto"
-            /> */}
             <ReactPlayer
+              ref={playerRef}
               className="h-full w-full z-0"
               url={bannerVid}
-              playing
+              playing={isVisible}
               muted
               loop
               width="100%"
@@ -113,11 +147,14 @@ const HomePage = () => {
                 At Morfouss, we are dedicated to revolutionizing company
                 processes through the seamless integration of cutting-edge
                 technologies and artificial intelligence (AI) into every aspect
-                of a business. We provide them with the tools they need to
-                thrive in today's rapidly evolving digital landscape.
+                of a business. <br /> <br /> We provide them with the tools they
+                need to thrive in today's rapidly evolving digital landscape.
               </p>
               <div className="flex gap-5">
-                <Link to="/contact-us" className="white-btn hover:shadow-black">
+                <Link
+                  to="/contact-us"
+                  className="bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none"
+                >
                   Contact Us
                 </Link>
                 <Link
@@ -153,8 +190,8 @@ const HomePage = () => {
               data-aos="fade-up"
               className="flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16 z-[2]"
             >
-              <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[7rem]">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
+              <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[7rem] group">
+                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
                   Expertise
                 </h4>
                 <p className="font-light desc">
@@ -162,8 +199,8 @@ const HomePage = () => {
                   innovative solutions that drive business success.
                 </p>
               </div>
-              <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:translate-x-[15rem]">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
+              <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:translate-x-[15rem] group">
+                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
                   Innovation
                 </h4>
                 <p className="font-light desc">
@@ -192,8 +229,8 @@ const HomePage = () => {
               data-aos="fade-up"
               className="z-[2] flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16"
             >
-              <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[-7rem]">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
+              <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[-7rem] group">
+                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
                   Reliability
                 </h4>
                 <p className="font-light desc">
@@ -202,8 +239,8 @@ const HomePage = () => {
                   efficiently.
                 </p>
               </div>
-              <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem]">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase">
+              <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] group">
+                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
                   Support
                 </h4>
                 <p className="font-light desc">
@@ -290,7 +327,7 @@ const HomePage = () => {
                 competitive digital landscape.
               </p>
               <div className="flex gap-5">
-                <Link to="/contact-us" className="black-btn">
+                <Link to="/contact-us" className="bg-black text-white border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none">
                   Contact Us
                 </Link>
               </div>

@@ -61,7 +61,7 @@ const WebsiteHeader = () => {
             <Link to="/">
               <LogoImg className="w-[12rem] min-w-[120px] sm:w-[12.5rem] sm:min-w-[165px] lg:h-[2.6rem]" />
             </Link>
-            <div className="lg:flex items-center gap-[2.4rem] hidden">
+            <div className="lg:flex items-center gap-[2.5rem] hidden">
               {routes.map(({ name, path }) => (
                 <Link
                   to={`${path}`}
@@ -70,7 +70,7 @@ const WebsiteHeader = () => {
                     pathname === `${path}` && "link-text-box-active"
                   } link-text-box transition-all duration-300 overflow-auto min-w-[4.5rem] rounded-full flex justify-center`}
                 >
-                  <div className="py-2 px-4 rounded-full text-center text-base">
+                  <div className="py-2 px-5 rounded-full text-center text-base">
                     {name}
                   </div>
                 </Link>

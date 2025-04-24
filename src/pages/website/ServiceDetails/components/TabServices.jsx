@@ -15,7 +15,7 @@ const TabServices = ({ service }) => {
   };
 
   return (
-    <div className="wrapper grid lg:grid-cols-[30%,1fr] gap-[30px] lg:gap-10">
+    <div className="wrapper py-[3rem] grid lg:grid-cols-[30%,1fr] gap-[30px] lg:gap-10">
       <div className="flex flex-col justify-between gap-[20px] lg:gap-10">
         <div className="space-y-2">
           {service.services.map((item, idx) => (
@@ -41,7 +41,7 @@ const TabServices = ({ service }) => {
             </button>
           ))}
         </div>
-        <div className="p-[2px] bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] rounded-xl">
+        <div className="p-[2px] bg-gradient-to-tr to-[#87F3FF_60%] via-[#239CE4_30%] from-[#7338AC_20%] rounded-xl">
           <div className="bg-white text-black p-[24px] rounded-xl flex flex-col gap-[12px]">
             <h6 className="text-[20px] lg:text-xl font-bold uppercase text-center">
               {service.getStarted.heading}

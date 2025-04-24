@@ -17,7 +17,7 @@ const Services = () => {
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[62px] sm:text-[20.4rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+            className="text-[65px] sm:text-[20.4rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
           >
             services
           </h1>
@@ -85,7 +85,7 @@ const Services = () => {
 
       <section className="py-16 bg-white text-black relative z-[1]">
         {serviceListPageContent.map((item) => (
-          <div className="relative px-10 py-[30px] md:py-5 group border border-black rounded-xl grid md:grid-cols-3 items-center gap-[30px] lg:gap-10 hover:bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] transition-all duration-300 hover:text-white">
+          <div className="relative px-[25px] lg:px-10 py-[30px] md:py-5 group border border-black rounded-xl grid md:grid-cols-3 items-center gap-[30px] lg:gap-10 hover:bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] transition-all duration-300 hover:text-white">
             <img
               src="/noise-texture.svg"
               className="absolute w-full h-full object-cover z-0 opacity-0 group-hover:opacity-70"

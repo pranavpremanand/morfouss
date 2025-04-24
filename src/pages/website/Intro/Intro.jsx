@@ -26,7 +26,7 @@ const Intro = () => {
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[70px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
+            className="text-[75px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
           >
             INTRO
           </h1>
@@ -56,15 +56,15 @@ const Intro = () => {
               all sizes, guiding them through their digital transformation and
               delivering tangible, lasting value.
             </p>
-            <div className="flex sm:flex-row flex-col gap-4 mt-[20px] sm:mt-0">
+            <div className="flex sm:flex-row flex-col gap-[20px] lg:gap-4 mt-[20px] sm:mt-0">
               <Link
-                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-4"
+                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-4 hover:shadow-[#7338AC]"
                 to="/services"
               >
                 Our Services
               </Link>
               <Link
-                className="black-btn !font-normal border !border-white !px-4 !w-full sm:!w-fit mt-10 sm:mt-0"
+                className="black-btn"
                 to="/contact-us"
               >
                 Contact Us
@@ -124,7 +124,7 @@ const Intro = () => {
                 ))}
               </ul>
               <div className="flex gap-5">
-                <Link to="/contact-us" className="white-btn hover:shadow-black">
+                <Link to="/contact-us" className="bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none">
                   Contact Us
                 </Link>
                 <Link
@@ -239,16 +239,16 @@ const Intro = () => {
         </div>
       </section>
       <section className="bg-white z-[1] relative">
-        <div className="wrapper py-[3rem] relative">
+        <div className="wrapper py-[40px] lg:py-[3rem] relative">
           <h2
             data-aos="zoom-in"
-            className="uppercase text-[53px] sm:text-[12.2rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_30%] via-[#239CE4] to-[#87F3FF_80%]"
+            className="uppercase text-[43px] sm:text-[12.2rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_30%] via-[#239CE4] to-[#87F3FF_80%]"
           >
             Testimonials
           </h2>
           <div
             data-aos="fade-up"
-            className="grid md:grid-cols-3 gap-5 mt-16 relative"
+            className="grid md:grid-cols-3 gap-[16px] lg:gap-5 mt-16 relative"
           >
             <img
               src={logo}
@@ -293,7 +293,7 @@ const Intro = () => {
                 key={title}
                 className={`p-[2px] group bg-black/80 hover:bg-gradient-to-tr from-[#8d49cd] via-[#239CE4] to-[#87F3FF] rounded-xl transition-all duration-300 hover:translate-y-1 ${style}`}
               >
-                <div className="h-full group-hover:bg-black text-white p-6 space-y-2 rounded-xl">
+                <div className="h-full group-hover:bg-black text-white p-[20px] lg:p-6 space-y-[8px] lg:space-y-2 rounded-xl">
                   <p className="font-semibold lg:text-base text-[17px]">
                     {title}
                   </p>
@@ -314,10 +314,10 @@ const Intro = () => {
               </div>
             ))}
           </div>
-          <div className="wrapper pt-[7rem] pb-[3rem] relative">
+          <div className="wrapper pt-[50px] lg:pt-[7rem] pb-[3rem] relative">
             <div className="grid lg:grid-cols-[40%_1fr] gap-[30px] lg:gap-10">
-              <div data-aos="fade-up" className="space-y-7">
-                <p className="py-[3px] px-4 desc !font-medium tracking-wide w-fit shadow-inner shadow-black/70 rounded-full uppercase">
+              <div data-aos="fade-up" className="space-y-[20px] lg:space-y-7">
+                <p className="py-[4px] px-[16px] lg:px-5 desc !font-medium tracking-wide w-fit shadow-inner shadow-black/70 rounded-full uppercase">
                   highlights
                 </p>
                 <h3 className="heading-2 uppercase">

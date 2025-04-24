@@ -147,29 +147,17 @@ body {
   .desc {
     @apply text-[15px] sm:text-[16px] lg:text-base font-inter font-light;
   }
-  .active-link {
-    @apply text-primary font-semibold;
-  }
-  .primary-btn {
-    @apply text-white cursor-pointer font-light tracking-wide bg-tertiary hover:bg-tertiary/80 text-[14px] lg:text-sm hover:shadow-secondary hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300;
-  }
-  .secondary-btn {
-    @apply text-white cursor-pointer font-light tracking-wide bg-black border border-tertiary hover:bg-tertiary text-[14px] lg:text-sm hover:shadow-white hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300;
-  }
-  .tertiary-btn {
-    @apply text-white cursor-pointer font-light tracking-wide bg-primary border border-primary hover:bg-black text-[14px] lg:text-sm hover:shadow-primary hover:-translate-y-1 shadow-2xl shadow-transparent rounded-[.3rem] px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300;
-  }
   .white-btn {
-    @apply bg-white text-black hover:bg-black hover:text-white border w-fit border-black hover:shadow-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-sm;
+    @apply bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] hover:!border-none;
   }
   .black-btn {
-    @apply bg-black text-white hover:bg-white hover:text-black border w-fit border-black hover:shadow-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-sm;
+    @apply bg-black hover:bg-[#87F3FF] text-white border w-full sm:w-fit border-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:shadow-[#7338AC] from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] hover:!border-none;
   }
   .gradient-btn {
-    @apply bg-gradient-to-tr cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-sm;
+    @apply bg-gradient-to-tr cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem];
   }
   .btn-styles {
-    @apply hover:shadow-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-sm;
+    @apply hover:shadow-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem];
   }
   .rounded-text-box {
     @apply px-[16px] lg:px-4 py-[12px] lg:py-3 rounded-full font-raleway min-w-[10rem] flex justify-center border text-[14px] lg:text-[.9rem] w-fit font-bold;
