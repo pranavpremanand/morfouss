@@ -16,6 +16,7 @@ import vector4 from "../../../assets/images/figma-home/Vector4.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import bannerVid from "../../../assets/videos/banner.mp4";
+import { ReactComponent as LogoClr } from "../../../assets/svg/Logo_Color.svg";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ReactPlayer from "react-player";
@@ -107,9 +108,9 @@ const HomePage = () => {
         <div
           ref={videoContainerRef}
           data-aos="fade-up"
-          className="wrapper overflow-hidden mt-[32px] w-full h-full lg:h-[80vh]"
+          className="wrapper overflow-hidden mt-[32px] pb-[32px] md:pb-[70px] w-full h-full lg:h-[80vh]"
         >
-          <div className="bg-black h-full">
+          <div className="banner-video bg-black h-full">
             <ReactPlayer
               ref={playerRef}
               className="h-full w-full z-0"
@@ -166,12 +167,13 @@ const HomePage = () => {
               </div>
             </div>
             <div data-aos="fade-up" className="flex flex-col">
-              <img
+              {/* <img
                 loading="lazy"
                 src={logo}
                 className="object-contain aspect-square w-[80%] mx-auto"
                 alt=""
-              />
+              /> */}
+              <LogoClr className="object-contain aspect-square w-[80%] h-full mx-auto" />
             </div>
           </div>
         </div>
@@ -327,7 +329,10 @@ const HomePage = () => {
                 competitive digital landscape.
               </p>
               <div className="flex gap-5">
-                <Link to="/contact-us" className="bg-black text-white border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none">
+                <Link
+                  to="/contact-us"
+                  className="bg-black text-white border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none"
+                >
                   Contact Us
                 </Link>
               </div>

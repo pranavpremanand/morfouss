@@ -2,20 +2,13 @@ import React, { useRef, useState } from "react";
 import { allServices } from "../../../../content/constant";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import Drawer from "react-modern-drawer";
-import { IoMdClose } from "react-icons/io";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
+import { createUrlParam } from "../../../../utils/helper";
 
 const Services = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState(allServices[0]);
   const titleRef = useRef(null);
-
-  const handleSelectServiceToShowDetail = (service) => {
-    setSelectedService(service);
-    setIsOpen(true);
-  };
 
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -60,11 +53,11 @@ const Services = () => {
         </div>
         <div className="mt-[15px] sm:mt-[32px] grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
           {allServices.map((item) => (
-            <div
-              onClick={() => handleSelectServiceToShowDetail(item)}
+            <Link
+              to={`/services/${createUrlParam(item.title)}`}
               data-aos="fade-up"
               key={item.id}
-              className="cursor-pointer group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/9]"
+              className="cursor-pointer group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/7]"
             >
               <div className="h-full w-full hidden group-hover:block bottom-0 left-0 rounded-tr-full group-hover:rounded-none absolute bg-gradient-box transition-all duration-300 ease-linear">
                 <img
@@ -81,32 +74,10 @@ const Services = () => {
                   {item.desc}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
-      <Drawer
-        open={isOpen}
-        onClose={() => setIsOpen(false)}
-        direction="top"
-        className="py-4 px-10 z-30"
-        lockBackgroundScroll
-      >
-        <div className="flex items-center justify-end pr-[.7rem] py-[.4rem]">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-white text-[35px] lg:text-[2.2rem]"
-          >
-            <IoMdClose />
-          </button>
-        </div>
-        <div className="px-4 flex flex-col gap-6 tex-white pb-[2rem]">
-          <div
-            dangerouslySetInnerHTML={{ __html: selectedService.html }}
-            className="desc whitespace-pre-line"
-          ></div>
-        </div>
-      </Drawer>
     </section>
   );
 };

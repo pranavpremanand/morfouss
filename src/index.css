@@ -128,6 +128,10 @@ body {
   pointer-events: none;
 }
 
+.banner-video video {
+  @apply aspect-[4/3] md:aspect-auto bg-gradient-to-tr from-[#7338AC] via-[#239CE4] to-[#87F3FF] p-[1.5px] w-full object-cover;
+}
+
 @layer utilities {
   .wrapper {
     /* @apply max-w-[1278px] mx-auto px-[16px] lg:px-4 lg:px-[1. lg:py-35rem]; */
@@ -138,14 +142,14 @@ body {
     @apply text-[44px] md:text-[72px] lg:text-7xl font-bold leading-tight;
   }
   .heading-2 {
-    @apply text-[26px] md:text-[48px] lg:text-5xl font-semibold !leading-tight;
+    @apply text-[26px] md:text-[48px] lg:text-5xl font-bold !leading-tight;
     /* @apply text-[36px] md:text-[48px] font-semibold leading-tight; */
   }
   .heading-3 {
     @apply text-[22px] md:text-[36px] lg:text-[1.75rem] font-bold leading-tight;
   }
   .desc {
-    @apply text-[15px] sm:text-[16px] lg:text-base font-inter font-light;
+    @apply text-[15px] sm:text-[16px] lg:text-base font-poppins font-light;
   }
   .white-btn {
     @apply bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] hover:!border-none;
@@ -249,8 +253,7 @@ body {
   }
 }
 
-
-.services-banner video{
+.services-banner video {
   object-fit: cover;
   width: 100%;
   height: 100%;

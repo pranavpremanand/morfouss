@@ -19,10 +19,11 @@ const GetInTouch = () => {
               data-aos="fade-up"
               className="space-y-[16px] md:space-y-10 w-full"
             >
-              <h3 className="heading-2 uppercase">Get in touch with us</h3>
+              <h3 className="heading-2 !font-normal">Get in touch with us</h3>
               <p className="desc">
-                Helping businesses not only survive but flourish in today’s
-                competitive digital landscape.
+                We help businesses achieve sustainable growth, enhance their
+                digital presence, and stay ahead of the curve in an increasingly
+                competitive and fast-paced digital ecosystem.
               </p>
               {/* <div className="flex gap-5">
                 <Link
