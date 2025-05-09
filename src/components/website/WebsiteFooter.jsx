@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 const WebsiteFooter = () => {
   return (
-    <div className="py-[56px] lg:py-[5] bg-black relative z-[1] border-t border-white/30">
+    <div className="py-[3.5rem] lg:py-[5] bg-black relative z-[1] border-t border-white/30">
       <div className="wrapper text-white">
-        <div className="flex md:flex-row flex-col md:items-center justify-between gap-[27px] md:gap-10">
-          <LogoImg className="h-[50px] w-[200px] lg:h-[4rem] lg:w-[18rem]" />
-          <div className="flex md:flex-row flex-col gap-[40px] md:gap-10">
-            <div className="flex flex-col gap-[8px] md:gap-2">
-              <h6 className="font-medium mb-1 text-[16px] sm:text-[17px] lg:text-[1.1rem] font-inter">
+        <div className="flex md:flex-row flex-col md:items-center justify-between gap-[1.6875rem] md:gap-10">
+          <LogoImg className="h-[3.125rem] w-[12.5rem] lg:h-[4rem] lg:w-[18rem]" />
+          <div className="flex md:flex-row flex-col gap-[2.5rem] md:gap-10">
+            <div className="flex flex-col gap-[0.5rem] md:gap-2">
+              <h6 className="font-medium mb-1 text-[1rem] sm:text-[1.0625rem] lg:text-[1.1rem] font-inter">
                 Quick Links
               </h6>
               {routes.map(({ name, path }) => (
@@ -24,12 +24,12 @@ const WebsiteFooter = () => {
                 </Link>
               ))}
             </div>
-            <div className="flex flex-col gap-[8px] md:gap-2">
-              <h6 className="font-medium mb-1 text-[16px] sm:text-[17px] lg:text-[1.1rem] font-inter">
+            <div className="flex flex-col gap-[0.5rem] md:gap-2">
+              <h6 className="font-medium mb-1 text-[1rem] sm:text-[1.0625rem] lg:text-[1.1rem] font-inter">
                 Contact Us
               </h6>
               <div className="flex flex-col">
-                <h6 className="text-[16px] sm:text-[17px] lg:text-[1.1rem] font-inter mb-1">
+                <h6 className="text-[1rem] sm:text-[1.0625rem] lg:text-[1.1rem] font-inter mb-1">
                   Phone
                 </h6>
                 <Link
@@ -40,7 +40,7 @@ const WebsiteFooter = () => {
                 </Link>
               </div>
               <div className="flex flex-col">
-                <h6 className="text-[16px] sm:text-[17px] lg:text-[1.1rem] font-inter mb-1">
+                <h6 className="text-[1rem] sm:text-[1.0625rem] lg:text-[1.1rem] font-inter mb-1">
                   Email
                 </h6>
                 <Link
@@ -50,8 +50,8 @@ const WebsiteFooter = () => {
                   {companyDetails.email}
                 </Link>
               </div>
-              <div className="flex flex-col gap-[8px] md:gap-2 mt-2">
-                <h6 className="text-[16px] sm:text-[17px] lg:text-[1.1rem] font-inter mb-1">
+              <div className="flex flex-col gap-[0.5rem] md:gap-2 mt-2">
+                <h6 className="text-[1rem] sm:text-[1.0625rem] lg:text-[1.1rem] font-inter mb-1">
                   Office Address
                 </h6>
                 <p className="text-white/70 desc md:max-w-[15rem]">

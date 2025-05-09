@@ -31,33 +31,43 @@ const Services = () => {
 
   return (
     <section className="services relative text-white bg-black">
-      <div className="wrapper flex flex-col py-[50px] sm:pb-[3rem]">
+      <div className="wrapper flex flex-col py-[3.125rem] sm:pb-[3rem]">
         <div className="text-center">
-          <div className="h-[70px] sm:h-[18rem]">
+          <div className="h-[4.375rem] sm:h-[8rem] md:h-[11rem] lg:h-[13rem] xl:h-[14rem]">
             <h2
               ref={titleRef}
               data-aos="zoom-in"
-              className="text-[65px] sm:text-[18rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden"
+              className="text-[4.0625rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[13.6rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden"
               style={{ height: 0 }} // Initial height set to 0
             >
               SERVICES
             </h2>
           </div>
+          {/* <div className="h-[4.375rem] sm:h-[8rem] md:h-[11rem] lg:h-[13rem] xl:h-[15.5rem]">
+            <h2
+              ref={titleRef}
+              data-aos="zoom-in"
+              className="text-[4.0625rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[15rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden"
+              style={{ height: 0 }} // Initial height set to 0
+            >
+              SERVICES
+            </h2>
+          </div> */}
           <h3 data-aos="fade-up" className="heading-3">
             Advanced and Highly Reliable Performance
           </h3>
-          <p data-aos="fade-up" className="mt-[12px] lg:mt-8 desc">
+          <p data-aos="fade-up" className="mt-[0.75rem] lg:mt-8 desc">
             Our services are designed to provide advanced and highly reliable
             performance.
           </p>
         </div>
-        <div className="mt-[15px] sm:mt-[32px] grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+        <div className="mt-[0.9375rem] sm:mt-[2rem] grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
           {allServices.map((item) => (
             <Link
               to={`/services/${createUrlParam(item.title)}`}
               data-aos="fade-up"
               key={item.id}
-              className="cursor-pointer group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/7]"
+              className="cursor-pointer group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/9.5]"
             >
               <div className="h-full w-full hidden group-hover:block bottom-0 left-0 rounded-tr-full group-hover:rounded-none absolute bg-gradient-box transition-all duration-300 ease-linear">
                 <img
@@ -66,8 +76,8 @@ const Services = () => {
                   alt=""
                 />
               </div>
-              <div className="relative p-[16px] z-[1] h-full flex flex-col justify-between gap-[20px]">
-                <h4 className="text-[19px] sm:text-[24px] lg:text-2xl font-bold">
+              <div className="relative p-[1rem] z-[1] h-full flex flex-col justify-between gap-[1.25rem]">
+                <h4 className="text-[1.1875rem] sm:text-[1.2rem] font-bold">
                   {item.title}
                 </h4>
                 <p className="desc lg:opacity-0 group-hover:opacity-100">

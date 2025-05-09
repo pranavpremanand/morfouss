@@ -13,13 +13,19 @@ const Blogs = () => {
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 bottom-0" alt="" />
-        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
+        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[62px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[14.5rem] xl:text-[15.8rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.7rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
           >
             insights
           </h1>
+          {/* <h1
+            data-aos="zoom-in"
+            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[14.5rem] xl:text-[17.7rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+          >
+            insights
+          </h1> */}
         </div>
         <img
           src="/noise-texture.svg"
@@ -28,7 +34,7 @@ const Blogs = () => {
         />
         <div
           data-aos="fade-up"
-          className="wrapper overflow-hidden mt-[32px] w-full h-full grid sm:grid-cols-2 lg:grid-cols-3 gap-[20px] lg:gap-7 pb-[50px] sm:pb-[4rem]"
+          className="wrapper overflow-hidden mt-[2rem] w-full h-full grid sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem] lg:gap-7 pb-[3.125rem] sm:pb-[4rem]"
         >
           {blogs.concat(blogs).map((item, index) => {
             return <BlogCard key={index} item={item} index={index} />;
@@ -58,9 +64,9 @@ const BlogCard = ({ item, index }) => {
         className="aspect-square sm:aspect-[3.5/4] object-cover group-hover:brightness-75 transition-all duration-300"
         loading="lazy"
       />
-      <div className="pb-[1.5px] px-[1.5px] rounded-b-2xl group-hover:bg-gradient-to-tr from-[#7338AC] via-[#239CE4] to-[#87F3FF]">
+      <div className="pb-[0.09375rem] px-[0.09375rem] rounded-b-2xl group-hover:bg-gradient-to-tr from-[#7338AC] via-[#239CE4] to-[#87F3FF]">
         <div
-          className={`p-[20px] lg:p-5 space-y-[8px] rounded-b-2xl transition-all duration-500 lg:space-y-2 ${
+          className={`p-[1.25rem] lg:p-5 space-y-[0.5rem] rounded-b-2xl transition-all duration-500 lg:space-y-2 ${
             isHovered
               ? index % 2 === 0
                 ? "bg-white text-black"

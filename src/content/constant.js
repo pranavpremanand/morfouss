@@ -125,18 +125,18 @@ export const allServices = [
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Custom Software Development</h3>
+    <div class="bg-white/10 p-[0.625rem] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[1.125rem] lg:text-lg font-semibold mb-1">Custom Software Development</h3>
       <p class="desc">We build software solutions that are as unique as your business, designed to deliver exactly what you need in the most efficient way possible.</p>
     </div>
     
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Mobile App Development</h3>
+    <div class="bg-white/10 p-[0.625rem] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[1.125rem] lg:text-lg font-semibold mb-1">Mobile App Development</h3>
       <p class="desc">Whether it’s iOS or Android, our team creates seamless and intuitive mobile experiences that boost engagement and performance.</p>
     </div>
 
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Ongoing Maintenance & Support</h3>
+    <div class="bg-white/10 p-[0.625rem] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[1.125rem] lg:text-lg font-semibold mb-1">Ongoing Maintenance & Support</h3>
       <p class="desc">We don’t just walk away after launch. We offer continuous support to keep your products secure, functional, and updated with the latest features.</p>
     </div>
   </div>
@@ -156,18 +156,18 @@ export const allServices = [
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Technology Audits & Strategy</h3>
+    <div class="bg-white/10 p-[0.625rem] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[1.125rem] lg:text-lg font-semibold mb-1">Technology Audits & Strategy</h3>
       <p class="desc">We take a deep dive into your current tech setup and develop a customized strategy that helps streamline operations and reduce unnecessary costs.</p>
     </div>
     
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Digital Transformation</h3>
+    <div class="bg-white/10 p-[0.625rem] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[1.125rem] lg:text-lg font-semibold mb-1">Digital Transformation</h3>
       <p class="desc">We partner with you to modernize your processes, adopting the latest tech that empowers your team and drives new opportunities.</p>
     </div>
 
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cybersecurity & Risk Management</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Cybersecurity & Risk Management</h3>
       <p class="desc">With ever-evolving threats, we prioritize the protection of your data and systems, ensuring your business stays safe from cyber risks.</p>
     </div>
   </div>
@@ -187,18 +187,18 @@ export const allServices = [
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Technology Audits & Strategy</h3>
+    <div class="bg-white/10 p-[0.625rem] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[1.125rem] lg:text-lg font-semibold mb-1">Technology Audits & Strategy</h3>
       <p class="desc">We take a deep dive into your current tech setup and develop a customized strategy that helps streamline operations and reduce unnecessary costs.</p>
     </div>
     
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Digital Transformation</h3>
+    <div class="bg-white/10 p-[0.625rem] lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-[1.125rem] lg:text-lg font-semibold mb-1">Digital Transformation</h3>
       <p class="desc">We partner with you to modernize your processes, adopting the latest tech that empowers your team and drives new opportunities.</p>
     </div>
 
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cybersecurity & Risk Management</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Cybersecurity & Risk Management</h3>
       <p class="desc">With ever-evolving threats, we prioritize the protection of your data and systems, ensuring your business stays safe from cyber risks.</p>
     </div>
   </div>
@@ -218,18 +218,18 @@ export const allServices = [
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">User Research & Insights</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">User Research & Insights</h3>
       <p class="desc">We gather data to understand user behavior, enabling us to design interfaces that are not only visually appealing but also highly functional and user-friendly.</p>
     </div>
     
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Wireframes & Prototypes</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Wireframes & Prototypes</h3>
       <p class="desc">We create low- and high-fidelity prototypes to give you a clear vision of how your product will look and behave before it’s developed.</p>
     </div>
 
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">UI/UX Design</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">UI/UX Design</h3>
       <p class="desc">We focus on creating beautiful, responsive designs that are easy to navigate, helping you connect with your users and enhance their overall experience.</p>
     </div>
   </div>
@@ -249,18 +249,18 @@ export const allServices = [
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cloud Migration</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Cloud Migration</h3>
       <p class="desc">Moving to the cloud doesn’t have to be a daunting process. We make your transition smooth and seamless, minimizing disruptions and ensuring you get the most out of your new infrastructure.</p>
     </div>
     
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cloud Management & Optimization</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Cloud Management & Optimization</h3>
       <p class="desc">We manage your cloud resources, making sure they’re running efficiently, securely, and cost-effectively.</p>
     </div>
 
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Cloud Security & Compliance</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Cloud Security & Compliance</h3>
       <p class="desc">We implement robust security measures that protect your data, while ensuring compliance with industry standards and regulations.</p>
     </div>
   </div>
@@ -280,18 +280,18 @@ export const allServices = [
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Enterprise Resource Planning (ERP)</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Enterprise Resource Planning (ERP)</h3>
       <p class="desc">We help you integrate and streamline core business functions such as finance, HR, and operations, making your organization more agile and efficient.</p>
     </div>
     
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Customer Relationship Management (CRM)</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Customer Relationship Management (CRM)</h3>
       <p class="desc">Our CRM solutions help you build stronger relationships with your customers by improving communication, tracking interactions, and personalizing their experience.</p>
     </div>
 
-    <div class="bg-white/10 p-[10px] lg:p-6 rounded-lg shadow-lg">
-      <h3 class="text-[18px] lg:text-lg font-semibold mb-1">Business Intelligence & Analytics</h3>
+    <div class="bg-white/10 p-3 lg:p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-semibold mb-1">Business Intelligence & Analytics</h3>
       <p class="desc">We provide you with the tools to make data-driven decisions, offering powerful insights into your business performance, customer behavior, and market trends.</p>
     </div>
   </div>

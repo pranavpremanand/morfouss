@@ -83,22 +83,37 @@ const HomePage = () => {
       <section className="flex flex-col w-screen relative">
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
-        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
+        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[68px] sm:text-[20.9rem] sm:sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
+            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[15.8rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.7rem] leading-none font-extrabold inline-block lg:ml-[-2.2rem]"
           >
             UNLEASH
           </h1>
           <h3
             data-aos="zoom-in"
-            className="text-[27px] sm:text-[7.7rem] ml-[-0.3rem] leading-[0.9] md:-mt-11"
+            className="text-[1.6875rem] sm:text-[3rem] md:text-[4rem] xl:text-[5.7rem] ml-[-0.2rem] leading-[0.9] md:-mt-3 xl:-mt-8"
           >
             <span className="gradient-stroke-text text-black">Dreams</span>{" "}
             <span className="gradient-stroke-text text-white font-extralight">
               Through Tech
             </span>
           </h3>
+          {/* <h1
+            data-aos="zoom-in"
+            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[17.9rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block lg:ml-[-2.2rem]"
+          >
+            UNLEASH
+          </h1>
+          <h3
+            data-aos="zoom-in"
+            className="text-[1.6875rem] sm:text-[3rem] md:text-[4rem] xl:text-[6.4rem] ml-[-0.2rem] leading-[0.9] md:-mt-3 xl:-mt-8"
+          >
+            <span className="gradient-stroke-text text-black">Dreams</span>{" "}
+            <span className="gradient-stroke-text text-white font-extralight">
+              Through Tech
+            </span>
+          </h3> */}
         </div>
         <img
           src="/noise-texture.svg"
@@ -108,9 +123,9 @@ const HomePage = () => {
         <div
           ref={videoContainerRef}
           data-aos="fade-up"
-          className="wrapper overflow-hidden mt-[32px] pb-[32px] md:pb-[70px] w-full h-full lg:h-[80vh]"
+          className="wrapper overflow-hidden mt-[2rem] mb-[2rem] md:mb-[4.375rem] w-full h-full lg:h-[80vh]"
         >
-          <div className="banner-video bg-black h-full">
+          <div className="banner-video bg-black aspect-[4/3] md:aspect-auto">
             <ReactPlayer
               ref={playerRef}
               className="h-full w-full z-0"
@@ -134,15 +149,15 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white flex items-center min-h-screen py-[50px] sm:py-[5rem] relative z-[2]">
+      <section className="bg-white flex items-center min-h-screen py-[3.125rem] sm:py-[5rem] relative z-[2]">
         <div className="wrapper relative h-full w-full">
           <img
             src={transparentLogo}
             className="w-[30vw] z-[-1] aspect-square absolute object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             alt=""
           />
-          <div className="flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[20px] lg:gap-7 w-full lg:max-w-6xl lg:mx-auto">
-            <div data-aos="fade-up" className="lg:space-y-7 space-y-[16px]">
+          <div className="flex flex-col-reverse lg:grid grid-cols-2 items-center gap-10 lg:gap-7 w-full lg:max-w-6xl lg:mx-auto">
+            <div data-aos="fade-up" className="lg:space-y-7 space-y-[1rem]">
               <h3 className="heading-2 uppercase">introduction</h3>
               <p className="desc">
                 At Morfouss, we are dedicated to revolutionizing company
@@ -154,7 +169,7 @@ const HomePage = () => {
               <div className="flex gap-5">
                 <Link
                   to="/contact-us"
-                  className="bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none"
+                  className="bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none"
                 >
                   Contact Us
                 </Link>
@@ -167,33 +182,33 @@ const HomePage = () => {
               </div>
             </div>
             <div data-aos="fade-up" className="flex flex-col">
-              {/* <img
-                loading="lazy"
-                src={logo}
-                className="object-contain aspect-square w-[80%] mx-auto"
-                alt=""
-              /> */}
-              <LogoClr className="object-contain aspect-square w-[80%] h-full mx-auto" />
+              <LogoClr className="object-contain aspect-square w-[80%] sm:w-1/3 lg:w-[80%] h-full mx-auto" />
             </div>
           </div>
         </div>
       </section>
       <Services />
-      <section className="relative z-[1] text-white bg-black pb-[50px] xl:pb-0">
+      <section className="relative z-[1] text-white bg-black pb-[3.125rem] xl:pb-0">
         <div className="wrapper py-[2rem]">
           <h2
             data-aos="zoom-in"
-            className="text-[70px] sm:text-[18rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text4"
+            className="text-[4.375rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[14rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text4"
           >
             WHY US?
           </h2>
-          <div className="mt-[32px] lg:mt-0 grid lg:grid-cols-[auto_50%_auto] items-center">
+          {/* <h2
+            data-aos="zoom-in"
+            className="text-[4.375rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[16rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text4"
+          >
+            WHY US?
+          </h2> */}
+          <div className="mt-[2rem] lg:mt-0 grid lg:grid-cols-[auto_50%_auto] items-center">
             <div
               data-aos="fade-up"
-              className="flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16 z-[2]"
+              className="flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[1.875rem] lg:gap-16 z-[2]"
             >
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[7rem] group">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
+                <h4 className="text-[1.375rem] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
                   Expertise
                 </h4>
                 <p className="font-light desc">
@@ -202,7 +217,7 @@ const HomePage = () => {
                 </p>
               </div>
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:translate-x-[15rem] group">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
+                <h4 className="text-[1.375rem] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
                   Innovation
                 </h4>
                 <p className="font-light desc">
@@ -229,10 +244,10 @@ const HomePage = () => {
             />
             <div
               data-aos="fade-up"
-              className="z-[2] flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[30px] lg:gap-16"
+              className="z-[2] flex flex-col items-center lg:items-start lg:h-2/3 justify-between gap-[1.875rem] lg:gap-16"
             >
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] lg:-translate-y-[2rem] lg:translate-x-[-7rem] group">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
+                <h4 className="text-[1.375rem] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
                   Reliability
                 </h4>
                 <p className="font-light desc">
@@ -242,7 +257,7 @@ const HomePage = () => {
                 </p>
               </div>
               <div className="text-center lg:text-start space-y-2 max-w-[70vw] lg:max-w-[15rem] group">
-                <h4 className="text-[22px] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
+                <h4 className="text-[1.375rem] lg:text-2xl font-semibold uppercase group-hover:text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4_40%] to-[#87F3FF_70%] transition-all duration-300">
                   Support
                 </h4>
                 <p className="font-light desc">
@@ -258,7 +273,7 @@ const HomePage = () => {
       <div className="bg-white z-[1] relative border-b">
         <div
           data-aos="fade-up"
-          className="wrapper border-black py-[30px] md:py-[35px] grid sm:grid-cols-4 gap-[35px] sm:gap-7"
+          className="wrapper border-black py-[1.875rem] md:py-[2.1875rem] grid sm:grid-cols-4 gap-[2.1875rem] sm:gap-7"
         >
           <div className="text-center space-y-2">
             <CountUp
@@ -269,7 +284,7 @@ const HomePage = () => {
               scrollSpyOnce
               duration={3}
             />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">
+            <p className="font-light text-[1rem] lg:text-[1.1rem]">
               Years of Experience
             </p>
           </div>
@@ -282,7 +297,7 @@ const HomePage = () => {
               scrollSpyOnce
               duration={3}
             />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">
+            <p className="font-light text-[1rem] lg:text-[1.1rem]">
               Projects Completed
             </p>
           </div>
@@ -295,7 +310,7 @@ const HomePage = () => {
               scrollSpyOnce
               duration={3}
             />
-            <p className="font-light text-[16px] lg:text-[1.1rem]">
+            <p className="font-light text-[1rem] lg:text-[1.1rem]">
               Tech Experts
             </p>
           </div>
@@ -328,14 +343,6 @@ const HomePage = () => {
                 Helping businesses not only survive but flourish in today’s
                 competitive digital landscape.
               </p>
-              <div className="flex gap-5">
-                <Link
-                  to="/contact-us"
-                  className="bg-black text-white border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none"
-                >
-                  Contact Us
-                </Link>
-              </div>
             </div>
             <div
               data-aos="fade-up"

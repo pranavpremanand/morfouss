@@ -6,20 +6,21 @@
 
 ::-webkit-scrollbar {
   scroll-behavior: smooth;
-  width: 6px;
+  width: 0.375rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #2c1a74;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
+
 * {
   font-family: "Poppins", sans-serif;
 }
 
 html {
   overflow-x: hidden;
-  font-size: 1vw;
+  font-size: 100%;
 }
 
 body::before {
@@ -48,7 +49,7 @@ body {
 }
 
 .gradient-stroke-text {
-  -webkit-text-stroke: 2px transparent; /* Stroke width and transparency */
+  -webkit-text-stroke: 0.125rem transparent; /* Stroke width and transparency */
   background: linear-gradient(
     8deg,
     #7338ac 0%,
@@ -61,7 +62,7 @@ body {
 }
 
 .gradient-stroke-text4 {
-  -webkit-text-stroke: 4px transparent; /* Stroke width and transparency */
+  -webkit-text-stroke: 0.25rem transparent; /* Stroke width and transparency */
   background: linear-gradient(
     to top right,
     #7338ac 0%,
@@ -102,7 +103,7 @@ body {
   right: 0;
   bottom: 0;
   border-radius: 2rem;
-  padding: 1.3px;
+  padding: 0.08125rem;
   background: linear-gradient(to right, #7338ac, #625ad8, #239ce4, #87f3ff);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -119,7 +120,7 @@ body {
   right: 0;
   bottom: 0;
   border-radius: 2rem;
-  padding: 1.3px;
+  padding: 0.08125rem;
   background: linear-gradient(to right, #7338ac, #625ad8, #239ce4, #87f3ff);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -129,45 +130,43 @@ body {
 }
 
 .banner-video video {
-  @apply aspect-[4/3] md:aspect-auto bg-gradient-to-tr from-[#7338AC] via-[#239CE4] to-[#87F3FF] p-[1.5px] w-full object-cover;
+  @apply bg-gradient-to-tr from-[#7338AC] via-[#239CE4] to-[#87F3FF] p-[0.09375rem] h-full w-full object-cover;
 }
 
 @layer utilities {
   .wrapper {
-    /* @apply max-w-[1278px] mx-auto px-[16px] lg:px-4 lg:px-[1. lg:py-35rem]; */
-    @apply max-w-[86rem] mx-auto px-[12px] lg:px-[1.5rem];
-    /* @apply max-w-7xl mx-auto px-[16px] lg:px-4 lg:px-[1. lg:py-35rem]; */
+    @apply max-w-5xl mx-auto px-5 lg:px-[1.5rem];
+    /* @apply max-w-6xl mx-auto px-5 lg:px-[1.5rem]; */
   }
   .heading-1 {
-    @apply text-[44px] md:text-[72px] lg:text-7xl font-bold leading-tight;
+    @apply text-[2.75rem] md:text-[4.5rem] lg:text-7xl font-bold leading-tight;
   }
   .heading-2 {
-    @apply text-[26px] md:text-[48px] lg:text-5xl font-bold !leading-tight;
-    /* @apply text-[36px] md:text-[48px] font-semibold leading-tight; */
+    @apply text-[1.625rem] md:text-[3rem] lg:text-5xl font-bold !leading-tight;
   }
   .heading-3 {
-    @apply text-[22px] md:text-[36px] lg:text-[1.75rem] font-bold leading-tight;
+    @apply text-[1.375rem] md:text-[2.25rem] lg:text-[1.75rem] font-bold leading-tight;
   }
   .desc {
-    @apply text-[15px] sm:text-[16px] lg:text-base font-poppins font-light;
+    @apply text-[0.9375rem] sm:text-[1rem] lg:text-base font-poppins font-light;
   }
   .white-btn {
-    @apply bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] hover:!border-none;
+    @apply bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] hover:!border-none;
   }
   .black-btn {
-    @apply bg-black hover:bg-[#87F3FF] text-white border w-full sm:w-fit border-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:shadow-[#7338AC] from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] hover:!border-none;
+    @apply bg-black hover:bg-[#87F3FF] text-white border w-full sm:w-fit border-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:shadow-[#7338AC] from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] hover:!border-none;
   }
   .gradient-btn {
-    @apply bg-gradient-to-tr cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem];
+    @apply bg-gradient-to-tr cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-[.9rem];
   }
   .btn-styles {
-    @apply hover:shadow-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem];
+    @apply hover:shadow-white cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-[.9rem];
   }
   .rounded-text-box {
-    @apply px-[16px] lg:px-4 py-[12px] lg:py-3 rounded-full font-raleway min-w-[10rem] flex justify-center border text-[14px] lg:text-[.9rem] w-fit font-bold;
+    @apply px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 rounded-full font-raleway min-w-[10rem] flex justify-center border text-[0.875rem] lg:text-[.9rem] w-fit font-bold;
   }
   .gradient-rounded-text-box {
-    @apply px-[16px] lg:px-4 py-[12px] lg:py-3 rounded-full font-raleway min-w-[10rem] flex justify-center border text-[14px] lg:text-[.9rem] w-fit bg-gradient-to-r from-[#7186FF_30%] to-primary font-bold border-primary bg-clip-text text-transparent;
+    @apply px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 rounded-full font-raleway min-w-[10rem] flex justify-center border text-[0.875rem] lg:text-[.9rem] w-fit bg-gradient-to-r from-[#7186FF_30%] to-primary font-bold border-primary bg-clip-text text-transparent;
   }
   .link {
     @apply cursor-pointer hover:text-primary transition-colors duration-200;
@@ -207,12 +206,12 @@ body {
 }
 
 .loader {
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  border: 3px solid;
+  border: 0.1875rem solid;
   border-color: #fff #fff transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
@@ -226,10 +225,10 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
-  border: 3px solid;
+  border: 0.1875rem solid;
   border-color: transparent #019cf8 #019cf8;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   animation: rotationBack 0.5s linear infinite;
   transform-origin: center center;

@@ -14,13 +14,19 @@ const Services = () => {
       <section className="flex flex-col w-screen relative">
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
-        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
+        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[65px] sm:text-[20.4rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[14.5rem] xl:text-[15.3rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.7rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
           >
             services
           </h1>
+          {/* <h1
+            data-aos="zoom-in"
+            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[14.5rem] xl:text-[17rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+          >
+            services
+          </h1> */}
         </div>
         <img
           src="/noise-texture.svg"
@@ -29,7 +35,7 @@ const Services = () => {
         />
         <div
           data-aos="fade-up"
-          className="wrapper overflow-hidden mt-[32px] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[6rem] lg:gap-[7rem] pb-[50px] sm:pb-[4rem]"
+          className="wrapper overflow-hidden mt-[2rem] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[2rem] lg:gap-[7rem] pb-[3.125rem] sm:pb-[4rem]"
         >
           <div className="flex flex-col justify-between gap-8 lg:aspect-[4/3]">
             <p className="desc lg:!leading-8 text-white">
@@ -44,22 +50,22 @@ const Services = () => {
               build a mobile app, integrate AI into your business, or create an
               immersive AR/VR experience, we’ve got you covered.
             </p>
-            <div className="flex sm:flex-row flex-col gap-4 mt-[20px] sm:mt-0">
+            <div className="flex sm:flex-row flex-col gap-4 mt-[1.25rem] sm:mt-0">
               <Link
-                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-4"
+                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-[1rem]"
                 to="/intro"
               >
                 About Us
               </Link>
               <Link
-                className="black-btn !font-normal border !border-white !px-4 !w-full sm:!w-fit mt-10 sm:mt-0"
+                className="black-btn !font-normal border !border-white !px-[1rem] !w-full sm:!w-fit"
                 to="/contact-us"
               >
                 Contact Us
               </Link>
             </div>
           </div>
-          <div className="aspect-[4/3] services-banner overflow-hidden rounded-2xl p-[2px] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+          <div className="aspect-video services-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
             <ReactPlayer
               className="h-full w-full z-0"
               url={bannerVid}
@@ -85,19 +91,19 @@ const Services = () => {
 
       <section className="py-16 bg-white text-black relative z-[1]">
         {serviceListPageContent.map((item) => (
-          <div className="wrapper relative px-[25px] lg:px-10 py-[30px] md:py-5 group rounded-xl grid md:grid-cols-3 items-center gap-[30px] lg:gap-10 hover:bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] transition-all duration-300 hover:text-white">
+          <div className="wrapper relative px-[1.5625rem] lg:px-10 py-[1.875rem] md:py-5 group rounded-xl grid md:grid-cols-3 items-center gap-[1.875rem] lg:gap-10 hover:bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] transition-all duration-300 hover:text-white">
             <img
               src="/noise-texture.svg"
               className="absolute w-full h-full object-cover z-0 opacity-0 group-hover:opacity-70"
               alt=""
             />
-            <h3 className="text-[26px] md:text-[30px] lg:text-5xl font-semibold !leading-tight relative z-[2]">
+            <h3 className="text-[1.625rem] md:text-[1.875rem] lg:text-[2.6rem] font-semibold !leading-tight relative z-[2]">
               {item.service}
             </h3>
             <img
               alt={item.title}
               src={item.image}
-              className="aspect-square min-w-[150px] max-w-[15rem] group-hover:max-w-[18rem] group-hover:md:scale-125 border-4 border-[#D8D8D8] rounded-xl object-cover -rotate-0 md:opacity-0 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-300 relative z-[2]"
+              className="aspect-square min-w-[9.375rem] max-w-[10rem] group-hover:max-w-[14rem] group-hover:md:scale-125 border-4 border-[#D8D8D8] rounded-xl object-cover -rotate-0 md:opacity-0 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-300 relative z-[2]"
             />
             <div className="space-y-10 relative z-[2]">
               <div className="space-y-2">
@@ -106,7 +112,7 @@ const Services = () => {
               </div>
               <div className="relative z-[2]">
                 <a href={`/services/${createUrlParam(item.service)}`}>
-                  <svg width="50" height="50" viewBox="0 0 50 50">
+                  <svg width="3.125rem" height="3.125rem" viewBox="0 0 50 50">
                     <defs>
                       <linearGradient
                         id="gradient"

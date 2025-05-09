@@ -7,10 +7,16 @@ export const serviceDetailContent = [
     headingHtml: (
       <h1
         data-aos="zoom-in"
-        className="text-[60px] sm:text-[19.8rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+        className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[14rem] xl:text-[15rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
       >
         ai&data
       </h1>
+      // <h1
+      //   data-aos="zoom-in"
+      //   className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[14rem] xl:text-[16rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+      // >
+      //   ai&data
+      // </h1>
     ),
     bannerSubHeading: "Customizing AI Solutions for Enterprises",
     bannerDesc:
@@ -66,15 +72,21 @@ export const serviceDetailContent = [
   {
     id: 2,
     title: "Product Engineering",
-      image: require("../assets/images/service-details/2.webp"),
+    image: require("../assets/images/service-details/2.webp"),
     video: require("../assets/videos/service-details/2.mp4"),
     headingHtml: (
       <h1
         data-aos="zoom-in"
-        className="text-[43px] sm:text-[14.3rem] sm:tracking-[-1.3rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+        className="text-[2.85rem] sm:text-[6rem] md:text-[7rem] lg:text-[9rem] xl:text-[10.8rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.1rem] leading-none font-extrabold inline-block sm:ml-[-1.5rem] uppercase"
       >
         Product Engineering
       </h1>
+      // <h1
+      //   data-aos="zoom-in"
+      //   className="text-[2.85rem] sm:text-[6rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.3rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+      // >
+      //   Product Engineering
+      // </h1>
     ),
     bannerSubHeading: "Crafting Impactful Software Products",
     bannerDesc:
@@ -130,15 +142,21 @@ export const serviceDetailContent = [
   {
     id: 3,
     title: "Enterprise Solutions",
-      image: require("../assets/images/service-details/3.webp"),
+    image: require("../assets/images/service-details/3.webp"),
     video: require("../assets/videos/service-details/3.mp4"),
     headingHtml: (
       <h1
         data-aos="zoom-in"
-        className="text-[50px] sm:text-[16.3rem] sm:tracking-[-1.4rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+        className="text-[3.125rem] sm:text-[7rem] md:text-[8.5rem] lg:text-[11rem] xl:text-[12.5rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.1rem] leading-none font-extrabold inline-block sm:ml-[-1rem] uppercase"
       >
         Enterprise Solutions
       </h1>
+      // <h1
+      //   data-aos="zoom-in"
+      //   className="text-[3.125rem] sm:text-[7rem] md:text-[8.5rem] lg:text-[11rem] xl:text-[13.8rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.3rem] leading-none font-extrabold inline-block sm:ml-[-1rem] uppercase"
+      // >
+      //   Enterprise Solutions
+      // </h1>
     ),
     bannerSubHeading: "Elevating Performance with Strategic Business Platforms",
     bannerDesc:
@@ -194,15 +212,21 @@ export const serviceDetailContent = [
   {
     id: 4,
     title: "Cloud Services",
-      image: require("../assets/images/service-details/4.webp"),
+    image: require("../assets/images/service-details/4.webp"),
     video: require("../assets/videos/service-details/4.mp4"),
     headingHtml: (
       <h1
         data-aos="zoom-in"
-        className="text-[60px] sm:text-[19.8rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+        className="text-[3.75rem] sm:text-[7rem] md:text-[8.5rem] lg:text-[15rem] xl:text-[19rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.4rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
       >
         Cloud
       </h1>
+      // <h1
+      //   data-aos="zoom-in"
+      //   className="text-[3.75rem] sm:text-[7rem] md:text-[8.5rem] lg:text-[15rem] xl:text-[19.8rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.4rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+      // >
+      //   Cloud
+      // </h1>
     ),
     bannerSubHeading: "Delivering End-to-End Cloud Excellence",
     bannerDesc:
@@ -258,15 +282,21 @@ export const serviceDetailContent = [
   {
     id: 5,
     title: "IT Consulting & Strategy",
-      image: require("../assets/images/service-details/5.webp"),
+    image: require("../assets/images/service-details/5.webp"),
     video: require("../assets/videos/service-details/5.mp4"),
     headingHtml: (
       <h1
         data-aos="zoom-in"
-        className="text-[38px] sm:text-[12.2rem] sm:tracking-[-0.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+        className="text-[2.375rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] xl:text-[9.3rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-0.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
       >
         IT Consulting <br /> & <br /> Strategy
       </h1>
+      // <h1
+      //   data-aos="zoom-in"
+      //   className="text-[2.375rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] xl:text-[10.3rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-0.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+      // >
+      //   IT Consulting <br /> & <br /> Strategy
+      // </h1>
     ),
     bannerSubHeading: "Transforming Businesses with Expert IT Solutions",
     bannerDesc:
@@ -306,15 +336,21 @@ export const serviceDetailContent = [
   {
     id: 6,
     title: "UI/UX Design",
-      image: require("../assets/images/service-details/6.webp"),
+    image: require("../assets/images/service-details/6.webp"),
     video: require("../assets/videos/service-details/6.mp4"),
     headingHtml: (
       <h1
         data-aos="zoom-in"
-        className="text-[60px] sm:text-[19.8rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
+        className="text-[3.75rem] sm:text-[6rem] md:text-[7rem] lg:text-[10rem] xl:text-[11.2rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.1rem] leading-none font-extrabold inline-block sm:ml-[-1.5rem] uppercase"
       >
         UI UX Design
       </h1>
+      // <h1
+      //   data-aos="zoom-in"
+      //   className="text-[3.75rem] sm:text-[6rem] md:text-[7rem] lg:text-[10rem] xl:text-[12.5rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.2rem] leading-none font-extrabold inline-block sm:ml-[-1.5rem] uppercase"
+      // >
+      //   UI UX Design
+      // </h1>
     ),
     bannerSubHeading: "Designing Seamless, Engaging Digital Experiences",
     bannerDesc:

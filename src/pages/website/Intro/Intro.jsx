@@ -23,10 +23,10 @@ const Intro = () => {
       <section className="flex flex-col w-screen relative">
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
-        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
+        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[75px] sm:text-[20.9rem] sm:tracking-[-2rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
+            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[17.9rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
           >
             INTRO
           </h1>
@@ -38,7 +38,7 @@ const Intro = () => {
         />
         <div
           data-aos="fade-up"
-          className="wrapper overflow-hidden mt-[32px] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[6rem] lg:gap-[7rem] pb-[50px] sm:pb-[4rem]"
+          className="wrapper overflow-hidden mt-[32px] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[2rem] lg:gap-[7rem] pb-[50px] sm:pb-[4rem]"
         >
           <div className="flex flex-col justify-between gap-8 lg:aspect-[4/3]">
             <p className="desc lg:!leading-8 text-white">
@@ -137,7 +137,7 @@ const Intro = () => {
             </div>
             <div
               data-aos="fade-up"
-              className="aspect-[4/3] h-full overflow-hidden rounded-md p-[1.5px] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]"
+              className="aspect-video w-full h-full overflow-hidden rounded-md p-[1.5px] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]"
             >
               <img
                 src={whyPartnerWithUsImg}
@@ -159,22 +159,22 @@ const Intro = () => {
           alt=""
           className="absolute left-0 -translate-x-1/3 bottom-0 translate-y-[20%] z-[-1]"
         />
-        <div className="wrapper py-[2rem]">
+        <div className="wrapper py-[2rem] space-y-3">
           <h2
             data-aos="zoom-in"
-            className="text-[60px] sm:text-[17rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4] to-[#87F3FF_80%]"
+            className="text-[4.25rem] sm:text-[7rem] md:text-[9rem] lg:text-[12rem] xl:text-[14rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4] to-[#87F3FF_80%]"
           >
             OUR CORE
           </h2>
           <div data-aos="fade-up">
-            <h3 className="text-[38px] sm:text-[7rem] leading-none font-extrabold tracking-tighter text-center sm:-translate-y-4">
+            <h3 className="text-[38px] sm:text-[3rem] md:text-[7rem] leading-none font-extrabold tracking-tighter text-center sm:-translate-y-4">
               VALUES
             </h3>
           </div>
-          <div className="mt-[32px] lg:mt-12 max-w-5xl mx-auto space-y-10">
+          <div className="pt-12 max-w-5xl mx-auto space-y-10">
             <div
               data-aos="fade-up"
-              className="flex md:flex-row flex-col md:justify-between gap-[30px] md:gap-10"
+              className="flex md:flex-row flex-col md:justify-between gap-8 md:gap-10"
             >
               <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
                 <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
@@ -186,7 +186,7 @@ const Intro = () => {
                   do.
                 </p>
               </div>
-              <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1 pb-[30px] md:pb-0">
+              <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
                 <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
                   Integrity
                 </h5>
@@ -198,7 +198,7 @@ const Intro = () => {
             </div>
             <div
               data-aos="fade-up"
-              className="flex md:justify-center pb-[30px] md:pb-0"
+              className="flex md:justify-center"
             >
               <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
                 <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
@@ -212,7 +212,7 @@ const Intro = () => {
             </div>
             <div
               data-aos="fade-up"
-              className="flex md:flex-row flex-col md:justify-between gap-[30px] md:gap-10"
+              className="flex md:flex-row flex-col md:justify-between gap-8 md:gap-10"
             >
               <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
                 <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
@@ -242,13 +242,13 @@ const Intro = () => {
         <div className="wrapper py-[40px] lg:py-[3rem] relative">
           <h2
             data-aos="zoom-in"
-            className="uppercase text-[43px] sm:text-[12.2rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_30%] via-[#239CE4] to-[#87F3FF_80%]"
+            className="uppercase text-[3rem] sm:text-[5.5rem] md:text-[6.5rem] lg:text-[9rem] xl:text-[10.2rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_30%] via-[#239CE4] to-[#87F3FF_80%]"
           >
             Testimonials
           </h2>
           <div
             data-aos="fade-up"
-            className="grid md:grid-cols-3 gap-[16px] lg:gap-5 mt-16 relative"
+            className="grid md:grid-cols-3 gap-[16px] lg:gap-5 mt-6 md:mt-16 relative"
           >
             <img
               src={logo}

@@ -25,7 +25,7 @@ const ServiceDetails = () => {
       <section className="flex flex-col w-screen relative">
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
-        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto mt-[-2rem]">
+        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           {service.headingHtml}
         </div>
         <img
@@ -35,31 +35,31 @@ const ServiceDetails = () => {
         />
         <div
           data-aos="fade-up"
-          className="wrapper overflow-hidden mt-[32px] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[6rem] lg:gap-[7rem] pb-[50px] sm:pb-[4rem]"
+          className="wrapper overflow-hidden mt-[2rem] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[2rem] lg:gap-[7rem] pb-[3.125rem] sm:pb-[4rem]"
         >
           <div className="flex flex-col justify-between gap-8 lg:aspect-[4/3]">
             <div className="space-y-6 text-white">
-              <h3 className="text-[20px] lg:text-xl uppercase font-semibold">
+              <h3 className="text-[1.25rem] lg:text-xl uppercase font-semibold">
                 {service.bannerSubHeading}
               </h3>
               <p className="desc lg:!leading-8">{service.bannerDesc}</p>
             </div>
-            <div className="flex sm:flex-row flex-col gap-4 mt-[20px] sm:mt-0">
+            <div className="flex sm:flex-row flex-col gap-4 mt-[1.25rem] sm:mt-0">
               <Link
-                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-4"
+                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-[1rem]"
                 to="/intro"
               >
                 About Us
               </Link>
               <Link
-                className="black-btn !font-normal border !border-white !px-4 !w-full sm:!w-fit mt-10 sm:mt-0"
+                className="black-btn !font-normal border !border-white !px-[1rem] !w-full sm:!w-fit"
                 to="/contact-us"
               >
                 Contact Us
               </Link>
             </div>
           </div>
-          <div className="aspect-[4/2] lg:aspect-[4/3.5] services-banner overflow-hidden rounded-2xl p-[2px] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+          <div className="aspect-[4/2] lg:aspect-[4/3.5] services-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
             <ReactPlayer
               className="h-full w-full z-0"
               url={service.video}

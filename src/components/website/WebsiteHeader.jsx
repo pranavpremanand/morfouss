@@ -47,7 +47,7 @@ const WebsiteHeader = () => {
   return (
     <>
       <div
-        className={`py-[16px] lg:py-6 border-white/20 fixed left-0 top-0 w-full z-[50] text-white transition-all duration-300 bg-cover bg-left ${
+        className={`py-[1rem] lg:py-5 border-white/20 fixed left-0 top-0 w-full z-[50] text-white transition-all duration-300 bg-cover bg-left ${
           isVisible ? "translate-y-0" : "-translate-y-0"
         }`}
         style={
@@ -59,7 +59,7 @@ const WebsiteHeader = () => {
         <div className="wrapper pl-1 flex justify-between items-center gap-10 w-full">
           <div className="flex justify-between items-center gap-20 w-full">
             <Link to="/">
-              <LogoImg className="w-[12rem] min-w-[120px] sm:w-[12.5rem] sm:min-w-[165px] lg:h-[2.6rem]" />
+              <LogoImg className="w-[12rem] min-w-[7.5rem] sm:w-[12.5rem] sm:min-w-[10.3125rem] lg:h-[2.6rem]" />
             </Link>
             <div className="lg:flex items-center gap-[2.5rem] hidden">
               {routes.map(({ name, path }) => (
@@ -70,7 +70,7 @@ const WebsiteHeader = () => {
                     pathname === `${path}` && "link-text-box-active"
                   } link-text-box transition-all duration-300 overflow-auto min-w-[4.5rem] rounded-full flex justify-center`}
                 >
-                  <div className="py-2 px-5 rounded-full text-center text-base">
+                  <div className="py-[0.5rem] px-[1.25rem] rounded-full text-center text-base">
                     {name}
                   </div>
                 </Link>
@@ -79,7 +79,7 @@ const WebsiteHeader = () => {
           </div>
 
           <div
-            className="block lg:hidden justify-self-end translate-x-10"
+            className="block lg:hidden justify-self-end"
             onClick={toggleDrawer}
           >
             <RxHamburgerMenu
@@ -96,12 +96,12 @@ const WebsiteHeader = () => {
         open={isOpen}
         onClose={toggleDrawer}
         direction="right"
-        className="py-4 px-10 z-30"
+        className="py-[1rem] px-[2.5rem] z-30"
       >
         <div className="mb-6 flex items-center justify-end pr-[.7rem] py-[.4rem]">
           <button
             onClick={() => setIsOpen(false)}
-            className="text-white text-[35px]"
+            className="text-white text-[2.1875rem]"
           >
             <IoMdClose />
           </button>
@@ -111,7 +111,7 @@ const WebsiteHeader = () => {
             <Link
               onClick={() => setIsOpen(false)}
               key={path}
-              className="text-[30px] text-white font-medium transition-colors duration-300 link"
+              className="text-[1.875rem] text-white font-medium transition-colors duration-300 link"
               to={path}
             >
               {name}
