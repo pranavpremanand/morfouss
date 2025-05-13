@@ -84,7 +84,7 @@ const HomePage = () => {
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
-          <h1
+          {/* <h1
             data-aos="zoom-in"
             className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[15.8rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.7rem] leading-none font-extrabold inline-block lg:ml-[-2.2rem]"
           >
@@ -98,22 +98,22 @@ const HomePage = () => {
             <span className="gradient-stroke-text text-white font-extralight">
               Through Tech
             </span>
-          </h3>
-          {/* <h1
+          </h3> */}
+          <h1
             data-aos="zoom-in"
-            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[17.9rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block lg:ml-[-2.2rem]"
+            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[19.2rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block lg:ml-[-2.2rem]"
           >
             UNLEASH
           </h1>
           <h3
             data-aos="zoom-in"
-            className="text-[1.6875rem] sm:text-[3rem] md:text-[4rem] xl:text-[6.4rem] ml-[-0.2rem] leading-[0.9] md:-mt-3 xl:-mt-8"
+            className="text-[1.6875rem] sm:text-[3rem] md:text-[4rem] xl:text-[7.05rem] ml-[-0.2rem] leading-[0.9] md:-mt-3 xl:-mt-8"
           >
             <span className="gradient-stroke-text text-black">Dreams</span>{" "}
             <span className="gradient-stroke-text text-white font-extralight">
               Through Tech
             </span>
-          </h3> */}
+          </h3>
         </div>
         <img
           src="/noise-texture.svg"
@@ -125,7 +125,7 @@ const HomePage = () => {
           data-aos="fade-up"
           className="wrapper overflow-hidden mt-[2rem] mb-[2rem] md:mb-[4.375rem] w-full h-full lg:h-[80vh]"
         >
-          <div className="banner-video bg-black aspect-[4/3] md:aspect-auto">
+          <div className="banner-video h-full bg-black aspect-[4/3] md:aspect-auto">
             <ReactPlayer
               ref={playerRef}
               className="h-full w-full z-0"
@@ -192,16 +192,10 @@ const HomePage = () => {
         <div className="wrapper py-[2rem]">
           <h2
             data-aos="zoom-in"
-            className="text-[4.375rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[14rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text4"
-          >
-            WHY US?
-          </h2>
-          {/* <h2
-            data-aos="zoom-in"
             className="text-[4.375rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[16rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text4"
           >
             WHY US?
-          </h2> */}
+          </h2>
           <div className="mt-[2rem] lg:mt-0 grid lg:grid-cols-[auto_50%_auto] items-center">
             <div
               data-aos="fade-up"
@@ -329,7 +323,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <section className="relative z-[2] bg-white">
+      <section className="relative z-[2] bg-white overflow-hidden">
         <div className="lg:max-w-6xl wrapper lg:mx-auto flex py-[35px] lg:pt-[5rem] lg:pb-0 relative h-full w-full">
           <div className="min-h-[60vh] flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[30px] lg:gap-7">
             <div

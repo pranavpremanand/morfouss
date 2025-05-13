@@ -25,16 +25,6 @@ const GetInTouch = () => {
                 digital presence, and stay ahead of the curve in an increasingly
                 competitive and fast-paced digital ecosystem.
               </p>
-              {/* <div className="flex gap-5">
-                <Link
-                  to="/contact-us"
-                  className="group p-[.9px] rounded-full overflow-hidden min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-sm bg-gradient-to-tr from-[#7338AC] via-[#239CE4] to-[#87F3FF] hover:-translate-y-1"
-                >
-                  <div className="bg-black group-hover:bg-transparent transition-all duration-300 px-[1rem] py-[0.75rem] rounded-full">
-                    Contact Us
-                  </div>
-                </Link>
-              </div> */}
             </div>
           </div>
           <form data-aos="fade-up" className="flex flex-col gap-[0.75rem] w-full">

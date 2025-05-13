@@ -135,7 +135,7 @@ body {
 
 @layer utilities {
   .wrapper {
-    @apply max-w-5xl mx-auto px-5 lg:px-[1.5rem];
+    @apply max-w-7xl mx-auto px-4 md:px-8;
     /* @apply max-w-6xl mx-auto px-5 lg:px-[1.5rem]; */
   }
   .heading-1 {

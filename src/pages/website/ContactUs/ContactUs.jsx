@@ -19,16 +19,10 @@ const ContactUs = () => {
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[2.8rem] sm:text-[6rem] md:text-[8rem] lg:text-[10.5rem] xl:text-[11.3rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.6rem] leading-none font-extrabold inline-block sm:ml-[-2rem] uppercase"
-          >
-            contact <span className="ml-5"> us</span>
-          </h1>
-          {/* <h1
-            data-aos="zoom-in"
             className="text-[2.8rem] sm:text-[6rem] md:text-[8rem] lg:text-[10.5rem] xl:text-[12.5rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.6rem] leading-none font-extrabold inline-block sm:ml-[-2rem] uppercase"
           >
             contact <span className="ml-5"> us</span>
-          </h1> */}
+          </h1>
         </div>
         <img
           src="/noise-texture.svg"

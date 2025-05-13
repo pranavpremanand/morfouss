@@ -16,16 +16,10 @@ const Blogs = () => {
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[14.5rem] xl:text-[15.8rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.7rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
-          >
-            insights
-          </h1>
-          {/* <h1
-            data-aos="zoom-in"
             className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[14.5rem] xl:text-[17.7rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
           >
             insights
-          </h1> */}
+          </h1>
         </div>
         <img
           src="/noise-texture.svg"

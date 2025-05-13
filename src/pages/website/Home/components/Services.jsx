@@ -33,30 +33,20 @@ const Services = () => {
     <section className="services relative text-white bg-black">
       <div className="wrapper flex flex-col py-[3.125rem] sm:pb-[3rem]">
         <div className="text-center">
-          <div className="h-[4.375rem] sm:h-[8rem] md:h-[11rem] lg:h-[13rem] xl:h-[14rem]">
+          <div className="h-[4.375rem] sm:h-[8rem] md:h-[11rem] lg:h-[13rem] xl:h-[17rem]">
             <h2
               ref={titleRef}
               data-aos="zoom-in"
-              className="text-[4.0625rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[13.6rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden"
+              className="text-[4.0625rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[17rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden lg:ml-[-0.5rem]"
               style={{ height: 0 }} // Initial height set to 0
             >
               SERVICES
             </h2>
           </div>
-          {/* <div className="h-[4.375rem] sm:h-[8rem] md:h-[11rem] lg:h-[13rem] xl:h-[15.5rem]">
-            <h2
-              ref={titleRef}
-              data-aos="zoom-in"
-              className="text-[4.0625rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[15rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden"
-              style={{ height: 0 }} // Initial height set to 0
-            >
-              SERVICES
-            </h2>
-          </div> */}
           <h3 data-aos="fade-up" className="heading-3">
             Advanced and Highly Reliable Performance
           </h3>
-          <p data-aos="fade-up" className="mt-[0.75rem] lg:mt-8 desc">
+          <p data-aos="fade-up" className="mt-[0.75rem] lg:mt-4 desc">
             Our services are designed to provide advanced and highly reliable
             performance.
           </p>
@@ -67,7 +57,7 @@ const Services = () => {
               to={`/services/${createUrlParam(item.title)}`}
               data-aos="fade-up"
               key={item.id}
-              className="cursor-pointer group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/9.5]"
+              className="cursor-pointer group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/8]"
             >
               <div className="h-full w-full hidden group-hover:block bottom-0 left-0 rounded-tr-full group-hover:rounded-none absolute bg-gradient-box transition-all duration-300 ease-linear">
                 <img
