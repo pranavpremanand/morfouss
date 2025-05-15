@@ -59,7 +59,8 @@ const ServiceDetails = () => {
               </Link>
             </div>
           </div>
-          <div className="aspect-[4/2] lg:aspect-[4/3.5] services-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+          {/* [4/3.5] */}
+          <div className="aspect-[4/2] lg:aspect-video h-full w-full services-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
             <ReactPlayer
               className="h-full w-full z-0"
               url={service.video}

@@ -15,45 +15,47 @@ const TabServices = ({ service }) => {
   };
 
   return (
-    <div className="wrapper py-[3rem] grid lg:grid-cols-[30%,1fr] gap-[1.875rem] lg:gap-10">
+    <div className="wrapper py-[3rem] grid lg:grid-cols-[35%,1fr] gap-[1.875rem] lg:gap-10">
       <div className="flex flex-col justify-between gap-[1.25rem] lg:gap-10">
-        <div className="space-y-2">
+        <div className="space-y-3">
           {service.services.map((item, idx) => (
             <button
               key={idx}
-              className={`flex p-[0.5rem] rounded-lg text-[0.875rem] lg:text-sm w-full items-center gap-2 uppercase font-medium ${
-                currentTab === idx
-                  ? "bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] text-white"
-                  : "bg-[#101010] text-white"
-              }`}
-              onClick={() => handleTabChange(idx)}
+              className="w-full rounded-lg overflow-hidden bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] p-[0.8px] shadow-md shadow-black/20"
             >
               <div
-                className={`min-w-[1.5rem] w-[1.5rem] h-[1.5rem] flex items-center justify-center rounded-full ${
-                  currentTab === idx
-                    ? "bg-black text-white"
-                    : "bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] text-white"
+                className={`flex p-[0.5rem] rounded-lg text-[0.875rem] lg:text-sm items-center gap-2 uppercase font-medium ${
+                  currentTab === idx ? " text-white" : "bg-white text-black"
                 }`}
+                onClick={() => handleTabChange(idx)}
               >
-                <TbArrowBadgeRightFilled className="w-[1.25rem] h-[1.25rem] ml-[0.0625rem]" />
+                <div
+                  className={`min-w-[1.5rem] w-[1.5rem] h-[1.5rem] flex items-center justify-center rounded-full ${
+                    currentTab === idx
+                      ? "bg-black text-white"
+                      : "bg-gradient-to-tr to-[#87F3FF_80%] via-[#239CE4_50%] from-[#7338AC_20%] text-white"
+                  }`}
+                >
+                  <TbArrowBadgeRightFilled className="w-[1.25rem] h-[1.25rem] ml-[0.0625rem]" />
+                </div>
+                {item.title}
               </div>
-              {item.title}
             </button>
           ))}
         </div>
         <div className="p-[0.125rem] bg-gradient-to-tr to-[#87F3FF_60%] via-[#239CE4_30%] from-[#7338AC_20%] rounded-xl">
-          <div className="bg-white text-black p-[1.5rem] rounded-xl flex flex-col gap-[0.75rem]">
-            <h6 className="text-[1.25rem] lg:text-xl font-bold uppercase text-center">
+          <div className="bg-gradient-to-b from-[#F1F8FE] to-[#ECF6FC] text-black p-[1.5rem] rounded-xl flex flex-col gap-[0.75rem]">
+            <h6 className="text-[1.25rem] lg:text-xl font-medium text-center">
               {service.getStarted.heading}
             </h6>
-            <p className="desc">{service.getStarted.desc}</p>
+            <p className="desc !font-medium !text-sm">{service.getStarted.desc}</p>
           </div>
         </div>
       </div>
 
       {/* Content */}
       <div className="p-[0.125rem] bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] rounded-2xl">
-        <div className="h-full rounded-2xl bg-[#D9D9D9] overflow-hidden">
+        <div className="h-full rounded-2xl bg-[#C3D8EB] overflow-hidden">
           {loading ? (
             <div className="h-full w-full flex justify-center py-[3.125rem] items-center">
               <CgSpinner size={50} className="text-primary animate-spin" />
@@ -72,7 +74,7 @@ const TabServices = ({ service }) => {
                   </h5>
                   <p className="desc">{service.services[currentTab].desc}</p>
                 </div>
-                <div className="p-[1.25rem] bg-black text-white rounded-2xl space-y-[0.9375rem]">
+                <div className="p-[1.25rem] bg-[#112C41] text-white rounded-2xl space-y-[0.9375rem]">
                   <h6 className="text-[1.5rem] lg:text-2xl uppercase text-center">
                     {service.whyChooseUs.heading}
                   </h6>

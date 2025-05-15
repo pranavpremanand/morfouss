@@ -85,7 +85,7 @@ export const serviceDetailContent = [
         data-aos="zoom-in"
         className="text-[2.85rem] sm:text-[6rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-1.3rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
       >
-        Product Engineering
+        Product <br /> Engineering
       </h1>
     ),
     bannerSubHeading: "Crafting Impactful Software Products",
