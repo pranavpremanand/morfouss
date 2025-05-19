@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
-import { TbArrowBadgeRightFilled } from "react-icons/tb";
 import { ReactComponent as Arrow } from "../../../../assets/svg/ServicesTabButtonArrow.svg";
+import { ReactComponent as ArrowHover } from "../../../../assets/svg/ServicesTabButtonArrowHover.svg";
 
 const TabServices = ({ service }) => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -35,14 +35,17 @@ const TabServices = ({ service }) => {
                 onClick={() => handleTabChange(idx)}
               >
                 <div
-                  className={`min-w-[1.5rem] w-[1.5rem] h-[1.5rem] flex items-center justify-center rounded-full ${
+                  className={`min-w-[1.5rem] w-[1.5rem] h-[1.5rem] flex items-center justify-center rounded-full text-white ${
                     currentTab === idx
-                      ? "bg-black text-white"
-                      : "bg-gradient-to-br to-[#87F3FF_80%] via-[#239CE4_68%] from-[#7338AC_40%] text-white"
+                      ? "bg-white"
+                      : "bg-gradient-to-br to-[#87F3FF_80%] via-[#239CE4_68%] from-[#7338AC_40%]"
                   }`}
                 >
-                  <Arrow className="w-[1rem] h-[1rem] ml-1" />
-                  {/* <TbArrowBadgeRightFilled className="w-[1.25rem] h-[1.25rem] ml-[0.0625rem]" /> */}
+                  {currentTab === idx ? (
+                    <ArrowHover className="w-[1.1rem] h-[1.1rem] ml-1" />
+                  ) : (
+                    <Arrow className="w-[1rem] h-[1rem] ml-1" />
+                  )}
                 </div>
                 {item.title}
               </div>
@@ -51,11 +54,11 @@ const TabServices = ({ service }) => {
         </div>
         <div className="p-[0.125rem] bg-gradient-to-tr to-[#87F3FF_60%] via-[#239CE4_30%] from-[#7338AC_20%] rounded-xl">
           <div className="bg-white rounded-xl">
-            <div className="bg-gradient-to-b from-[#cdeaff3d] via-[#c4c4c400] to-[#c0e5ff40] text-black px-[1.5rem] py-12 rounded-xl flex flex-col gap-5">
+            <div className="bg-gradient-to-b flex flex-col items-center justify-center h-full from-[#cdeaff3d] via-[#c4c4c400] to-[#c0e5ff40] text-black px-[35px] py-[60.50px] rounded-xl gap-5">
               <h6 className="text-[1.25rem] font-mulish lg:text-xl font-semibold text-center whitespace-pre-line">
                 {service.getStarted.heading}
               </h6>
-              <p className="desc !font-inter !font-normal !text-sm">
+              <p className="desc !font-inter !font-normal">
                 {service.getStarted.desc}
               </p>
             </div>
@@ -78,13 +81,13 @@ const TabServices = ({ service }) => {
                 alt={service.title}
               />
               <div className="space-y-[1.25rem] pt-[2.1875rem] lg:pt-10">
-                <div className="px-[1.25rem] space-y-4">
+                <div className="px-[35px] space-y-4">
                   <h5 className="heading-3 !font-normal uppercase">
                     {service.services[currentTab].title}
                   </h5>
                   <p className="desc">{service.services[currentTab].desc}</p>
                 </div>
-                <div className="p-[1.25rem] bg-[#112C41] text-white rounded-2xl space-y-[0.9375rem]">
+                <div className="p-[35px] bg-[#112C41] text-white rounded-2xl space-y-[0.9375rem]">
                   <h6 className="text-[1.5rem] lg:text-2xl uppercase text-center">
                     {service.whyChooseUs.heading}
                   </h6>

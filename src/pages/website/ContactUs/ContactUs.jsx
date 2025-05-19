@@ -80,7 +80,7 @@ const ContactUs = () => {
                     type="button"
                     className={`${
                       selectedService === item.title
-                        ? "bg-gradient-to-tr from-[#7338AC] via-[#239CE4_50%] to-[#87F3FF] text-white"
+                        ? "bg-gradient-to-tr from-[#7338AC] via-[#239CE4] to-[#87F3FF] text-white"
                         : "bg-transparent"
                     } border border-gray-500 py-[0.1875rem] lg:py-[.4rem] px-[1.5rem] lg:px-6 rounded-[0.5rem] lg:rounded-lg desc font-medium`}
                   >
@@ -99,7 +99,7 @@ const ContactUs = () => {
             </div>
             <button
               type="submit"
-              className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal px-[1.5rem] lg:!px-8 mx-auto w-full sm:w-fit"
+              className="gradient-btn from-[#7338AC] via-[#239CE4] to-[#87F3FF] text-white !font-normal px-[1.5rem] lg:!px-8 mx-auto w-full sm:w-fit"
             >
               Submit
             </button>
@@ -108,25 +108,25 @@ const ContactUs = () => {
         <div className="py-[1.5rem] relative z-[1] text-white lg:!py-6 flex gap-[1.25rem] lg:gap-8 justify-center">
           <Link
             to=""
-            className="w-[2.5rem] h-[2.5rem] !min-w-[2.5rem] lg:w-10 lg:h-10 lg:!min-w-10 !p-2 flex justify-center items-center rounded-full gradient-btn from-[#7338AC_30%] via-[#239CE4_60%] to-[#87F3FF_80%]"
+            className="w-[2.5rem] h-[2.5rem] !min-w-[2.5rem] lg:w-10 lg:h-10 lg:!min-w-10 !p-2 flex justify-center items-center rounded-full gradient-btn from-[#7338AC] via-[#239CE4] to-[#87F3FF]"
           >
             <Linkedin strokeWidth={1.2} className="" />
           </Link>
           <Link
             to=""
-            className="w-[2.5rem] h-[2.5rem] !min-w-[2.5rem] lg:w-10 lg:h-10 lg:!min-w-10 !p-2 flex justify-center items-center rounded-full gradient-btn from-[#7338AC_30%] via-[#239CE4_60%] to-[#87F3FF_80%]"
+            className="w-[2.5rem] h-[2.5rem] !min-w-[2.5rem] lg:w-10 lg:h-10 lg:!min-w-10 !p-2 flex justify-center items-center rounded-full gradient-btn from-[#7338AC] via-[#239CE4] to-[#87F3FF]"
           >
             <Facebook strokeWidth={1.2} className="" />
           </Link>
           <Link
             to=""
-            className="w-[2.5rem] h-[2.5rem] !min-w-[2.5rem] lg:w-10 lg:h-10 lg:!min-w-10 !p-2 flex justify-center items-center rounded-full gradient-btn from-[#7338AC_30%] via-[#239CE4_60%] to-[#87F3FF_80%]"
+            className="w-[2.5rem] h-[2.5rem] !min-w-[2.5rem] lg:w-10 lg:h-10 lg:!min-w-10 !p-2 flex justify-center items-center rounded-full gradient-btn from-[#7338AC] via-[#239CE4] to-[#87F3FF]"
           >
             <Instagram strokeWidth={1.2} className="" />
           </Link>
           <Link
             to=""
-            className="w-[2.5rem] h-[2.5rem] !min-w-[2.5rem] lg:w-10 lg:h-10 lg:!min-w-10 !p-2 flex justify-center items-center rounded-full gradient-btn from-[#7338AC_30%] via-[#239CE4_60%] to-[#87F3FF_80%]"
+            className="w-[2.5rem] h-[2.5rem] !min-w-[2.5rem] lg:w-10 lg:h-10 lg:!min-w-10 !p-2 flex justify-center items-center rounded-full gradient-btn from-[#7338AC] via-[#239CE4] to-[#87F3FF]"
           >
             <Twitter strokeWidth={1.2} className="" />
           </Link>

@@ -46,7 +46,7 @@ const Services = () => {
             </p>
             <div className="flex sm:flex-row flex-col gap-4 mt-[1.25rem] sm:mt-0">
               <Link
-                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-[1rem]"
+                className="gradient-btn  from-[#7338AC] to-[#87F3FF] via-[#239CE4] text-white !font-normal !px-[1rem]"
                 to="/intro"
               >
                 About Us
