@@ -14,7 +14,6 @@ const ServiceDetails = () => {
     (item) => createUrlParam(item.title) === title
   );
 
-
   // if there's no service, redirect to services page
   if (!service) {
     return <Navigate to="/services" />;
@@ -61,6 +60,11 @@ const ServiceDetails = () => {
           </div>
           {/* [4/3.5] */}
           <div className="aspect-[4/2] lg:aspect-video h-full w-full service-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+            <style>
+              {`.service-banner video{
+                    object-position:${service.id === 1 ? "right" : "center"};
+              }`}
+            </style>
             <ReactPlayer
               className="h-full w-full z-0"
               url={service.video}

@@ -59,9 +59,8 @@ const Services = () => {
               </Link>
             </div>
           </div>
-          <div className="aspect-video h-[110%] w-full services-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+          <div className="aspect-[4/3] service-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
             <ReactPlayer
-              className="h-full w-full z-0"
               url={bannerVid}
               playing
               muted
@@ -88,7 +87,7 @@ const Services = () => {
           <div className="wrapper relative px-[1.5625rem] lg:px-10 py-[1.875rem] md:py-5 group rounded-xl grid md:grid-cols-3 items-center gap-[1.875rem] lg:gap-10 hover:bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] transition-all duration-300 hover:text-white">
             <img
               src="/noise-texture.svg"
-              className="absolute w-full h-full object-cover z-0 opacity-0 group-hover:opacity-70"
+              className="absolute rounded-xl w-full h-full object-cover z-0 opacity-0 group-hover:opacity-70"
               alt=""
             />
             <h3 className="text-[1.625rem] md:text-[1.875rem] lg:text-[2.6rem] font-semibold !leading-tight relative z-[2]">
@@ -101,7 +100,7 @@ const Services = () => {
             />
             <div className="space-y-10 relative z-[2]">
               <div className="space-y-2">
-                <p className="desc !font-medium lg:!text-xl">{item.title}</p>
+                <p className="desc !font-medium !text-lg lg:!text-xl">{item.title}</p>
                 <p className="desc group-hover:block hidden">{item.desc}</p>
               </div>
               <div className="relative z-[2]">

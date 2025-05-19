@@ -252,15 +252,10 @@ body {
   }
 }
 
-.services-banner video,
 .service-banner video {
   object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  object-position: center;
-}
-
-.services-banner video {
   object-position: right;
 }
