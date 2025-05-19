@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
+import { ReactComponent as Arrow } from "../../../../assets/svg/ServicesTabButtonArrow.svg";
 
 const TabServices = ({ service }) => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -11,18 +12,22 @@ const TabServices = ({ service }) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 300);
+    }, 150);
   };
 
   return (
-    <div className="wrapper py-[3rem] grid lg:grid-cols-[35%,1fr] gap-[1.875rem] lg:gap-10">
+    <div className="wrapper py-[3rem] grid lg:grid-cols-[35%,1fr] gap-[1.875rem] lg:gap-12">
       <div className="flex flex-col justify-between gap-[1.25rem] lg:gap-10">
         <div className="space-y-3">
           {service.services.map((item, idx) => (
             <button
               key={idx}
-              className="w-full rounded-lg overflow-hidden bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] p-[0.8px] shadow-md shadow-black/20"
+              className="w-full rounded-lg overflow-hidden bg-gradient-to-tr to-[#7338AC_80%] via-[#239CE4] from-[#87F3FF] p-[0.8px] shadow-md shadow-black/20"
             >
+              {/* <button
+              key={idx}
+              className="w-full rounded-lg overflow-hidden bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] p-[0.8px] shadow-md shadow-black/20"
+            > */}
               <div
                 className={`flex p-[0.5rem] rounded-lg text-[0.875rem] lg:text-sm items-center gap-2 uppercase font-medium ${
                   currentTab === idx ? " text-white" : "bg-white text-black"
@@ -33,10 +38,11 @@ const TabServices = ({ service }) => {
                   className={`min-w-[1.5rem] w-[1.5rem] h-[1.5rem] flex items-center justify-center rounded-full ${
                     currentTab === idx
                       ? "bg-black text-white"
-                      : "bg-gradient-to-tr to-[#87F3FF_80%] via-[#239CE4_50%] from-[#7338AC_20%] text-white"
+                      : "bg-gradient-to-br to-[#87F3FF_80%] via-[#239CE4_68%] from-[#7338AC_40%] text-white"
                   }`}
                 >
-                  <TbArrowBadgeRightFilled className="w-[1.25rem] h-[1.25rem] ml-[0.0625rem]" />
+                  <Arrow className="w-[1rem] h-[1rem] ml-1" />
+                  {/* <TbArrowBadgeRightFilled className="w-[1.25rem] h-[1.25rem] ml-[0.0625rem]" /> */}
                 </div>
                 {item.title}
               </div>
@@ -44,18 +50,22 @@ const TabServices = ({ service }) => {
           ))}
         </div>
         <div className="p-[0.125rem] bg-gradient-to-tr to-[#87F3FF_60%] via-[#239CE4_30%] from-[#7338AC_20%] rounded-xl">
-          <div className="bg-gradient-to-b from-[#F1F8FE] to-[#ECF6FC] text-black p-[1.5rem] rounded-xl flex flex-col gap-[0.75rem]">
-            <h6 className="text-[1.25rem] lg:text-xl font-medium text-center">
-              {service.getStarted.heading}
-            </h6>
-            <p className="desc !font-medium !text-sm">{service.getStarted.desc}</p>
+          <div className="bg-white rounded-xl">
+            <div className="bg-gradient-to-b from-[#cdeaff3d] via-[#c4c4c400] to-[#c0e5ff40] text-black px-[1.5rem] py-12 rounded-xl flex flex-col gap-5">
+              <h6 className="text-[1.25rem] font-mulish lg:text-xl font-semibold text-center whitespace-pre-line">
+                {service.getStarted.heading}
+              </h6>
+              <p className="desc !font-inter !font-normal !text-sm">
+                {service.getStarted.desc}
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Content */}
       <div className="p-[0.125rem] bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] rounded-2xl">
-        <div className="h-full rounded-2xl bg-[#C3D8EB] overflow-hidden">
+        <div className="h-full rounded-2xl bg-[#D5F3FB] overflow-hidden">
           {loading ? (
             <div className="h-full w-full flex justify-center py-[3.125rem] items-center">
               <CgSpinner size={50} className="text-primary animate-spin" />

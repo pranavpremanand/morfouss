@@ -35,7 +35,7 @@ const ServiceDetails = () => {
         />
         <div
           data-aos="fade-up"
-          className="wrapper overflow-hidden mt-[2rem] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[2rem] lg:gap-[7rem] pb-[3.125rem] sm:pb-[4rem]"
+          className="wrapper overflow-hidden mt-[2rem] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[2rem] lg:gap-[7rem] pb-[3.125rem] sm:pb-[8rem]"
         >
           <div className="flex flex-col justify-between gap-8 lg:aspect-[4/3]">
             <div className="space-y-6 text-white">
@@ -46,7 +46,7 @@ const ServiceDetails = () => {
             </div>
             <div className="flex sm:flex-row flex-col gap-4 mt-[1.25rem] sm:mt-0">
               <Link
-                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-[1rem]"
+                className="gradient-btn text-white from-[#7338AC] to-[#87F3FF] via-[#239CE4] !font-normal !px-[1rem]"
                 to="/intro"
               >
                 About Us
@@ -60,7 +60,7 @@ const ServiceDetails = () => {
             </div>
           </div>
           {/* [4/3.5] */}
-          <div className="aspect-[4/2] lg:aspect-video h-full w-full services-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+          <div className="aspect-[4/2] lg:aspect-video h-full w-full service-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
             <ReactPlayer
               className="h-full w-full z-0"
               url={service.video}

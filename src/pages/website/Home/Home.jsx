@@ -169,13 +169,13 @@ const HomePage = () => {
               <div className="flex gap-5">
                 <Link
                   to="/contact-us"
-                  className="bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none"
+                  className="bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none"
                 >
                   Contact Us
                 </Link>
                 <Link
                   to="/services"
-                  className="gradient-btn text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4]"
+                  className="gradient-btn text-white from-[#7338AC] to-[#87F3FF] via-[#239CE4]"
                 >
                   Services
                 </Link>

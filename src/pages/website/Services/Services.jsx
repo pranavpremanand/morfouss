@@ -29,7 +29,7 @@ const Services = () => {
         />
         <div
           data-aos="fade-up"
-          className="wrapper overflow-hidden mt-[2rem] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[2rem] lg:gap-[7rem] pb-[3.125rem] sm:pb-[4rem]"
+          className="wrapper mt-[2rem] w-full h-full flex flex-col-reverse lg:grid grid-cols-2 gap-[2rem] lg:gap-[7rem] pb-[3.125rem] sm:pb-[8rem]"
         >
           <div className="flex flex-col justify-between gap-8 lg:aspect-[4/3]">
             <p className="desc lg:!leading-8 text-white">
@@ -59,7 +59,7 @@ const Services = () => {
               </Link>
             </div>
           </div>
-          <div className="aspect-video h-full w-full services-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+          <div className="aspect-video h-[110%] w-full services-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
             <ReactPlayer
               className="h-full w-full z-0"
               url={bannerVid}

@@ -63,7 +63,7 @@ const GetInTouch = () => {
                 className="peer outline-none bg-transparent desc rounded-[0.375rem] md:rounded-lg border border-white/40 p-[0.75rem] w-full"
               />
             </div>
-            <button className="bg-gradient-to-tr from-[#7338AC_30%] via-[#239CE4] to-[#87F3FF] p-[0.125rem] tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full hover:border-white flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-sm w-[10rem] mx-auto group">
+            <button className="bg-gradient-to-tr from-[#7338AC] via-[#239CE4] to-[#87F3FF] p-[0.125rem] tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full hover:border-white flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-sm w-[10rem] mx-auto group">
               <div className="px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 w-[10rem] bg-black rounded-full group-hover:bg-transparent transition-all duration-300">
                 Submit
               </div>

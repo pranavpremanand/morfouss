@@ -65,7 +65,7 @@ export const serviceDetailContent = [
       ],
     },
     getStarted: {
-      heading: "Get Started with AI Today! Innovation with Our IT Services",
+      heading: "Get Started with AI Today!\n Innovation with Our IT Services",
       desc: "Embrace the power of AI and data-driven strategies to revolutionize your business. Contact Us Morphus today to discuss how our AI solutions can enhance your business intelligence, automation, and decision-making capabilities.",
     },
   },

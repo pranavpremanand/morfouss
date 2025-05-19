@@ -58,15 +58,12 @@ const Intro = () => {
             </p>
             <div className="flex sm:flex-row flex-col gap-[20px] lg:gap-4 mt-[20px] sm:mt-0">
               <Link
-                className="gradient-btn from-[#7338AC_18%] via-[#239CE4] to-[#87F3FF_70%] text-white !font-normal !px-4 hover:shadow-[#7338AC]"
+                className="gradient-btn text-white from-[#7338AC] to-[#87F3FF] via-[#239CE4] !font-normal !px-4"
                 to="/services"
               >
                 Our Services
               </Link>
-              <Link
-                className="black-btn"
-                to="/contact-us"
-              >
+              <Link className="black-btn" to="/contact-us">
                 Contact Us
               </Link>
             </div>
@@ -124,12 +121,15 @@ const Intro = () => {
                 ))}
               </ul>
               <div className="flex gap-5">
-                <Link to="/contact-us" className="bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none">
+                <Link
+                  to="/contact-us"
+                  className="bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[16px] lg:px-4 py-[12px] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[14px] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none"
+                >
                   Contact Us
                 </Link>
                 <Link
                   to="/services"
-                  className="gradient-btn text-white hover:shadow-[#7338AC] from-[#7338AC] to-[#87F3FF] via-[#239CE4]"
+                  className="gradient-btn text-white from-[#7338AC] to-[#87F3FF] via-[#239CE4]"
                 >
                   Services
                 </Link>
@@ -196,10 +196,7 @@ const Intro = () => {
                 </p>
               </div>
             </div>
-            <div
-              data-aos="fade-up"
-              className="flex md:justify-center"
-            >
+            <div data-aos="fade-up" className="flex md:justify-center">
               <div className="space-y-2 md:max-w-[20rem] text-center group transition-all duration-300 hover:translate-y-1">
                 <h5 className="text-[20px] lg:text-2xl font-medium uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-[#7338AC_30%] group-hover:via-[#239CE4] group-hover:to-[#87F3FF_80%] transition-all duration-300">
                   Collaboration
