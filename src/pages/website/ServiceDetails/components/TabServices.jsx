@@ -54,8 +54,8 @@ const TabServices = ({ service }) => {
         </div>
         <div className="p-[0.125rem] bg-gradient-to-tr to-[#87F3FF_60%] via-[#239CE4_30%] from-[#7338AC_20%] rounded-xl">
           <div className="bg-white rounded-xl">
-            <div className="bg-gradient-to-b flex flex-col items-center justify-center h-full from-[#cdeaff3d] via-[#c4c4c400] to-[#c0e5ff40] text-black px-[35px] py-[60.50px] rounded-xl gap-5">
-              <h6 className="text-[1.25rem] font-mulish lg:text-xl font-semibold text-center whitespace-pre-line">
+            <div className="bg-gradient-to-b flex flex-col items-center justify-center h-full from-[#cdeaff3d] via-[#c4c4c400] to-[#c0e5ff40] text-black px-[35px] py-[60.50px] rounded-xl gap-7">
+              <h6 className="text-[1.25rem] font-mulish lg:text-[22px] font-semibold text-center whitespace-pre-line">
                 {service.getStarted.heading}
               </h6>
               <p className="desc !font-inter !font-normal !leading-[1.7] text-justify">
