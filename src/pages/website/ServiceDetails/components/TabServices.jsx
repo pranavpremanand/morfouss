@@ -65,6 +65,7 @@ const TabServices = ({ service }) => {
           </div>
         </div>
       </div>
+      
 
       {/* Content */}
       <div className="p-[0.125rem] bg-gradient-to-tr from-[#87F3FF_20%] via-[#239CE4_30%] to-[#7338AC_80%] rounded-2xl">
