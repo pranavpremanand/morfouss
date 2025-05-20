@@ -58,7 +58,7 @@ const TabServices = ({ service }) => {
               <h6 className="text-[1.25rem] font-mulish lg:text-xl font-semibold text-center whitespace-pre-line">
                 {service.getStarted.heading}
               </h6>
-              <p className="desc !font-inter !font-normal !leading-[1.7] hyphens-auto text-justify">
+              <p className="desc !font-inter !font-normal !leading-[1.7] text-justify">
                 {service.getStarted.desc}
               </p>
             </div>
