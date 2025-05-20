@@ -14,8 +14,8 @@ const ContactUs = () => {
   return (
     <div className="bg-black">
       <section className="flex flex-col w-screen relative pb-[10rem] overflow-hidden">
-        <img src={blur1} className="absolute left-0 top-0" alt="" />
-        <img src={blur2} className="absolute right-0 top-0" alt="" />
+        <img src={blur1} className="absolute left-0 top-0 " alt="" />
+        <img src={blur2} className="absolute right-0 top-0 md:block hidden" alt="" />
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
