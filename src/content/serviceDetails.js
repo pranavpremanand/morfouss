@@ -295,7 +295,7 @@ export const serviceDetailContent = [
         data-aos="zoom-in"
         className="text-[2.375rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] xl:text-[10.3rem] sm:tracking-[-0.5rem] md:tracking-[-0.6rem] xl:tracking-[-0.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem] uppercase"
       >
-        IT Consulting <br /> & <br /> Strategy
+        IT Consulting <br /> & Strategy
       </h1>
     ),
     bannerSubHeading: "Transforming Businesses with Expert IT Solutions",
