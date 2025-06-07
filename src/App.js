@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import WebsiteHeader from "./components/website/WebsiteHeader";
+import WebsiteFooter from "./components/website/WebsiteFooter";
 import { routes } from "./content/constant";
 import { lazy, Suspense, memo } from "react";
 import { LoadingSpinner } from "./components/common/LoadingSpinner";
@@ -8,6 +10,7 @@ import SpinnerContextProvider, {
   LoadingSpinnerContext,
 } from "./components/SpinnerContext";
 import { Toaster } from "react-hot-toast";
+import Thankyou from "./pages/Thankyou";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 // Lazy load all components for better performance
