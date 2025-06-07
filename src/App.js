@@ -21,10 +21,14 @@ const BlogDetails = lazy(() =>
   import("./pages/website/BlogDetails/BlogDetails")
 );
 
-// Initialize AOS with default settings
+// Initialize AOS with optimized settings
 AOS.init({
   once: true,
-  duration: 500
+  duration: 500,
+  disable: window.disableAOS || false, // Disable on mobile
+  startEvent: 'DOMContentLoaded', // Earlier initialization
+  offset: 120, // Smaller offset for earlier animation
+  delay: 0 // No delay for better performance
 });
 
 export default function App() {

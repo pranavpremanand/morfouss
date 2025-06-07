@@ -14,7 +14,46 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/Logo_Color.svg" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="%PUBLIC_URL%/blur-left.png" />
+    <link rel="preload" as="image" href="%PUBLIC_URL%/blur-right.png" />
+    
+    <!-- Disable AOS animations on mobile for better performance -->
+    <script>
+      if (window.innerWidth < 768) {
+        window.disableAOS = true;
+      }
+    </script>
+    
+    <!-- Performance optimization script -->
+    <script src="%PUBLIC_URL%/performance.js"></script>
+    
     <title>Morfouss</title>
+    
+    <style>
+      /* Critical CSS for better FCP */
+      .no-animations * {
+        animation: none !important;
+        transition: none !important;
+      }
+      
+      /* Skeleton loading styles */
+      .skeleton-loader {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: skeleton-loading 1.5s infinite;
+      }
+      
+      @keyframes skeleton-loading {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

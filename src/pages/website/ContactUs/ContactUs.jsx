@@ -2,7 +2,7 @@ import GetInTouch from "../../../components/common/GetInTouch";
 import blur1 from "../../../assets/images/contact/left.png";
 import blur2 from "../../../assets/images/contact/right.png";
 import { allServices, companyDetails } from "../../../content/constant";
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { ReactComponent as Mail } from "../../../assets/svg/contact/Mail.svg";
 import { ReactComponent as Address } from "../../../assets/svg/contact/Address.svg";
 import { ReactComponent as Phone } from "../../../assets/svg/contact/Phone.svg";
@@ -172,4 +172,5 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+// Memoize the component to prevent unnecessary re-renders
+export default memo(ContactUs);
