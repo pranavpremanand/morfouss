@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import WebsiteHeader from "./components/website/WebsiteHeader";
+import WebsiteFooter from "./components/website/WebsiteFooter";
 import { routes } from "./content/constant";
 import { lazy, Suspense, useEffect } from "react";
 import { LoadingSpinner } from "./components/common/LoadingSpinner";
@@ -8,12 +10,10 @@ import SpinnerContextProvider, {
   LoadingSpinnerContext,
 } from "./components/SpinnerContext";
 import { Toaster } from "react-hot-toast";
+import Thankyou from "./pages/Thankyou";
 import { ScrollToTop } from "./components/ScrollToTop";
 
-// Lazy load components for better performance
-const WebsiteHeader = lazy(() => import("./components/website/WebsiteHeader"));
-const WebsiteFooter = lazy(() => import("./components/website/WebsiteFooter"));
-const Thankyou = lazy(() => import("./pages/Thankyou"));
+// Lazy load only the page components for better performance
 const ServiceDetails = lazy(() =>
   import("./pages/website/ServiceDetails/ServiceDetails")
 );
@@ -21,21 +21,14 @@ const BlogDetails = lazy(() =>
   import("./pages/website/BlogDetails/BlogDetails")
 );
 
-// Initialize AOS with performance-optimized settings
-export default function App() {
-  useEffect(() => {
-    // Initialize AOS only after component mounts for better performance
-    AOS.init({
-      once: true,
-      duration: 500,
-      disable: window.innerWidth < 768 ? 'mobile' : false, // Disable on mobile for better performance
-    });
+// Initialize AOS with default settings
+AOS.init({
+  once: true,
+  duration: 500
+});
 
-    // Clean up AOS on unmount
-    return () => {
-      AOS.refresh();
-    };
-  }, []);
+export default function App() {
+  // No useEffect needed for AOS initialization
 
   return (
     <SpinnerContextProvider>
@@ -61,13 +54,9 @@ export default function App() {
               path={path}
               element={
                 <>
-                  <Suspense fallback={<div className="h-20 bg-primary"></div>}>
-                    <WebsiteHeader />
-                  </Suspense>
+                  <WebsiteHeader />
                   {component}
-                  <Suspense fallback={<div className="h-40 bg-primary"></div>}>
-                    <WebsiteFooter />
-                  </Suspense>
+                  <WebsiteFooter />
                 </>
               }
             />
@@ -77,13 +66,9 @@ export default function App() {
             path="/services/:title"
             element={
               <>
-                <Suspense fallback={<div className="h-20 bg-primary"></div>}>
-                  <WebsiteHeader />
-                </Suspense>
+                <WebsiteHeader />
                 <ServiceDetails />
-                <Suspense fallback={<div className="h-40 bg-primary"></div>}>
-                  <WebsiteFooter />
-                </Suspense>
+                <WebsiteFooter />
               </>
             }
           />
@@ -92,13 +77,9 @@ export default function App() {
             path="/insights/:id"
             element={
               <>
-                <Suspense fallback={<div className="h-20 bg-primary"></div>}>
-                  <WebsiteHeader />
-                </Suspense>
+                <WebsiteHeader />
                 <BlogDetails />
-                <Suspense fallback={<div className="h-40 bg-primary"></div>}>
-                  <WebsiteFooter />
-                </Suspense>
+                <WebsiteFooter />
               </>
             }
           />
