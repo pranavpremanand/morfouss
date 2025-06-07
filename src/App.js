@@ -1,17 +1,19 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import WebsiteHeader from "./components/website/WebsiteHeader";
-import WebsiteFooter from "./components/website/WebsiteFooter";
 import { routes } from "./content/constant";
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, memo } from "react";
 import { LoadingSpinner } from "./components/common/LoadingSpinner";
 import SpinnerContextProvider, {
   LoadingSpinnerContext,
 } from "./components/SpinnerContext";
 import { Toaster } from "react-hot-toast";
-import Thankyou from "./pages/Thankyou";
 import { ScrollToTop } from "./components/ScrollToTop";
+
+// Lazy load all components for better performance
+const WebsiteHeader = lazy(() => import("./components/website/WebsiteHeader"));
+const WebsiteFooter = lazy(() => import("./components/website/WebsiteFooter"));
+const Thankyou = lazy(() => import("./pages/Thankyou"));
 
 // Lazy load only the page components for better performance
 const ServiceDetails = lazy(() =>
@@ -31,9 +33,8 @@ AOS.init({
   delay: 0 // No delay for better performance
 });
 
-export default function App() {
-  // No useEffect needed for AOS initialization
-
+// Memoize the App component to prevent unnecessary re-renders
+const App = memo(function App() {
   return (
     <SpinnerContextProvider>
       <LoadingSpinnerContext />
@@ -100,4 +101,6 @@ export default function App() {
       </Suspense>
     </SpinnerContextProvider>
   );
-}
+});
+
+export default App;
