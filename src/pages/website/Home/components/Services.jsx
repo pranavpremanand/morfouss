@@ -32,7 +32,7 @@ const Services = () => {
   return (
     <section className="services relative text-white bg-black">
       <div className="wrapper flex flex-col py-[3.125rem] sm:pb-[3rem]">
-        <div className="text-center">
+        <div className="text-center select-none">
           <div className="h-[4.375rem] sm:h-[8rem] md:h-[11rem] lg:h-[13rem] xl:h-[17rem]">
             <h2
               ref={titleRef}

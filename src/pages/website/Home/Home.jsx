@@ -80,25 +80,10 @@ const HomePage = () => {
   }, []);
   return (
     <div className="bg-black">
-      <section className="flex flex-col w-screen relative">
+      <section className="flex flex-col w-screen relative select-none">
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
-          {/* <h1
-            data-aos="zoom-in"
-            className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[15.8rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.7rem] leading-none font-extrabold inline-block lg:ml-[-2.2rem]"
-          >
-            UNLEASH
-          </h1>
-          <h3
-            data-aos="zoom-in"
-            className="text-[1.6875rem] sm:text-[3rem] md:text-[4rem] xl:text-[5.7rem] ml-[-0.2rem] leading-[0.9] md:-mt-3 xl:-mt-8"
-          >
-            <span className="gradient-stroke-text text-black">Dreams</span>{" "}
-            <span className="gradient-stroke-text text-white font-extralight">
-              Through Tech
-            </span>
-          </h3> */}
           <h1
             data-aos="zoom-in"
             className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[19.2rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block lg:ml-[-2.2rem]"
@@ -192,7 +177,7 @@ const HomePage = () => {
         <div className="wrapper py-[2rem]">
           <h2
             data-aos="zoom-in"
-            className="text-[4.375rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[16rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text4"
+            className="text-[4.375rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[16rem] leading-none font-extrabold tracking-tighter text-center gradient-stroke-text4 select-none"
           >
             WHY US?
           </h2>

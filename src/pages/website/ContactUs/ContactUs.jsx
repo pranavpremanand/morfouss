@@ -2,32 +2,34 @@ import GetInTouch from "../../../components/common/GetInTouch";
 import blur1 from "../../../assets/images/contact/left.png";
 import blur2 from "../../../assets/images/contact/right.png";
 import { allServices, companyDetails } from "../../../content/constant";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ReactComponent as Mail } from "../../../assets/svg/contact/Mail.svg";
 import { ReactComponent as Address } from "../../../assets/svg/contact/Address.svg";
 import { ReactComponent as Phone } from "../../../assets/svg/contact/Phone.svg";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import LazyImage from "../../../components/common/LazyImage";
 
 const ContactUs = () => {
   const [selectedService, setSelectedService] = useState(null);
   return (
     <div className="bg-black">
       <section className="flex flex-col w-screen relative pb-[10rem] overflow-hidden">
-        <img src={blur1} className="absolute left-0 top-0 " alt="" />
-        <img src={blur2} className="absolute right-0 top-0 md:block hidden" alt="" />
+        <LazyImage src={blur1} className="absolute left-0 top-0" alt="Background blur effect" priority={true} />
+        <LazyImage src={blur2} className="absolute right-0 top-0 md:block hidden" alt="Background blur effect" priority={true} />
         <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
-            className="text-[2.8rem] sm:text-[6rem] md:text-[8rem] lg:text-[10.5rem] xl:text-[12.5rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.6rem] leading-none font-extrabold inline-block sm:ml-[-2rem] uppercase"
+            className="text-[2.8rem] sm:text-[6rem] md:text-[8rem] lg:text-[10.5rem] xl:text-[12.5rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.6rem] leading-none font-extrabold inline-block sm:ml-[-2rem] uppercase select-none"
           >
             contact <span className="ml-5"> us</span>
           </h1>
         </div>
-        <img
+        <LazyImage
           src="/noise-texture.svg"
           className="w-full h-[calc(100%+1rem)] -translate-y-[2rem] absolute z-0 inset-0 object-cover opacity-70"
-          alt=""
+          alt="Noise texture"
+          priority={true}
         />
         <div className="wrapper">
           <form

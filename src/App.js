@@ -1,18 +1,19 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import WebsiteHeader from "./components/website/WebsiteHeader";
-import WebsiteFooter from "./components/website/WebsiteFooter";
 import { routes } from "./content/constant";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { LoadingSpinner } from "./components/common/LoadingSpinner";
 import SpinnerContextProvider, {
   LoadingSpinnerContext,
 } from "./components/SpinnerContext";
 import { Toaster } from "react-hot-toast";
-import Thankyou from "./pages/Thankyou";
 import { ScrollToTop } from "./components/ScrollToTop";
 
+// Lazy load components for better performance
+const WebsiteHeader = lazy(() => import("./components/website/WebsiteHeader"));
+const WebsiteFooter = lazy(() => import("./components/website/WebsiteFooter"));
+const Thankyou = lazy(() => import("./pages/Thankyou"));
 const ServiceDetails = lazy(() =>
   import("./pages/website/ServiceDetails/ServiceDetails")
 );
@@ -20,11 +21,22 @@ const BlogDetails = lazy(() =>
   import("./pages/website/BlogDetails/BlogDetails")
 );
 
-AOS.init({
-  once: true,
-  duration: 500,
-});
+// Initialize AOS with performance-optimized settings
 export default function App() {
+  useEffect(() => {
+    // Initialize AOS only after component mounts for better performance
+    AOS.init({
+      once: true,
+      duration: 500,
+      disable: window.innerWidth < 768 ? 'mobile' : false, // Disable on mobile for better performance
+    });
+
+    // Clean up AOS on unmount
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
+
   return (
     <SpinnerContextProvider>
       <LoadingSpinnerContext />
@@ -41,6 +53,7 @@ export default function App() {
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           <Route path="*" element={<Navigate to="/" />} />
+          
           {/* Website Pages */}
           {routes.map(({ component, name, path }, index) => (
             <Route
@@ -48,9 +61,13 @@ export default function App() {
               path={path}
               element={
                 <>
-                  <WebsiteHeader />
+                  <Suspense fallback={<div className="h-20 bg-primary"></div>}>
+                    <WebsiteHeader />
+                  </Suspense>
                   {component}
-                  <WebsiteFooter />
+                  <Suspense fallback={<div className="h-40 bg-primary"></div>}>
+                    <WebsiteFooter />
+                  </Suspense>
                 </>
               }
             />
@@ -60,9 +77,13 @@ export default function App() {
             path="/services/:title"
             element={
               <>
-                <WebsiteHeader />
+                <Suspense fallback={<div className="h-20 bg-primary"></div>}>
+                  <WebsiteHeader />
+                </Suspense>
                 <ServiceDetails />
-                <WebsiteFooter />
+                <Suspense fallback={<div className="h-40 bg-primary"></div>}>
+                  <WebsiteFooter />
+                </Suspense>
               </>
             }
           />
@@ -71,12 +92,17 @@ export default function App() {
             path="/insights/:id"
             element={
               <>
-                <WebsiteHeader />
+                <Suspense fallback={<div className="h-20 bg-primary"></div>}>
+                  <WebsiteHeader />
+                </Suspense>
                 <BlogDetails />
-                <WebsiteFooter />
+                <Suspense fallback={<div className="h-40 bg-primary"></div>}>
+                  <WebsiteFooter />
+                </Suspense>
               </>
             }
           />
+          
           <Route
             path="/thank-you"
             element={
@@ -85,28 +111,6 @@ export default function App() {
               </>
             }
           />
-
-          {/* Landing Pages */}
-          {/* <Route
-            path="/web-development"
-            element={
-              <>
-                <LandingHeader />
-                <LandingPage page={"web-development"} />
-                <LandingFooter />
-              </>
-            }
-          />
-          <Route
-            path="/app-development"
-            element={
-              <>
-                <LandingHeader />
-                <LandingPage page={"app-development"} />
-                <LandingFooter />
-              </>
-            }
-          /> */}
         </Routes>
       </Suspense>
     </SpinnerContextProvider>

@@ -23,7 +23,7 @@ const Intro = () => {
       <section className="flex flex-col w-screen relative">
         <img src={blur1} className="absolute left-0 top-0" alt="" />
         <img src={blur2} className="absolute right-0 top-0" alt="" />
-        <div className="relative z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
+        <div className="relative select-none z-[1] pt-[11vh] sm:pt-[10vh] md:pt-[8rem] lg:pt-[6rem] xl:pt-[5.4rem] text-center text-white w-fit mx-auto md:mt-[-2rem]">
           <h1
             data-aos="zoom-in"
             className="text-[4.25rem] sm:text-[8rem] md:text-[11rem] lg:text-[15rem] xl:text-[17.9rem] sm:tracking-[-0.8rem] md:tracking-[-1.2rem] xl:tracking-[-1.9rem] leading-none font-extrabold inline-block sm:ml-[-2.2rem]"
@@ -162,12 +162,12 @@ const Intro = () => {
         <div className="wrapper py-[2rem] space-y-3">
           <h2
             data-aos="zoom-in"
-            className="text-[4.25rem] sm:text-[7rem] md:text-[9rem] lg:text-[12rem] xl:text-[14rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4] to-[#87F3FF_80%]"
+            className="text-[4.25rem] sm:text-[7rem] md:text-[9rem] lg:text-[12rem] xl:text-[14rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_20%] via-[#239CE4] to-[#87F3FF_80%] select-none"
           >
             OUR CORE
           </h2>
           <div data-aos="fade-up">
-            <h3 className="text-[38px] sm:text-[3rem] md:text-[7rem] leading-none font-extrabold tracking-tighter text-center sm:-translate-y-4">
+            <h3 className="text-[38px] sm:text-[3rem] md:text-[7rem] leading-none font-extrabold tracking-tighter text-center sm:-translate-y-4 select-none">
               VALUES
             </h3>
           </div>
@@ -239,7 +239,7 @@ const Intro = () => {
         <div className="wrapper py-[40px] lg:py-[3rem] relative">
           <h2
             data-aos="zoom-in"
-            className="uppercase text-[3rem] sm:text-[5.5rem] md:text-[6.5rem] lg:text-[9rem] xl:text-[10.2rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_30%] via-[#239CE4] to-[#87F3FF_80%]"
+            className="uppercase text-[3rem] sm:text-[5.5rem] md:text-[6.5rem] lg:text-[9rem] xl:text-[10.2rem] leading-none font-extrabold tracking-tighter text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#7338AC_30%] via-[#239CE4] to-[#87F3FF_80%] select-none"
           >
             Testimonials
           </h2>
