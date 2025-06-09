@@ -110,7 +110,7 @@ const HomePage = () => {
           data-aos="fade-up"
           className="wrapper overflow-hidden mt-[2rem] mb-[2rem] md:mb-[4.375rem] w-full h-full lg:h-[80vh]"
         >
-          <div className="banner-video h-full bg-black aspect-[4/3] md:aspect-auto">
+          <div className="banner-video h-full bg-black aspect-[4/3] md:aspect-auto relative z-[1]">
             <ReactPlayer
               ref={playerRef}
               className="h-full w-full z-0"
