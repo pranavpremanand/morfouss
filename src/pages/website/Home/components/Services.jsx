@@ -38,7 +38,6 @@ const Services = () => {
               ref={titleRef}
               data-aos="zoom-in"
               className="text-[4.0625rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[17rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden lg:ml-[-0.5rem]"
-              style={{ height: window.innerWidth < 768 ? 'auto' : 0 }} // Set height to auto on mobile
             >
               SERVICES
             </h2>
