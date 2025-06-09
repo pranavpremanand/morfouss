@@ -59,7 +59,7 @@ const Services = () => {
               </Link>
             </div>
           </div>
-          <div className="aspect-[4/3] service-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+          <div className="relative z-[1] service-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
             <ReactPlayer
               url={bannerVid}
               playing

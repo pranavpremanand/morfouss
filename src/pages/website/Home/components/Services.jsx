@@ -54,14 +54,13 @@ const Services = () => {
           {allServices.map((item) => (
             <Link
               to={`/services/${createUrlParam(item.title)}`}
-              data-aos="fade-up"
               key={item.id}
-              className="cursor-pointer group relative overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/8]"
+              className="cursor-pointer group relative !overflow-hidden border border-gray-500 bg-transparent aspect-auto xl:aspect-[3.5/8]"
             >
-              <div className="h-full w-full hidden group-hover:block bottom-0 left-0 rounded-tr-full group-hover:rounded-none absolute bg-gradient-box transition-all duration-300 ease-linear">
+              <div className="h-full overflow-hidden w-full hidden group-hover:flex inset-0 rounded-tr-full group-hover:rounded-none absolute bg-gradient-box transition-all duration-300 ease-linear">
                 <img
                   src="/background.png"
-                  className="h-[200%] w-[200%] object-cover"
+                  className="flex-1 object-cover"
                   alt=""
                 />
               </div>

@@ -16,7 +16,7 @@ const ContactUs = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState({ text: "", type: "", visible: false });
-  
+
   const {
     register,
     handleSubmit,
@@ -38,7 +38,7 @@ const ContactUs = () => {
       });
     }
   }, [selectedService, setValue]);
-  
+
   // Hide status message after 5 seconds
   useEffect(() => {
     let timer;
@@ -237,15 +237,14 @@ const ContactUs = () => {
               {isSubmitting ? "Sending..." : "Submit"}
             </button>
           </form>
-          
+
           {/* Status Message */}
           {statusMessage.visible && (
-            <div 
-              className={`mt-4 p-4 rounded-lg text-center transition-all duration-300 ${
-                statusMessage.type === 'success' 
-                  ? 'bg-green-900/30 text-green-300 border border-green-500/50' 
+            <div
+              className={`mt-4 p-4 rounded-lg text-center transition-all duration-300 ${statusMessage.type === 'success'
+                  ? 'bg-green-900/30 text-green-300 border border-green-500/50'
                   : 'bg-red-900/30 text-red-300 border border-red-500/50'
-              }`}
+                }`}
             >
               {statusMessage.text}
             </div>

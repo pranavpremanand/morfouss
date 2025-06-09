@@ -59,7 +59,7 @@ const ServiceDetails = () => {
             </div>
           </div>
           {/* [4/3.5] */}
-          <div className="aspect-[4/2] lg:aspect-video h-full w-full service-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
+          <div className="aspect-[4/2] relative z-[1] lg:aspect-video h-full w-full service-banner overflow-hidden rounded-2xl p-[0.125rem] bg-gradient-to-tr to-[#87F3FF] from-[#625AD8]">
             <style>
               {`.service-banner video{
                     object-position:${service.id === 1 ? "right" : "center"};
