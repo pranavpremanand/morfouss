@@ -1,6 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { routes } from "./content/constant";
 import { lazy, Suspense } from "react";
 import { LoadingSpinner } from "./components/common/LoadingSpinner";

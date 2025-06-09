@@ -85,7 +85,7 @@ const Intro = () => {
             alt=""
           />
           <div className="flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[20px] lg:gap-7 w-full">
-            <div data-aos="fade-up" className="lg:space-y-7 space-y-[25px]">
+            <div data-aos="fade-up" className="lg:space-y-7 space-y-[25px] text-black">
               <h3 className="heading-2 uppercase">
                 Why Partner <br /> with Us?
               </h3>
@@ -312,7 +312,7 @@ const Intro = () => {
             ))}
           </div>
           <div className="wrapper pt-[50px] lg:pt-[7rem] pb-[3rem] relative">
-            <div className="grid lg:grid-cols-[40%_1fr] gap-[30px] lg:gap-10">
+            <div className="grid lg:grid-cols-[40%_1fr] gap-[30px] lg:gap-10 text-black">
               <div data-aos="fade-up" className="space-y-[20px] lg:space-y-7">
                 <p className="py-[4px] px-[16px] lg:px-5 desc !font-medium tracking-wide w-fit shadow-inner shadow-black/70 rounded-full uppercase">
                   highlights

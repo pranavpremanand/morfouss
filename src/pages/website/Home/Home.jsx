@@ -142,7 +142,7 @@ const HomePage = () => {
             alt=""
           />
           <div className="flex flex-col-reverse lg:grid grid-cols-2 items-center gap-10 lg:gap-7 w-full lg:max-w-6xl lg:mx-auto">
-            <div data-aos="fade-up" className="lg:space-y-7 space-y-[1rem]">
+            <div data-aos="fade-up" className="lg:space-y-7 space-y-[1rem] text-black">
               <h3 className="heading-2 uppercase">introduction</h3>
               <p className="desc">
                 At Morfouss, we are dedicated to revolutionizing company
@@ -310,7 +310,7 @@ const HomePage = () => {
       </div>
       <section className="relative z-[2] bg-white overflow-hidden">
         <div className="lg:max-w-6xl wrapper lg:mx-auto flex py-[35px] lg:pt-[5rem] lg:pb-0 relative h-full w-full">
-          <div className="min-h-[60vh] flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[30px] lg:gap-7">
+          <div className="min-h-[60vh] text-black flex flex-col-reverse lg:grid grid-cols-2 items-center gap-[30px] lg:gap-7">
             <div
               data-aos="fade-up"
               className="lg:pb-[5rem] flex flex-col justify-center space-y-[20px] md:space-y-10"
