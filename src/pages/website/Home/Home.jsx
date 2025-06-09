@@ -325,7 +325,7 @@ const HomePage = () => {
             </div>
             <div
               data-aos="fade-up"
-              className="flex flex-col h-full w-full justify-end items-end"
+              className="flex flex-col h-full w-full justify-center lg:justify-end items-end"
             >
               <div ref={containerRef} className="relative h-full w-full">
                 <img
