@@ -27,7 +27,10 @@ const BlogDetails = lazy(() =>
 AOS.init({
   once: true,
   duration: 500,
-  disable: window.innerWidth < 768
+  disable: window.disableAOS || false, // Disable on mobile
+  startEvent: 'DOMContentLoaded', // Earlier initialization
+  offset: 120, // Smaller offset for earlier animation
+  delay: 0
 });
 
 export default function App() {
