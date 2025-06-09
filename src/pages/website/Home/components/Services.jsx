@@ -13,26 +13,20 @@ const Services = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
   useGSAP(() => {
-    // Only apply GSAP animations on screens larger than 768px
-    if (window.innerWidth >= 768) {
-      // Animate the height of the title when scrolled into view
-      gsap.fromTo(
-        titleRef.current,
-        { height: 0 },
-        {
-          height: "auto",
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 70%", // Adjust the start position as needed
-            end: "top 30%", // Adjust the end position as needed
-            scrub: 1, // Smoothly animate the height
-          },
-        }
-      );
-    } else {
-      // For mobile, ensure title is visible without animation
-      gsap.set(titleRef.current, { height: "auto" });
-    }
+    // Animate the height of the title when scrolled into view
+    gsap.fromTo(
+      titleRef.current,
+      { height: 0 },
+      {
+        height: "auto",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 70%", // Adjust the start position as needed
+          end: "top 30%", // Adjust the end position as needed
+          scrub: 1, // Smoothly animate the height
+        },
+      }
+    );
   }, []);
 
   return (

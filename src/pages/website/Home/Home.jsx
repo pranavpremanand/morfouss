@@ -29,25 +29,19 @@ const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useGSAP(() => {
-    // Only apply GSAP animations on screens larger than 768px
-    if (window.innerWidth >= 768) {
-      gsap.from(".vector-image", {
-        y: 200,
-        opacity: 0,
-        duration: 4,
-        stagger: 4,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 70%",
-          end: "top 30%",
-          scrub: 1,
-        },
-      });
-    } else {
-      // For mobile, ensure vectors are visible without animation
-      gsap.set(".vector-image", { opacity: 1, y: 0 });
-    }
+    gsap.from(".vector-image", {
+      y: 200,
+      opacity: 0,
+      duration: 4,
+      stagger: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 70%",
+        end: "top 30%",
+        scrub: 1,
+      },
+    });
   }, []);
 
   useEffect(() => {
@@ -258,7 +252,7 @@ const HomePage = () => {
       <div className="bg-white z-[1] relative border-b">
         <div
           data-aos="fade-up"
-          className="wrapper border-black py-[1.875rem] md:py-[2.1875rem] grid sm:grid-cols-4 gap-[2.1875rem] sm:gap-7"
+          className="wrapper text-black border-black py-[1.875rem] md:py-[2.1875rem] grid sm:grid-cols-4 gap-[2.1875rem] sm:gap-7"
         >
           <div className="text-center space-y-2">
             <CountUp
