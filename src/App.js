@@ -26,7 +26,8 @@ const BlogDetails = lazy(() =>
 AOS.init({
   once: true,
   duration: 500,
-  disable: window.innerWidth < 768
+  // Enable animations on all screen sizes
+  disable: false
 });
 
 export default function App() {

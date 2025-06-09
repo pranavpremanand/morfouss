@@ -29,19 +29,25 @@ const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useGSAP(() => {
-    gsap.from(".vector-image", {
-      y: 200,
-      opacity: 0,
-      duration: 4,
-      stagger: 4,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 70%",
-        end: "top 30%",
-        scrub: 1,
-      },
-    });
+    // Only apply GSAP animations on screens larger than 768px
+    if (window.innerWidth >= 768) {
+      gsap.from(".vector-image", {
+        y: 200,
+        opacity: 0,
+        duration: 4,
+        stagger: 4,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 70%",
+          end: "top 30%",
+          scrub: 1,
+        },
+      });
+    } else {
+      // For mobile, ensure vectors are visible without animation
+      gsap.set(".vector-image", { opacity: 1, y: 0 });
+    }
   }, []);
 
   useEffect(() => {

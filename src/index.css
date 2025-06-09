@@ -185,6 +185,25 @@ body {
   .desc {
     @apply text-[0.9375rem] sm:text-[1rem] lg:text-base font-poppins font-light;
   }
+  
+  /* Ensure content visibility on small screens */
+  @media (max-width: 767px) {
+    [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
+    
+    /* Ensure all content is visible */
+    .overflow-hidden {
+      overflow: visible !important;
+    }
+    
+    /* Fix for any height: 0 elements */
+    h1, h2, h3, h4, h5, h6, p, div {
+      height: auto !important;
+    }
+  }
   .white-btn {
     @apply bg-white text-black border w-fit border-black cursor-pointer tracking-wide hover:-translate-y-1 shadow-2xl shadow-transparent rounded-full px-[1rem] lg:px-4 py-[0.75rem] lg:py-3 min-w-[7rem] flex justify-center text-center transition-all duration-300 font-light text-[0.875rem] lg:text-[.9rem] hover:!bg-gradient-to-tr hover:text-white from-[#7338AC] to-[#87F3FF] via-[#239CE4] hover:!border-none;
   }

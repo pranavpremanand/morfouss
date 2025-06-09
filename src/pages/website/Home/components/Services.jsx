@@ -13,20 +13,26 @@ const Services = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
   useGSAP(() => {
-    // Animate the height of the title when scrolled into view
-    gsap.fromTo(
-      titleRef.current,
-      { height: 0 },
-      {
-        height: "auto",
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 70%", // Adjust the start position as needed
-          end: "top 30%", // Adjust the end position as needed
-          scrub: 1, // Smoothly animate the height
-        },
-      }
-    );
+    // Only apply GSAP animations on screens larger than 768px
+    if (window.innerWidth >= 768) {
+      // Animate the height of the title when scrolled into view
+      gsap.fromTo(
+        titleRef.current,
+        { height: 0 },
+        {
+          height: "auto",
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 70%", // Adjust the start position as needed
+            end: "top 30%", // Adjust the end position as needed
+            scrub: 1, // Smoothly animate the height
+          },
+        }
+      );
+    } else {
+      // For mobile, ensure title is visible without animation
+      gsap.set(titleRef.current, { height: "auto" });
+    }
   }, []);
 
   return (
@@ -38,7 +44,7 @@ const Services = () => {
               ref={titleRef}
               data-aos="zoom-in"
               className="text-[4.0625rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[12.5rem] xl:text-[17rem] leading-none font-extrabold tracking-tighter gradient-text overflow-hidden lg:ml-[-0.5rem]"
-              style={{ height: 0 }} // Initial height set to 0
+              style={{ height: window.innerWidth < 768 ? 'auto' : 0 }} // Set height to auto on mobile
             >
               SERVICES
             </h2>

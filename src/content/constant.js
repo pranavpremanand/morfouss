@@ -13,7 +13,7 @@ export { LogoImg };
 export const companyDetails = {
   phone: "+0000000000",
   whatsapp: "+0000000000",
-  email: "abc@xyz.com",
+  email: "mpranavprem@gmail.com",
   address: "ABC Street, City, Country",
 };
 
