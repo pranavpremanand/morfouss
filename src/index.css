@@ -259,3 +259,7 @@ body {
   border-radius: 1rem;
   object-position: right;
 }
+
+.reset-content * {
+  all: revert;
+}

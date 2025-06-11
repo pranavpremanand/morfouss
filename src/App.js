@@ -9,6 +9,8 @@ import SpinnerContextProvider, {
 } from "./components/SpinnerContext";
 import { Toaster } from "react-hot-toast";
 import { ScrollToTop } from "./components/ScrollToTop";
+import QueryProvider from "./utils/QueryProvider";
+import { HelmetProvider } from "react-helmet-async";
 
 // Lazy load components for better performance
 const WebsiteHeader = lazy(() => import("./components/website/WebsiteHeader"));
@@ -28,76 +30,80 @@ AOS.init({
   once: true,
   duration: 500,
   disable: window.disableAOS || false, // Disable on mobile
-  startEvent: 'DOMContentLoaded', // Earlier initialization
+  startEvent: "DOMContentLoaded", // Earlier initialization
   offset: 120, // Smaller offset for earlier animation
-  delay: 0
+  delay: 0,
 });
 
 export default function App() {
   return (
-    <SpinnerContextProvider>
-      <LoadingSpinnerContext />
-      <ScrollToTop />
-      <Toaster
-        position="top-bottom"
-        toastOptions={{
-          style: {
-            background: "#010C2A",
-            color: "#ffffff",
-          },
-        }}
-      />
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
-          <Route path="*" element={<Navigate to="/" />} />
-          
-          {/* Website Pages */}
-          {routes.map(({ component, name, path }, index) => (
-            <Route
-              key={name}
-              path={path}
-              element={
-                <>
-                  <WebsiteHeader />
-                  {component}
-                  <WebsiteFooter />
-                </>
-              }
-            />
-          ))}
+    <HelmetProvider>
+      <SpinnerContextProvider>
+        <QueryProvider>
+          <LoadingSpinnerContext />
+          <ScrollToTop />
+          <Toaster
+            position="top-bottom"
+            toastOptions={{
+              style: {
+                background: "#010C2A",
+                color: "#ffffff",
+              },
+            }}
+          />
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="*" element={<Navigate to="/" />} />
 
-          <Route
-            path="/services/:title"
-            element={
-              <>
-                <WebsiteHeader />
-                <ServiceDetails />
-                <WebsiteFooter />
-              </>
-            }
-          />
+              {/* Website Pages */}
+              {routes.map(({ component, name, path }, index) => (
+                <Route
+                  key={name}
+                  path={path}
+                  element={
+                    <>
+                      <WebsiteHeader />
+                      {component}
+                      <WebsiteFooter />
+                    </>
+                  }
+                />
+              ))}
 
-          <Route
-            path="/insights/:id"
-            element={
-              <>
-                <WebsiteHeader />
-                <BlogDetails />
-                <WebsiteFooter />
-              </>
-            }
-          />
-          
-          <Route
-            path="/thank-you"
-            element={
-              <>
-                <Thankyou />
-              </>
-            }
-          />
-        </Routes>
-      </Suspense>
-    </SpinnerContextProvider>
+              <Route
+                path="/services/:title"
+                element={
+                  <>
+                    <WebsiteHeader />
+                    <ServiceDetails />
+                    <WebsiteFooter />
+                  </>
+                }
+              />
+
+              <Route
+                path="/insights/:slug"
+                element={
+                  <>
+                    <WebsiteHeader />
+                    <BlogDetails />
+                    <WebsiteFooter />
+                  </>
+                }
+              />
+
+              <Route
+                path="/thank-you"
+                element={
+                  <>
+                    <Thankyou />
+                  </>
+                }
+              />
+            </Routes>
+          </Suspense>
+        </QueryProvider>
+      </SpinnerContextProvider>
+    </HelmetProvider>
   );
 }
