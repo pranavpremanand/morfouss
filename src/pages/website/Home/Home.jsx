@@ -9,6 +9,7 @@ import blur1 from "../../../assets/images/figma-home/blur-1.png";
 import blur2 from "../../../assets/images/figma-home/blur-2.png";
 import blur3 from "../../../assets/images/figma-home/blur-3.png";
 import Services from "./components/Services";
+import Portfolio from "./components/Portfolio";
 import vector1 from "../../../assets/images/figma-home/Vector1.png";
 import vector2 from "../../../assets/images/figma-home/Vector2.png";
 import vector3 from "../../../assets/images/figma-home/Vector3.png";
@@ -353,6 +354,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <Portfolio />
       <GetInTouch />
     </div>
   );
